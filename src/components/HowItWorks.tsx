@@ -38,13 +38,13 @@ export const HowItWorks: React.FC = () => {
         </div>
 
         {/* 5-Step Visual Timeline */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 mb-14">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6 mb-12 sm:mb-14">
           {siteConfig.howItWorksSteps.map((step, idx) => {
             const Icon = stepIcons[idx] || CheckCircle2;
             return (
               <div
                 key={step.step}
-                className="group rounded-2xl p-6 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 bg-[#F8FAFC] border border-slate-200/90 hover:border-[#3E4C9A]/50 hover:bg-white shadow-sm"
+                className="group rounded-2xl p-4 sm:p-6 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 bg-[#F8FAFC] border border-slate-200/90 hover:border-[#3E4C9A]/50 hover:bg-white shadow-sm"
               >
                 <div>
                   <div className="flex items-center justify-between mb-4">

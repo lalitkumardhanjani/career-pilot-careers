@@ -26,23 +26,23 @@ export const PrivacyModal: React.FC<PrivacyModalProps> = ({ isOpen, onClose }) =
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 overflow-y-auto bg-black/60 backdrop-blur-sm animate-in fade-in duration-200"
+      className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 overflow-y-auto bg-black/60 backdrop-blur-sm animate-in fade-in duration-200"
       role="dialog"
       aria-modal="true"
       aria-labelledby="privacy-modal-title"
     >
-      <div className="relative w-full max-w-2xl bg-white rounded-2xl shadow-2xl border border-[#DCE6F2] overflow-hidden my-8">
+      <div className="relative w-full max-w-2xl bg-white rounded-2xl shadow-2xl border border-[#DCE6F2] overflow-hidden my-4 sm:my-8">
         {/* Modal Header */}
-        <div className="bg-[#0B132B] px-6 py-5 text-white flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <div className="w-9 h-9 rounded-xl bg-[#20A486]/20 flex items-center justify-center text-[#20A486]">
-              <ShieldCheck className="w-5 h-5" />
+        <div className="bg-[#0B132B] px-4 sm:px-6 py-4 sm:py-5 text-white flex items-center justify-between gap-3">
+          <div className="flex items-center gap-2.5 sm:gap-3 min-w-0">
+            <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-[#20A486]/20 flex items-center justify-center text-[#20A486] shrink-0">
+              <ShieldCheck className="w-4 h-4 sm:w-5 sm:h-5" />
             </div>
-            <div>
-              <h3 id="privacy-modal-title" className="text-lg font-bold leading-tight">
+            <div className="min-w-0">
+              <h3 id="privacy-modal-title" className="text-base sm:text-lg font-bold leading-tight truncate">
                 {siteConfig.brandName} Privacy Principles
               </h3>
-              <p className="text-xs text-[#EAF1FA]/75">
+              <p className="text-[11px] sm:text-xs text-[#EAF1FA]/75 truncate">
                 Clear, candidate-first privacy and account security guidelines
               </p>
             </div>
@@ -50,7 +50,7 @@ export const PrivacyModal: React.FC<PrivacyModalProps> = ({ isOpen, onClose }) =
           <button
             type="button"
             onClick={onClose}
-            className="text-[#EAF1FA]/70 hover:text-white p-1.5 rounded-lg hover:bg-white/10 transition-colors focus:outline-none focus:ring-2 focus:ring-[#20A486]"
+            className="text-[#EAF1FA]/70 hover:text-white p-1.5 rounded-lg hover:bg-white/10 transition-colors focus:outline-none focus:ring-2 focus:ring-[#20A486] shrink-0"
             aria-label="Close modal"
           >
             <X className="w-5 h-5" />
@@ -58,9 +58,9 @@ export const PrivacyModal: React.FC<PrivacyModalProps> = ({ isOpen, onClose }) =
         </div>
 
         {/* Modal Body */}
-        <div className="p-6 sm:p-8 max-h-[70vh] overflow-y-auto space-y-6 text-sm text-[#3A506B]">
-          <div className="rounded-xl bg-[#EAF1FA] border border-[#DCE6F2] p-4 text-[#0B132B]">
-            <p className="font-semibold text-xs sm:text-sm">
+        <div className="p-4 sm:p-8 max-h-[75vh] overflow-y-auto space-y-5 sm:space-y-6 text-xs sm:text-sm text-[#3A506B]">
+          <div className="rounded-xl bg-[#EAF1FA] border border-[#DCE6F2] p-3.5 sm:p-4 text-[#0B132B]">
+            <p className="font-semibold text-xs sm:text-sm leading-relaxed">
               We help you choose a safe, privacy-conscious workflow that fits your existing professional presence. We never encourage duplicate accounts or unnecessary password sharing.
             </p>
           </div>
@@ -92,7 +92,7 @@ export const PrivacyModal: React.FC<PrivacyModalProps> = ({ isOpen, onClose }) =
         </div>
 
         {/* Modal Footer */}
-        <div className="bg-[#F8FAFC] px-6 py-4 border-t border-[#DCE6F2] flex items-center justify-between">
+        <div className="bg-[#F8FAFC] px-4 sm:px-6 py-3.5 sm:py-4 border-t border-[#DCE6F2] flex items-center justify-between">
           <span className="text-xs text-[#3A506B] flex items-center gap-1">
             <ShieldCheck className="w-4 h-4 text-[#20A486]" />
             <span>Verified Confidentiality</span>
@@ -100,7 +100,7 @@ export const PrivacyModal: React.FC<PrivacyModalProps> = ({ isOpen, onClose }) =
           <button
             type="button"
             onClick={onClose}
-            className="bg-[#0B132B] hover:bg-[#1C2541] text-white text-xs font-semibold px-5 py-2 rounded-xl transition-colors"
+            className="bg-[#0B132B] hover:bg-[#1C2541] text-white text-xs font-semibold px-4 sm:px-5 py-2 rounded-xl transition-colors"
           >
             I Understand
           </button>

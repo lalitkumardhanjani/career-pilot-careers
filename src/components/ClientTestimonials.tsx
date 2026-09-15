@@ -54,30 +54,30 @@ export const ClientTestimonials: React.FC = () => {
         </div>
 
         {/* 3 Testimonial Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-14">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 mb-12 sm:mb-14">
           {testimonials.map((t, idx) => (
             <div
               key={idx}
-              className="rounded-3xl bg-[#F8FAFC] border border-slate-200/90 p-8 flex flex-col justify-between transition-all duration-300 hover:shadow-xl hover:-translate-y-1 hover:border-[#3E4C9A]/40 hover:bg-white relative shadow-sm group"
+              className="rounded-2xl sm:rounded-3xl bg-[#F8FAFC] border border-slate-200/90 p-5 sm:p-7 md:p-8 flex flex-col justify-between transition-all duration-300 hover:shadow-xl hover:-translate-y-1 hover:border-[#3E4C9A]/40 hover:bg-white relative shadow-sm group"
             >
               <div>
                 {/* 5-Star Rating */}
-                <div className="flex items-center gap-1 text-amber-400 mb-5">
+                <div className="flex items-center gap-1 text-amber-400 mb-4 sm:mb-5">
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
                   ))}
                 </div>
 
-                <div className="text-sm font-bold text-[#0B132B] mb-3 group-hover:text-[#3E4C9A] transition-colors leading-snug">
+                <div className="text-sm font-bold text-[#0B132B] mb-2 sm:mb-3 group-hover:text-[#3E4C9A] transition-colors leading-snug">
                   "{t.highlight}"
                 </div>
 
-                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed italic mb-6">
+                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed italic mb-5 sm:mb-6">
                   "{t.quote}"
                 </p>
               </div>
 
-              <div className="pt-5 border-t border-slate-200/70">
+              <div className="pt-4 sm:pt-5 border-t border-slate-200/70">
                 <div className="flex items-center gap-3.5 mb-3">
                   <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#3E4C9A] to-[#4F67B8] text-white font-bold flex items-center justify-center text-xs shrink-0 shadow-sm">
                     {t.avatarInitials}
@@ -90,7 +90,7 @@ export const ClientTestimonials: React.FC = () => {
                       {t.role}
                     </p>
                     <p className="text-[11px] text-[#3E4C9A] font-semibold mt-0.5 flex items-center gap-1">
-                      <Building2 className="w-3 h-3" />
+                      <Building2 className="w-3 h-3 shrink-0" />
                       <span>{t.currentCompany}</span>
                     </p>
                   </div>
@@ -106,7 +106,7 @@ export const ClientTestimonials: React.FC = () => {
         </div>
 
         {/* Aggregate Trust Metrics Strip */}
-        <div className="max-w-4xl mx-auto rounded-2xl bg-[#0B132B] text-white p-6 sm:p-8 border border-white/10 shadow-xl flex flex-wrap items-center justify-around gap-6 text-center">
+        <div className="max-w-4xl mx-auto rounded-2xl bg-[#0B132B] text-white p-4 sm:p-8 border border-white/10 shadow-xl flex flex-wrap items-center justify-around gap-4 sm:gap-6 text-center">
           <div>
             <div className="text-2xl sm:text-3xl font-black text-[#34D399]">1,200+</div>
             <div className="text-xs text-slate-300 font-medium mt-1">Applications Executed</div>

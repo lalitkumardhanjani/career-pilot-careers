@@ -100,34 +100,34 @@ export const WeeklyReportPreview: React.FC = () => {
         </div>
 
         {/* Enterprise Dashboard Container */}
-        <div className="rounded-3xl bg-[#101A36]/85 border border-white/15 backdrop-blur-2xl p-6 sm:p-8 md:p-10 shadow-2xl shadow-black/80">
+        <div className="rounded-3xl bg-[#101A36]/85 border border-white/15 backdrop-blur-2xl p-4 sm:p-7 md:p-10 shadow-2xl shadow-black/80">
           {/* Dashboard Header Bar */}
-          <div className="flex flex-col md:flex-row md:items-center justify-between pb-6 border-b border-white/[0.08] gap-4 mb-8">
-            <div className="flex items-center gap-3.5">
-              <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-[#3E4C9A] to-[#4F67B8] text-white flex items-center justify-center border border-white/10 shrink-0 shadow-md">
-                <FileSpreadsheet className="w-6 h-6" />
+          <div className="flex flex-col md:flex-row md:items-center justify-between pb-5 sm:pb-6 border-b border-white/[0.08] gap-3 sm:gap-4 mb-6 sm:mb-8">
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-gradient-to-br from-[#3E4C9A] to-[#4F67B8] text-white flex items-center justify-center border border-white/10 shrink-0 shadow-md">
+                <FileSpreadsheet className="w-5 h-5 sm:w-6 sm:h-6" />
               </div>
               <div>
                 <div className="flex items-center gap-2">
-                  <span className="text-[11px] font-bold uppercase tracking-widest text-[#34D399]">
+                  <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-widest text-[#34D399]">
                     Confidential Candidate Digest
                   </span>
-                  <span className="text-[10px] bg-white/10 text-slate-300 px-2.5 py-0.5 rounded-full font-semibold border border-white/10">
+                  <span className="text-[9px] sm:text-[10px] bg-white/10 text-slate-300 px-2 py-0.5 rounded-full font-semibold border border-white/10">
                     Live Demo Portal
                   </span>
                 </div>
-                <h3 className="text-lg sm:text-xl font-extrabold text-white">
+                <h3 className="text-base sm:text-lg md:text-xl font-extrabold text-white leading-tight">
                   Executive Weekly Activity & Analytics Summary
                 </h3>
               </div>
             </div>
 
             {/* Navigation Tabs */}
-            <div className="flex items-center gap-1.5 bg-[#070B19]/80 p-1.5 rounded-2xl border border-white/10 self-start md:self-auto">
+            <div className="flex items-center gap-1 bg-[#070B19]/80 p-1 sm:p-1.5 rounded-2xl border border-white/10 overflow-x-auto max-w-full">
               <button
                 type="button"
                 onClick={() => setSelectedTab("overview")}
-                className={`px-4 py-2 rounded-xl text-xs font-bold transition-all duration-200 ${
+                className={`px-3 sm:px-4 py-1.5 sm:py-2 rounded-xl text-xs font-bold transition-all duration-200 whitespace-nowrap shrink-0 ${
                   selectedTab === "overview"
                     ? "bg-[#3E4C9A] text-white shadow-md shadow-[#3E4C9A]/30"
                     : "text-slate-400 hover:text-white hover:bg-white/[0.04]"
@@ -138,7 +138,7 @@ export const WeeklyReportPreview: React.FC = () => {
               <button
                 type="button"
                 onClick={() => setSelectedTab("charts")}
-                className={`px-4 py-2 rounded-xl text-xs font-bold transition-all duration-200 ${
+                className={`px-3 sm:px-4 py-1.5 sm:py-2 rounded-xl text-xs font-bold transition-all duration-200 whitespace-nowrap shrink-0 ${
                   selectedTab === "charts"
                     ? "bg-[#3E4C9A] text-white shadow-md shadow-[#3E4C9A]/30"
                     : "text-slate-400 hover:text-white hover:bg-white/[0.04]"
@@ -149,7 +149,7 @@ export const WeeklyReportPreview: React.FC = () => {
               <button
                 type="button"
                 onClick={() => setSelectedTab("log")}
-                className={`px-4 py-2 rounded-xl text-xs font-bold transition-all duration-200 ${
+                className={`px-3 sm:px-4 py-1.5 sm:py-2 rounded-xl text-xs font-bold transition-all duration-200 whitespace-nowrap shrink-0 ${
                   selectedTab === "log"
                     ? "bg-[#3E4C9A] text-white shadow-md shadow-[#3E4C9A]/30"
                     : "text-slate-400 hover:text-white hover:bg-white/[0.04]"
@@ -162,9 +162,9 @@ export const WeeklyReportPreview: React.FC = () => {
 
           {/* TAB 1: Key Metrics Overview */}
           {selectedTab === "overview" && (
-            <div className="space-y-6 animate-in fade-in duration-300">
+            <div className="space-y-4 sm:space-y-6 animate-in fade-in duration-300">
               {/* 6 Core Weekly Insight KPI Cards */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3.5 sm:gap-5">
                 {/* Metric 1: Emails Sent */}
                 <div className="rounded-2xl bg-[#070B19]/80 border border-white/[0.08] p-5 hover:border-blue-400/40 transition-all group">
                   <div className="flex items-center justify-between text-xs text-slate-400 mb-3">
@@ -430,15 +430,15 @@ export const WeeklyReportPreview: React.FC = () => {
           )}
 
           {/* Footer Bar with Download Sample and CTA */}
-          <div className="mt-8 pt-6 border-t border-white/[0.08] flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <div className="mt-6 sm:mt-8 pt-6 border-t border-white/[0.08] flex flex-col sm:flex-row sm:items-center justify-between gap-3.5 sm:gap-4">
             <div className="flex items-center gap-3">
               <button
                 type="button"
                 onClick={() => setPdfModalOpen(true)}
-                className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/15 text-white text-xs font-semibold px-4 py-2.5 rounded-xl border border-white/15 transition-colors cursor-pointer shadow-xs"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/15 text-white text-xs font-semibold px-4 py-2.5 rounded-xl border border-white/15 transition-colors cursor-pointer shadow-xs"
                 id="view-sample-pdf-btn"
               >
-                <Download className="w-3.5 h-3.5 text-[#34D399]" />
+                <Download className="w-3.5 h-3.5 text-[#34D399] shrink-0" />
                 <span>View Sample PDF Digest</span>
               </button>
               <span className="text-[11px] text-slate-400 hidden lg:inline">
@@ -448,7 +448,7 @@ export const WeeklyReportPreview: React.FC = () => {
 
             <a
               href="#contact"
-              className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-[#3E4C9A] to-[#4F67B8] hover:from-[#4859b3] hover:to-[#5571d4] text-white text-xs sm:text-sm font-bold px-6 py-2.5 rounded-xl transition-all duration-200 shadow-lg shadow-[#3E4C9A]/30 shrink-0"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-gradient-to-r from-[#3E4C9A] to-[#4F67B8] hover:from-[#4859b3] hover:to-[#5571d4] text-white text-xs sm:text-sm font-bold px-6 py-2.5 rounded-xl transition-all duration-200 shadow-lg shadow-[#3E4C9A]/30 shrink-0"
             >
               <span>Get Your Weekly Career Digest</span>
               <ArrowRight className="w-4 h-4" />
@@ -460,30 +460,30 @@ export const WeeklyReportPreview: React.FC = () => {
       {/* SAMPLE PDF DIGEST EXECUTIVE MODAL */}
       {pdfModalOpen && (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-black/80 backdrop-blur-md animate-in fade-in duration-200"
+          className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-black/80 backdrop-blur-md animate-in fade-in duration-200"
           role="dialog"
           aria-modal="true"
         >
-          <div className="relative w-full max-w-3xl bg-[#0B132B] text-white rounded-3xl shadow-2xl border border-white/20 overflow-hidden flex flex-col max-h-[90vh]">
+          <div className="relative w-full max-w-3xl bg-[#0B132B] text-white rounded-2xl sm:rounded-3xl shadow-2xl border border-white/20 overflow-hidden flex flex-col max-h-[92vh]">
             {/* Modal Header */}
-            <div className="bg-[#101A36] px-6 py-4 border-b border-white/10 flex items-center justify-between">
-              <div className="flex items-center gap-3">
-                <div className="w-9 h-9 rounded-xl bg-[#3E4C9A] flex items-center justify-center text-white">
-                  <FileText className="w-5 h-5" />
+            <div className="bg-[#101A36] px-4 sm:px-6 py-3.5 sm:py-4 border-b border-white/10 flex items-center justify-between gap-3">
+              <div className="flex items-center gap-2.5 sm:gap-3 min-w-0">
+                <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-[#3E4C9A] flex items-center justify-center text-white shrink-0">
+                  <FileText className="w-4 h-4 sm:w-5 sm:h-5" />
                 </div>
-                <div>
-                  <div className="text-xs font-bold text-[#34D399] uppercase tracking-wider">
+                <div className="min-w-0">
+                  <div className="text-[10px] sm:text-xs font-bold text-[#34D399] uppercase tracking-wider truncate">
                     Official Executive Document Preview
                   </div>
-                  <h4 className="text-sm sm:text-base font-extrabold text-white">
-                    CareerPilot Confidential Candidate Performance Digest
+                  <h4 className="text-xs sm:text-sm md:text-base font-extrabold text-white truncate">
+                    CareerPilot Candidate Performance Digest
                   </h4>
                 </div>
               </div>
               <button
                 type="button"
                 onClick={() => setPdfModalOpen(false)}
-                className="text-slate-400 hover:text-white p-2 rounded-xl focus:outline-none"
+                className="text-slate-400 hover:text-white p-1.5 sm:p-2 rounded-xl focus:outline-none shrink-0"
                 aria-label="Close Sample PDF Modal"
               >
                 <X className="w-5 h-5" />
@@ -491,14 +491,14 @@ export const WeeklyReportPreview: React.FC = () => {
             </div>
 
             {/* Modal Document Body (Styled like an executive PDF document) */}
-            <div className="p-6 sm:p-8 space-y-6 overflow-y-auto text-xs sm:text-sm text-slate-300">
+            <div className="p-4 sm:p-7 space-y-5 sm:space-y-6 overflow-y-auto text-xs sm:text-sm text-slate-300">
               {/* Document Meta Header */}
-              <div className="bg-[#070B19] rounded-2xl p-5 border border-white/10 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+              <div className="bg-[#070B19] rounded-2xl p-4 sm:p-5 border border-white/10 flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-4">
                 <div>
                   <span className="text-[10px] uppercase tracking-widest text-slate-400 font-bold block">
                     Candidate Reference
                   </span>
-                  <span className="text-base font-bold text-white">
+                  <span className="text-sm sm:text-base font-bold text-white">
                     Client ID #CP-8492 • Senior Tech Lead
                   </span>
                   <p className="text-xs text-slate-400">Target CTC: ₹45L–₹60L • Bengaluru / Remote</p>
@@ -507,7 +507,7 @@ export const WeeklyReportPreview: React.FC = () => {
                   <span className="text-[10px] uppercase tracking-widest text-slate-400 font-bold block">
                     Reporting Period
                   </span>
-                  <span className="text-sm font-semibold text-[#34D399]">
+                  <span className="text-xs sm:text-sm font-semibold text-[#34D399]">
                     Week 3 (Friday Audit Delivered)
                   </span>
                   <p className="text-xs text-slate-400">Status: Active Recruitment Pipeline</p>
@@ -516,32 +516,32 @@ export const WeeklyReportPreview: React.FC = () => {
 
               {/* Executive Summary Stats */}
               <div>
-                <h5 className="font-bold text-white text-sm mb-3">1. Executive Weekly Volume Summary</h5>
-                <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-center">
-                  <div className="bg-[#1C2541]/50 p-3 rounded-xl border border-white/10">
-                    <div className="text-xl font-black text-white">38</div>
-                    <div className="text-[10px] text-slate-400 uppercase">Companies Applied</div>
+                <h5 className="font-bold text-white text-xs sm:text-sm mb-2.5 sm:mb-3">1. Executive Weekly Volume Summary</h5>
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-3 text-center">
+                  <div className="bg-[#1C2541]/50 p-2.5 sm:p-3 rounded-xl border border-white/10">
+                    <div className="text-lg sm:text-xl font-black text-white">38</div>
+                    <div className="text-[9px] sm:text-[10px] text-slate-400 uppercase">Companies Applied</div>
                   </div>
-                  <div className="bg-[#1C2541]/50 p-3 rounded-xl border border-white/10">
-                    <div className="text-xl font-black text-blue-300">42</div>
-                    <div className="text-[10px] text-slate-400 uppercase">Recruiter Emails</div>
+                  <div className="bg-[#1C2541]/50 p-2.5 sm:p-3 rounded-xl border border-white/10">
+                    <div className="text-lg sm:text-xl font-black text-blue-300">42</div>
+                    <div className="text-[9px] sm:text-[10px] text-slate-400 uppercase">Recruiter Emails</div>
                   </div>
-                  <div className="bg-[#1C2541]/50 p-3 rounded-xl border border-white/10">
-                    <div className="text-xl font-black text-purple-300">26</div>
-                    <div className="text-[10px] text-slate-400 uppercase">Talent Leads Linked</div>
+                  <div className="bg-[#1C2541]/50 p-2.5 sm:p-3 rounded-xl border border-white/10">
+                    <div className="text-lg sm:text-xl font-black text-purple-300">26</div>
+                    <div className="text-[9px] sm:text-[10px] text-slate-400 uppercase">Talent Leads Linked</div>
                   </div>
-                  <div className="bg-[#1C2541]/50 p-3 rounded-xl border border-white/10">
-                    <div className="text-xl font-black text-[#34D399]">4</div>
-                    <div className="text-[10px] text-slate-400 uppercase">Alumni Referrals</div>
+                  <div className="bg-[#1C2541]/50 p-2.5 sm:p-3 rounded-xl border border-white/10">
+                    <div className="text-lg sm:text-xl font-black text-[#34D399]">4</div>
+                    <div className="text-[9px] sm:text-[10px] text-slate-400 uppercase">Alumni Referrals</div>
                   </div>
                 </div>
               </div>
 
               {/* Sample Verified Submissions Table */}
               <div>
-                <h5 className="font-bold text-white text-sm mb-3">2. Sample Application Audit Log (Week 3)</h5>
+                <h5 className="font-bold text-white text-xs sm:text-sm mb-2.5 sm:mb-3">2. Sample Application Audit Log (Week 3)</h5>
                 <div className="overflow-x-auto rounded-xl border border-white/10">
-                  <table className="w-full text-left text-xs text-slate-300">
+                  <table className="min-w-[500px] w-full text-left text-xs text-slate-300">
                     <thead className="bg-[#101A36] text-white uppercase text-[10px] tracking-wider border-b border-white/10">
                       <tr>
                         <th className="py-2.5 px-3">Company</th>
@@ -580,7 +580,7 @@ export const WeeklyReportPreview: React.FC = () => {
 
               {/* Strategic Next Steps */}
               <div className="bg-[#101A36]/60 rounded-2xl p-4 border border-white/10">
-                <h5 className="font-bold text-white text-xs uppercase tracking-wider mb-2 flex items-center gap-1.5">
+                <h5 className="font-bold text-white text-xs uppercase tracking-wider mb-1.5 flex items-center gap-1.5">
                   <ShieldCheck className="w-4 h-4 text-[#34D399]" />
                   <span>3. Strategic Focus for Upcoming Week</span>
                 </h5>
@@ -591,22 +591,22 @@ export const WeeklyReportPreview: React.FC = () => {
             </div>
 
             {/* Modal Footer */}
-            <div className="bg-[#101A36] px-6 py-4 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-3">
-              <div className="text-[11px] text-slate-400 text-center sm:text-left">
+            <div className="bg-[#101A36] px-4 sm:px-6 py-3.5 sm:py-4 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-3">
+              <div className="text-[10px] sm:text-[11px] text-slate-400 text-center sm:text-left">
                 Every Friday at 5:00 PM, an updated PDF and online audit like this is sent directly to you.
               </div>
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-2 w-full sm:w-auto justify-end">
                 <button
                   type="button"
                   onClick={() => setPdfModalOpen(false)}
-                  className="bg-white/10 hover:bg-white/15 text-white text-xs font-semibold px-4 py-2 rounded-xl transition-colors"
+                  className="w-full sm:w-auto bg-white/10 hover:bg-white/15 text-white text-xs font-semibold px-4 py-2 rounded-xl transition-colors text-center"
                 >
                   Close Preview
                 </button>
                 <a
                   href="#contact"
                   onClick={() => setPdfModalOpen(false)}
-                  className="bg-gradient-to-r from-[#3E4C9A] to-[#4F67B8] text-white text-xs font-bold px-5 py-2 rounded-xl shadow-md transition-all"
+                  className="w-full sm:w-auto bg-gradient-to-r from-[#3E4C9A] to-[#4F67B8] text-white text-xs font-bold px-5 py-2 rounded-xl shadow-md transition-all text-center shrink-0"
                 >
                   Start Your Concierge Service
                 </a>

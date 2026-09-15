@@ -27,40 +27,40 @@ export const FinalCTA: React.FC = () => {
           Let our career specialists manage the grueling 15–20 hours of daily job applications and recruiter outreach, while you stay focused on your current high-impact work.
         </p>
 
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-3.5 sm:gap-4 mb-8">
           <a
             href="#contact"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-gradient-to-r from-[#3E4C9A] via-[#4F67B8] to-[#3E4C9A] hover:from-[#4859b3] hover:to-[#5571d4] text-white font-bold text-base px-9 py-4 rounded-xl shadow-xl shadow-[#3E4C9A]/35 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-2xl focus:outline-none focus:ring-2 focus:ring-[#34D399]"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-gradient-to-r from-[#3E4C9A] via-[#4F67B8] to-[#3E4C9A] hover:from-[#4859b3] hover:to-[#5571d4] text-white font-bold text-sm sm:text-base px-6 sm:px-9 py-3.5 sm:py-4 rounded-xl shadow-xl shadow-[#3E4C9A]/35 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-2xl focus:outline-none focus:ring-2 focus:ring-[#34D399]"
             id="final-cta-primary-btn"
           >
             <span>Schedule Free Strategy Consultation</span>
-            <ArrowRight className="w-5 h-5" />
+            <ArrowRight className="w-5 h-5 shrink-0" />
           </a>
 
           <a
             href={siteConfig.contact.whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-[#10B981] hover:bg-[#0ea372] text-white font-bold text-base px-8 py-4 rounded-xl shadow-lg shadow-[#10B981]/25 transition-all duration-300 hover:-translate-y-0.5"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-[#10B981] hover:bg-[#0ea372] text-white font-bold text-sm sm:text-base px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl shadow-lg shadow-[#10B981]/25 transition-all duration-300 hover:-translate-y-0.5"
             id="final-cta-whatsapp-btn"
           >
-            <MessageCircle className="w-5 h-5" />
+            <MessageCircle className="w-5 h-5 shrink-0" />
             <span>Chat Directly on WhatsApp</span>
           </a>
         </div>
 
-        <div className="flex flex-wrap items-center justify-center gap-y-2 gap-x-6 text-xs text-slate-400 font-medium">
+        <div className="flex flex-wrap items-center justify-center gap-y-2 gap-x-4 sm:gap-x-6 text-[11px] sm:text-xs text-slate-400 font-medium">
           <span className="flex items-center gap-1.5 text-slate-300">
-            <ShieldCheck className="w-3.5 h-3.5 text-[#34D399]" />
-            100% Confidential
+            <ShieldCheck className="w-3.5 h-3.5 text-[#34D399] shrink-0" />
+            <span>100% Confidential</span>
           </span>
           <span className="flex items-center gap-1.5 text-slate-300">
-            <Clock className="w-3.5 h-3.5 text-[#34D399]" />
-            15-Minute Intro Call
+            <Clock className="w-3.5 h-3.5 text-[#34D399] shrink-0" />
+            <span>15-Minute Intro Call</span>
           </span>
           <span className="flex items-center gap-1.5 text-slate-300">
-            <Sparkles className="w-3.5 h-3.5 text-[#34D399]" />
-            Zero Sales Pressure
+            <Sparkles className="w-3.5 h-3.5 text-[#34D399] shrink-0" />
+            <span>Zero Sales Pressure</span>
           </span>
         </div>
       </div>

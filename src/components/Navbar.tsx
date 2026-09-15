@@ -26,20 +26,20 @@ export const Navbar: React.FC = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
       {/* Top Subtle Announcement Bar */}
-      <div className="bg-[#070B19] border-b border-white/[0.06] text-white py-1.5 px-4 text-center text-[11px] sm:text-xs font-medium tracking-wide">
-        <div className="max-w-7xl mx-auto flex items-center justify-center gap-2 sm:gap-3 flex-wrap">
-          <span className="inline-flex items-center gap-1.5 text-[#34D399] font-semibold">
+      <div className="bg-[#070B19] border-b border-white/[0.06] text-white py-1 sm:py-1.5 px-3 sm:px-4 text-center text-[10px] sm:text-xs font-medium tracking-wide">
+        <div className="max-w-7xl mx-auto flex items-center justify-center gap-1.5 sm:gap-3 flex-wrap">
+          <span className="inline-flex items-center gap-1.5 text-[#34D399] font-semibold shrink-0">
             <span className="w-1.5 h-1.5 rounded-full bg-[#34D399] animate-pulse"></span>
             Accepting Q3 Cohort
           </span>
           <span className="text-slate-400 hidden sm:inline">•</span>
-          <span className="text-slate-300">
-            Dedicated Career Concierge for Busy Working Professionals in India & Globally
+          <span className="text-slate-300 line-clamp-1 sm:line-clamp-none">
+            Dedicated Career Concierge for Busy Working Professionals
           </span>
           <span className="text-slate-400 hidden md:inline">•</span>
           <a
             href="#contact"
-            className="text-white hover:text-[#34D399] underline underline-offset-2 transition-colors hidden md:inline font-semibold"
+            className="text-white hover:text-[#34D399] underline underline-offset-2 transition-colors hidden md:inline font-semibold shrink-0"
           >
             Check Availability →
           </a>
@@ -50,33 +50,33 @@ export const Navbar: React.FC = () => {
       <div
         className={`transition-all duration-300 ${
           isScrolled
-            ? "bg-[#0B132B]/95 backdrop-blur-xl shadow-xl shadow-black/25 border-b border-white/[0.08] py-3"
-            : "bg-[#0B132B]/90 backdrop-blur-md py-4 border-b border-white/[0.04]"
+            ? "bg-[#0B132B]/95 backdrop-blur-xl shadow-xl shadow-black/25 border-b border-white/[0.08] py-2.5 sm:py-3"
+            : "bg-[#0B132B]/90 backdrop-blur-md py-3 sm:py-4 border-b border-white/[0.04]"
         }`}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between gap-2">
             {/* Brand Logo & Name */}
             <a
               href="#"
-              className="flex items-center gap-3 group focus:outline-none rounded-xl p-1"
+              className="flex items-center gap-2.5 sm:gap-3 group focus:outline-none rounded-xl p-1 min-w-0"
               aria-label={`${siteConfig.brandName} Home`}
             >
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#3E4C9A] via-[#4F67B8] to-[#10B981] p-[1.5px] shadow-lg shadow-[#3E4C9A]/20 transition-transform duration-300 group-hover:scale-105">
+              <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-br from-[#3E4C9A] via-[#4F67B8] to-[#10B981] p-[1.5px] shadow-lg shadow-[#3E4C9A]/20 transition-transform duration-300 group-hover:scale-105 shrink-0">
                 <div className="w-full h-full bg-[#0B132B] rounded-[10px] flex items-center justify-center">
-                  <Compass className="w-5 h-5 text-[#34D399] transition-transform duration-500 group-hover:rotate-45" />
+                  <Compass className="w-4 h-4 sm:w-5 sm:h-5 text-[#34D399] transition-transform duration-500 group-hover:rotate-45" />
                 </div>
               </div>
-              <div>
-                <div className="flex items-center gap-2">
-                  <span className="text-white font-extrabold text-lg sm:text-xl tracking-tight leading-tight">
+              <div className="min-w-0">
+                <div className="flex items-center gap-1.5 sm:gap-2">
+                  <span className="text-white font-extrabold text-base sm:text-lg md:text-xl tracking-tight leading-tight truncate">
                     {siteConfig.brandName}
                   </span>
-                  <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full bg-[#3E4C9A]/40 text-blue-200 border border-blue-400/20">
+                  <span className="text-[9px] sm:text-[10px] font-bold uppercase tracking-wider px-1.5 sm:px-2 py-0.5 rounded-full bg-[#3E4C9A]/40 text-blue-200 border border-blue-400/20 hidden sm:inline-flex shrink-0">
                     Concierge
                   </span>
                 </div>
-                <span className="text-slate-400 text-[11px] font-medium tracking-wide block">
+                <span className="text-slate-400 text-[10px] sm:text-[11px] font-medium tracking-wide block truncate">
                   Career Co-Pilot for Busy Professionals
                 </span>
               </div>

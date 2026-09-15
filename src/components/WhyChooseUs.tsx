@@ -22,13 +22,13 @@ export const WhyChooseUs: React.FC = () => {
         </div>
 
         {/* 4 Credibility Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
           {siteConfig.credibilityPillars.map((pillar, idx) => {
             const Icon = pillarIcons[idx] || Check;
             return (
               <div
                 key={pillar.title}
-                className="group rounded-2xl bg-white border border-slate-200/90 p-7 flex flex-col justify-between transition-all duration-300 hover:border-[#3E4C9A]/50 hover:-translate-y-1 hover:shadow-xl shadow-sm"
+                className="group rounded-2xl bg-white border border-slate-200/90 p-5 sm:p-7 flex flex-col justify-between transition-all duration-300 hover:border-[#3E4C9A]/50 hover:-translate-y-1 hover:shadow-xl shadow-sm"
               >
                 <div>
                   <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#EBF0FA] to-[#F1F5F9] border border-[#3E4C9A]/15 flex items-center justify-center text-[#3E4C9A] mb-6 group-hover:scale-105 transition-transform shadow-xs">

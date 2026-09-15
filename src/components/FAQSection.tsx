@@ -40,15 +40,15 @@ export const FAQSection: React.FC = () => {
                 <button
                   type="button"
                   onClick={() => toggleAccordion(idx)}
-                  className="w-full text-left px-6 py-5 flex items-center justify-between gap-4 focus:outline-none"
+                  className="w-full text-left px-4 sm:px-6 py-4 sm:py-5 flex items-center justify-between gap-3 sm:gap-4 focus:outline-none"
                   aria-expanded={isOpen}
                   id={`faq-btn-${idx}`}
                 >
-                  <div className="flex items-center gap-3.5">
-                    <span className="text-xs font-bold text-[#3E4C9A] bg-[#EBF0FA] border border-[#3E4C9A]/20 px-2.5 py-0.5 rounded-md shrink-0">
+                  <div className="flex items-center gap-2.5 sm:gap-3.5">
+                    <span className="text-xs font-bold text-[#3E4C9A] bg-[#EBF0FA] border border-[#3E4C9A]/20 px-2 sm:px-2.5 py-0.5 rounded-md shrink-0">
                       Q0{idx + 1}
                     </span>
-                    <span className="text-base sm:text-lg font-bold text-[#0B132B]">
+                    <span className="text-sm sm:text-base md:text-lg font-bold text-[#0B132B]">
                       {faq.question}
                     </span>
                   </div>
@@ -60,7 +60,7 @@ export const FAQSection: React.FC = () => {
                 </button>
 
                 {isOpen && (
-                  <div className="px-6 pb-6 pt-1 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-200/60 animate-in fade-in duration-200">
+                  <div className="px-4 sm:px-6 pb-5 sm:pb-6 pt-1 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-200/60 animate-in fade-in duration-200">
                     <p>{faq.answer}</p>
                   </div>
                 )}
@@ -70,7 +70,7 @@ export const FAQSection: React.FC = () => {
         </div>
 
         {/* Additional questions link */}
-        <div className="mt-12 text-center p-6 rounded-2xl bg-[#F8FAFC] border border-slate-200/90 shadow-xs">
+        <div className="mt-8 sm:mt-12 text-center p-4 sm:p-6 rounded-2xl bg-[#F8FAFC] border border-slate-200/90 shadow-xs">
           <p className="text-xs sm:text-sm text-slate-700 font-medium">
             Have a specific search criteria or timeline question?{" "}
             <a

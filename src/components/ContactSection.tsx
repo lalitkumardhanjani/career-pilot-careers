@@ -212,13 +212,13 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ selectedPlanId }
         </div>
 
         {/* 3 Direct Contact Channel Action Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 mb-12 sm:mb-16 max-w-4xl mx-auto">
           {/* Email Us */}
-          <div className="rounded-2xl bg-white border border-slate-200/90 p-6 text-center shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
-            <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#EBF0FA] to-[#F1F5F9] text-[#3E4C9A] border border-[#3E4C9A]/15 flex items-center justify-center mx-auto mb-4 group-hover:scale-105 transition-transform shadow-xs">
-              <Mail className="w-6 h-6" />
+          <div className="rounded-2xl bg-white border border-slate-200/90 p-5 sm:p-6 text-center shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
+            <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-br from-[#EBF0FA] to-[#F1F5F9] text-[#3E4C9A] border border-[#3E4C9A]/15 flex items-center justify-center mx-auto mb-3.5 sm:mb-4 group-hover:scale-105 transition-transform shadow-xs">
+              <Mail className="w-5 h-5 sm:w-6 sm:h-6" />
             </div>
-            <h3 className="font-bold text-base text-[#0B132B] mb-1">Direct Email</h3>
+            <h3 className="font-bold text-sm sm:text-base text-[#0B132B] mb-1">Direct Email</h3>
             <p className="text-xs sm:text-sm text-slate-600 font-medium mb-4 break-all">
               {primaryRecipient}
             </p>
@@ -233,11 +233,11 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ selectedPlanId }
           </div>
 
           {/* Call Us */}
-          <div className="rounded-2xl bg-white border border-slate-200/90 p-6 text-center shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
-            <div className="w-12 h-12 rounded-xl bg-slate-100 text-slate-800 border border-slate-200 flex items-center justify-center mx-auto mb-4 group-hover:scale-105 transition-transform shadow-xs">
-              <Phone className="w-6 h-6" />
+          <div className="rounded-2xl bg-white border border-slate-200/90 p-5 sm:p-6 text-center shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
+            <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-slate-100 text-slate-800 border border-slate-200 flex items-center justify-center mx-auto mb-3.5 sm:mb-4 group-hover:scale-105 transition-transform shadow-xs">
+              <Phone className="w-5 h-5 sm:w-6 sm:h-6" />
             </div>
-            <h3 className="font-bold text-base text-[#0B132B] mb-1">Direct Phone</h3>
+            <h3 className="font-bold text-sm sm:text-base text-[#0B132B] mb-1">Direct Phone</h3>
             <p className="text-xs sm:text-sm text-slate-600 font-medium mb-4">
               {siteConfig.contact.phoneDisplay}
             </p>
@@ -252,11 +252,11 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ selectedPlanId }
           </div>
 
           {/* WhatsApp Us */}
-          <div className="rounded-2xl bg-white border border-slate-200/90 p-6 text-center shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
-            <div className="w-12 h-12 rounded-xl bg-emerald-50 text-[#10B981] border border-emerald-200/60 flex items-center justify-center mx-auto mb-4 group-hover:scale-105 transition-transform shadow-xs">
-              <MessageCircle className="w-6 h-6" />
+          <div className="rounded-2xl bg-white border border-slate-200/90 p-5 sm:p-6 text-center shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group sm:col-span-2 md:col-span-1">
+            <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-emerald-50 text-[#10B981] border border-emerald-200/60 flex items-center justify-center mx-auto mb-3.5 sm:mb-4 group-hover:scale-105 transition-transform shadow-xs">
+              <MessageCircle className="w-5 h-5 sm:w-6 sm:h-6" />
             </div>
-            <h3 className="font-bold text-base text-[#0B132B] mb-1">WhatsApp Chat</h3>
+            <h3 className="font-bold text-sm sm:text-base text-[#0B132B] mb-1">WhatsApp Chat</h3>
             <p className="text-xs sm:text-sm text-slate-600 font-medium mb-4">
               Instant Concierge Chat
             </p>
@@ -274,7 +274,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ selectedPlanId }
         </div>
 
         {/* Lead Generation Form Container */}
-        <div className="max-w-3xl mx-auto rounded-3xl bg-white border border-slate-200/90 p-8 sm:p-10 md:p-12 shadow-2xl shadow-slate-900/5">
+        <div className="max-w-3xl mx-auto rounded-2xl sm:rounded-3xl bg-white border border-slate-200/90 p-4 sm:p-8 md:p-12 shadow-2xl shadow-slate-900/5">
           {isSubmitted ? (
             /* Refined Confirmation Success State */
             <div className="text-center py-6 animate-in fade-in zoom-in-95 duration-300">
@@ -597,7 +597,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ selectedPlanId }
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full inline-flex items-center justify-center gap-2.5 bg-gradient-to-r from-[#3E4C9A] via-[#4F67B8] to-[#3E4C9A] hover:from-[#4859b3] hover:to-[#5571d4] text-white font-bold text-base py-4 px-6 rounded-xl shadow-xl shadow-[#3E4C9A]/30 transition-all duration-300 hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-[#34D399] disabled:opacity-60 disabled:pointer-events-none cursor-pointer"
+                className="w-full inline-flex items-center justify-center gap-2.5 bg-gradient-to-r from-[#3E4C9A] via-[#4F67B8] to-[#3E4C9A] hover:from-[#4859b3] hover:to-[#5571d4] text-white font-bold text-sm sm:text-base py-3.5 sm:py-4 px-4 sm:px-6 rounded-xl shadow-xl shadow-[#3E4C9A]/30 transition-all duration-300 hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-[#34D399] disabled:opacity-60 disabled:pointer-events-none cursor-pointer"
                 id="submit-consultation-btn"
               >
                 {isSubmitting ? (

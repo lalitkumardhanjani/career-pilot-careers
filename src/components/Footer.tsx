@@ -13,9 +13,9 @@ export const Footer: React.FC = () => {
     <>
       <footer className="bg-[#070B19] text-white border-t border-white/[0.08] pt-16 pb-12 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-white/[0.08]">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 sm:gap-10 pb-10 sm:pb-12 border-b border-white/[0.08]">
             {/* Brand column */}
-            <div className="md:col-span-2">
+            <div className="sm:col-span-2">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#3E4C9A] to-[#10B981] p-[1.5px] shadow-md">
                   <div className="w-full h-full bg-[#070B19] rounded-[10px] flex items-center justify-center">

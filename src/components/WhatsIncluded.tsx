@@ -47,14 +47,14 @@ export const WhatsIncluded: React.FC = () => {
         </div>
 
         {/* 6 Core Service Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 mb-14">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-7 mb-12 sm:mb-14">
           {siteConfig.services.map((srv) => {
             const Icon = iconMap[srv.icon] || FileText;
             const highlights = serviceHighlights[srv.letter] || [];
             return (
               <div
                 key={srv.id}
-                className="rounded-2xl p-7 flex flex-col justify-between transition-all duration-300 hover:shadow-xl hover:-translate-y-1 bg-white border border-slate-200/90 hover:border-[#3E4C9A]/50 shadow-sm group"
+                className="rounded-2xl p-5 sm:p-7 flex flex-col justify-between transition-all duration-300 hover:shadow-xl hover:-translate-y-1 bg-white border border-slate-200/90 hover:border-[#3E4C9A]/50 shadow-sm group"
               >
                 <div>
                   <div className="flex items-center justify-between mb-5">

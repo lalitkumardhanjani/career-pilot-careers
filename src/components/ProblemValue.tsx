@@ -34,13 +34,13 @@ export const ProblemValue: React.FC = () => {
         </div>
 
         {/* 4 Pain-Point Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
           {siteConfig.problemCards.map((card, idx) => {
             const Icon = iconMap[card.icon] || AlertCircle;
             return (
               <div
                 key={idx}
-                className="group relative rounded-2xl bg-[#F8FAFC] border border-slate-200/90 p-7 shadow-sm transition-all duration-300 hover:shadow-xl hover:-translate-y-1 hover:border-[#3E4C9A]/40 hover:bg-white flex flex-col justify-between overflow-hidden"
+                className="group relative rounded-2xl bg-[#F8FAFC] border border-slate-200/90 p-5 sm:p-7 shadow-sm transition-all duration-300 hover:shadow-xl hover:-translate-y-1 hover:border-[#3E4C9A]/40 hover:bg-white flex flex-col justify-between overflow-hidden"
               >
                 {/* Subtle Watermark Number */}
                 <span className="absolute -top-3 -right-1 text-5xl font-black text-slate-100 group-hover:text-[#EBF0FA] transition-colors pointer-events-none select-none">
