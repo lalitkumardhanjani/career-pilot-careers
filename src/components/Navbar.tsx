@@ -17,103 +17,133 @@ export const Navbar: React.FC = () => {
   const navLinks = [
     { name: "How It Works", href: "#how-it-works" },
     { name: "What We Do", href: "#what-we-do" },
-    { name: "Weekly Updates", href: "#weekly-updates" },
+    { name: "Weekly Dashboard", href: "#weekly-updates" },
     { name: "Pricing", href: "#pricing" },
     { name: "FAQs", href: "#faqs" },
     { name: "Contact", href: "#contact" },
   ];
 
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? "bg-[#0B132B]/95 backdrop-blur-md shadow-lg shadow-black/20 border-b border-[#EAF1FA]/10 py-3"
-          : "bg-[#0B132B] py-4 sm:py-5 border-b border-[#EAF1FA]/5"
-      }`}
-    >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between">
-          {/* Brand Logo & Name */}
+    <header className="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+      {/* Top Subtle Announcement Bar */}
+      <div className="bg-[#070B19] border-b border-white/[0.06] text-white py-1.5 px-4 text-center text-[11px] sm:text-xs font-medium tracking-wide">
+        <div className="max-w-7xl mx-auto flex items-center justify-center gap-2 sm:gap-3 flex-wrap">
+          <span className="inline-flex items-center gap-1.5 text-[#34D399] font-semibold">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#34D399] animate-pulse"></span>
+            Accepting Q3 Cohort
+          </span>
+          <span className="text-slate-400 hidden sm:inline">•</span>
+          <span className="text-slate-300">
+            Dedicated Career Concierge for Busy Working Professionals in India & Globally
+          </span>
+          <span className="text-slate-400 hidden md:inline">•</span>
           <a
-            href="#"
-            className="flex items-center gap-3 group focus:outline-none focus-visible:ring-2 focus-visible:ring-[#20A486] rounded-lg p-1"
-            aria-label={`${siteConfig.brandName} Home`}
+            href="#contact"
+            className="text-white hover:text-[#34D399] underline underline-offset-2 transition-colors hidden md:inline font-semibold"
           >
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#3E4C9A] to-[#20A486] p-[1.5px] shadow-md transition-transform group-hover:scale-105">
-              <div className="w-full h-full bg-[#0B132B] rounded-[10px] flex items-center justify-center">
-                <Compass className="w-5 h-5 text-[#20A486]" />
-              </div>
-            </div>
-            <div>
-              <span className="text-white font-bold text-lg sm:text-xl tracking-tight block leading-tight">
-                {siteConfig.brandName}
-              </span>
-              <span className="text-[#EAF1FA]/70 text-[11px] font-medium tracking-wide uppercase block">
-                Career Co-Pilot for Busy Professionals
-              </span>
-            </div>
+            Check Availability →
           </a>
+        </div>
+      </div>
 
-          {/* Desktop Navigation Links */}
-          <nav className="hidden lg:flex items-center gap-7" aria-label="Main Navigation">
-            {navLinks.map((link) => (
-              <a
-                key={link.name}
-                href={link.href}
-                className="text-sm font-medium text-[#EAF1FA]/85 hover:text-white transition-colors duration-200 focus:outline-none focus-visible:text-white focus-visible:ring-2 focus-visible:ring-[#20A486] rounded px-1"
-              >
-                {link.name}
-              </a>
-            ))}
-          </nav>
-
-          {/* Primary CTA button */}
-          <div className="hidden sm:flex items-center gap-4">
+      {/* Main Glassmorphic Navigation Bar */}
+      <div
+        className={`transition-all duration-300 ${
+          isScrolled
+            ? "bg-[#0B132B]/95 backdrop-blur-xl shadow-xl shadow-black/25 border-b border-white/[0.08] py-3"
+            : "bg-[#0B132B]/90 backdrop-blur-md py-4 border-b border-white/[0.04]"
+        }`}
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between">
+            {/* Brand Logo & Name */}
             <a
-              href="#contact"
-              className="inline-flex items-center justify-center gap-2 bg-[#3E4C9A] hover:bg-[#4d5cb3] text-white text-sm font-semibold px-5 py-2.5 rounded-xl shadow-md transition-all duration-200 hover:shadow-lg hover:shadow-[#3E4C9A]/25 hover:-translate-y-0.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#20A486] active:translate-y-0"
-              id="nav-cta-btn"
+              href="#"
+              className="flex items-center gap-3 group focus:outline-none rounded-xl p-1"
+              aria-label={`${siteConfig.brandName} Home`}
             >
-              <span>Book a Free Consultation</span>
-              <ArrowRight className="w-4 h-4" />
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#3E4C9A] via-[#4F67B8] to-[#10B981] p-[1.5px] shadow-lg shadow-[#3E4C9A]/20 transition-transform duration-300 group-hover:scale-105">
+                <div className="w-full h-full bg-[#0B132B] rounded-[10px] flex items-center justify-center">
+                  <Compass className="w-5 h-5 text-[#34D399] transition-transform duration-500 group-hover:rotate-45" />
+                </div>
+              </div>
+              <div>
+                <div className="flex items-center gap-2">
+                  <span className="text-white font-extrabold text-lg sm:text-xl tracking-tight leading-tight">
+                    {siteConfig.brandName}
+                  </span>
+                  <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full bg-[#3E4C9A]/40 text-blue-200 border border-blue-400/20">
+                    Concierge
+                  </span>
+                </div>
+                <span className="text-slate-400 text-[11px] font-medium tracking-wide block">
+                  Career Co-Pilot for Busy Professionals
+                </span>
+              </div>
             </a>
-          </div>
 
-          {/* Mobile menu button */}
-          <div className="flex lg:hidden">
-            <button
-              type="button"
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="text-[#EAF1FA] hover:text-white p-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#20A486]"
-              aria-expanded={mobileMenuOpen}
-              aria-label="Toggle navigation menu"
-              id="mobile-menu-toggle"
-            >
-              {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-            </button>
+            {/* Desktop Navigation Links */}
+            <nav className="hidden lg:flex items-center gap-8" aria-label="Main Navigation">
+              {navLinks.map((link) => (
+                <a
+                  key={link.name}
+                  href={link.href}
+                  className="text-sm font-medium text-slate-300 hover:text-white transition-colors duration-200 relative group py-1"
+                >
+                  <span>{link.name}</span>
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#34D399] transition-all duration-200 group-hover:w-full rounded-full"></span>
+                </a>
+              ))}
+            </nav>
+
+            {/* Primary CTA button */}
+            <div className="hidden sm:flex items-center gap-4">
+              <a
+                href="#contact"
+                className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-[#3E4C9A] to-[#4F67B8] hover:from-[#4757af] hover:to-[#5a74cb] text-white text-sm font-semibold px-5 py-2.5 rounded-xl shadow-lg shadow-[#3E4C9A]/30 transition-all duration-300 hover:shadow-xl hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-[#34D399]"
+                id="nav-cta-btn"
+              >
+                <span>Book Consultation</span>
+                <ArrowRight className="w-4 h-4" />
+              </a>
+            </div>
+
+            {/* Mobile menu button */}
+            <div className="flex lg:hidden">
+              <button
+                type="button"
+                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                className="text-slate-300 hover:text-white p-2 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#34D399]"
+                aria-expanded={mobileMenuOpen}
+                aria-label="Toggle navigation menu"
+                id="mobile-menu-toggle"
+              >
+                {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              </button>
+            </div>
           </div>
         </div>
       </div>
 
       {/* Mobile Menu dropdown */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-[#0B132B]/98 border-b border-[#EAF1FA]/15 px-4 pt-3 pb-6 animate-in slide-in-from-top-2">
-          <div className="flex flex-col gap-2">
+        <div className="lg:hidden bg-[#0B132B]/98 backdrop-blur-2xl border-b border-white/10 px-4 pt-4 pb-6 shadow-2xl animate-in slide-in-from-top-2">
+          <div className="flex flex-col gap-1.5">
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className="text-base font-medium text-[#EAF1FA] hover:text-white hover:bg-white/5 py-2.5 px-3 rounded-lg transition-colors"
+                className="text-base font-medium text-slate-200 hover:text-white hover:bg-white/[0.06] py-2.5 px-3.5 rounded-xl transition-colors"
               >
                 {link.name}
               </a>
             ))}
-            <div className="pt-3 border-t border-[#EAF1FA]/10 mt-2">
+            <div className="pt-4 border-t border-white/10 mt-2">
               <a
                 href="#contact"
                 onClick={() => setMobileMenuOpen(false)}
-                className="w-full flex items-center justify-center gap-2 bg-[#3E4C9A] hover:bg-[#4d5cb3] text-white font-semibold py-3 px-4 rounded-xl shadow-md"
+                className="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-[#3E4C9A] to-[#4F67B8] text-white font-semibold py-3 px-4 rounded-xl shadow-lg"
               >
                 <span>Book a Free Consultation</span>
                 <ArrowRight className="w-4 h-4" />
@@ -125,3 +155,4 @@ export const Navbar: React.FC = () => {
     </header>
   );
 };
+

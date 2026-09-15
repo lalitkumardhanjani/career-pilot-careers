@@ -2,9 +2,12 @@
 
 > Dedicated job-search & application concierge service for busy working professionals who don’t have time to apply, scroll job boards, or chase recruiters.
 
-🌐 **Live Deployed Websites**:
-- Primary Live Domain: **[https://careerpilot-partners.surge.sh](https://careerpilot-partners.surge.sh)**
-- Mirror Domain: **[https://nextrole-career-services.surge.sh](https://nextrole-career-services.surge.sh)**
+🌐 **Universal Global Live Website (Accessible Worldwide on All Networks & ISPs)**:  
+👉 **[https://lalitkumardhanjani.github.io/career-pilot-careers/](https://lalitkumardhanjani.github.io/career-pilot-careers/)**
+
+🔗 **Alternative Mirror Links**:
+- [https://careerpilot-partners.surge.sh](https://careerpilot-partners.surge.sh)
+- [https://nextrole-career-services.surge.sh](https://nextrole-career-services.surge.sh)
 
 ---
 
@@ -28,7 +31,7 @@
   - Emerald Accent: `#20A486`
 - **Icons**: Lucide React
 - **Typography**: Google Fonts (Plus Jakarta Sans & Inter)
-- **Deployment**: Surge, Vercel, Netlify, and Cloudflare Pages ready
+- **Deployment**: GitHub Pages (Global CDN), Surge, Vercel, Netlify
 
 ---
 
@@ -56,64 +59,16 @@ All business details, pricing plans, phone, email, WhatsApp, and form endpoints 
 
 📍 **`src/config/siteConfig.ts`**
 
-### Quick Reference Map
-
-```typescript
-export const siteConfig = {
-  // 1. BRAND & POSITIONING
-  brandName: "CareerPilot Partners",
-  tagline: "Dedicated Job Search & Application Concierge for Busy Professionals",
-
-  // 2. CONTACT INFORMATION
-  contact: {
-    email: "LK3560003@gmail.com",                  // Change public email
-    phoneDisplay: "+91 63787 92367",              // Change displayed phone
-    phoneTel: "+916378792367",                    // Change tel: link
-    whatsappUrl: "https://wa.me/916378792367",    // Change WhatsApp URL
-    formspreeEndpoint: "https://formspree.io/f/xyzgklqw", // Replace with your Formspree ID
-  },
-
-  // 3. PRICING PLANS
-  pricing: [
-    {
-      id: "india",
-      name: "CareerPilot India Plan",
-      price: "₹10,000",                           // Change India price
-      period: "per month",
-      // ...
-    },
-    {
-      id: "international",
-      name: "CareerPilot International Plan",
-      price: "$100",                              // Change International price
-      period: "per month",
-      // ...
-    }
-  ],
-};
-```
-
 ---
 
-## 🌐 3. Free Deployment Steps
+## 🌐 3. How to Deploy Updates to GitHub Pages
 
-### Option A: Free Deployment via Surge (Already Live)
+Whenever you make changes, simply run:
 ```bash
 npm run build
-powershell -Command "Copy-Item dist/index.html dist/200.html"
-npx surge ./dist careerpilot-partners.surge.sh
+npx gh-pages -d dist
 ```
-
-### Option B: Deploy for Free to Vercel
-1. Push this repository to GitHub or GitLab.
-2. Sign in to [Vercel](https://vercel.com).
-3. Import project (Vite preset is pre-configured in `vercel.json`).
-4. Click **Deploy**.
-
-### Option C: Deploy for Free to Netlify
-1. Connect repository in [Netlify](https://www.netlify.com).
-2. Build command: `npm run build`, Publish directory: `dist` (pre-configured in `netlify.toml`).
-3. Click **Deploy Site**.
+Your live site at `https://lalitkumardhanjani.github.io/career-pilot-careers/` will update automatically in ~30 seconds!
 
 ---
 

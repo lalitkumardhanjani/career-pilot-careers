@@ -10,17 +10,17 @@ export const FAQSection: React.FC = () => {
   };
 
   return (
-    <section className="py-20 lg:py-28 bg-[#FFFFFF]" id="faqs">
+    <section className="py-20 lg:py-28 bg-white relative" id="faqs">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <span className="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#3E4C9A] bg-[#EAF1FA] px-3.5 py-1.5 rounded-full inline-block mb-4">
-            Common Questions
+          <span className="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#3E4C9A] bg-[#EBF0FA] border border-[#3E4C9A]/20 px-4 py-1.5 rounded-full inline-block mb-4 shadow-sm">
+            Common Inquiries
           </span>
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#0B132B] tracking-tight">
             Frequently Asked Questions
           </h2>
-          <p className="mt-4 text-base sm:text-lg text-[#3A506B] leading-relaxed">
-            Transparent answers about our candidate onboarding, platform workflows, and weekly progress updates.
+          <p className="mt-4 text-base sm:text-lg text-slate-600 leading-relaxed">
+            Direct, transparent answers about our candidate onboarding, privacy controls, and weekly performance reporting.
           </p>
         </div>
 
@@ -31,36 +31,36 @@ export const FAQSection: React.FC = () => {
             return (
               <div
                 key={idx}
-                className={`rounded-2xl border transition-all duration-200 overflow-hidden ${
+                className={`rounded-2xl border transition-all duration-300 overflow-hidden ${
                   isOpen
-                    ? "border-[#3E4C9A] bg-[#F8FAFC] shadow-sm"
-                    : "border-[#DCE6F2] bg-white hover:border-[#DCE6F2]/80"
+                    ? "border-blue-500/40 bg-[#F8FAFC] shadow-md ring-1 ring-[#3E4C9A]/10"
+                    : "border-slate-200/90 bg-white hover:border-slate-300 shadow-xs"
                 }`}
               >
                 <button
                   type="button"
                   onClick={() => toggleAccordion(idx)}
-                  className="w-full text-left px-6 py-5 flex items-center justify-between gap-4 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#20A486]"
+                  className="w-full text-left px-6 py-5 flex items-center justify-between gap-4 focus:outline-none"
                   aria-expanded={isOpen}
                   id={`faq-btn-${idx}`}
                 >
-                  <div className="flex items-center gap-3">
-                    <span className="text-xs font-bold text-[#3E4C9A] bg-[#EAF1FA] px-2 py-0.5 rounded">
-                      Q{idx + 1}
+                  <div className="flex items-center gap-3.5">
+                    <span className="text-xs font-bold text-[#3E4C9A] bg-[#EBF0FA] border border-[#3E4C9A]/20 px-2.5 py-0.5 rounded-md shrink-0">
+                      Q0{idx + 1}
                     </span>
                     <span className="text-base sm:text-lg font-bold text-[#0B132B]">
                       {faq.question}
                     </span>
                   </div>
                   <ChevronDown
-                    className={`w-5 h-5 text-[#3A506B] shrink-0 transition-transform duration-200 ${
+                    className={`w-5 h-5 text-slate-500 shrink-0 transition-transform duration-300 ${
                       isOpen ? "rotate-180 text-[#3E4C9A]" : ""
                     }`}
                   />
                 </button>
 
                 {isOpen && (
-                  <div className="px-6 pb-6 pt-1 text-sm sm:text-base text-[#3A506B] leading-relaxed border-t border-[#DCE6F2]/50 animate-in fade-in duration-150">
+                  <div className="px-6 pb-6 pt-1 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-200/60 animate-in fade-in duration-200">
                     <p>{faq.answer}</p>
                   </div>
                 )}
@@ -70,19 +70,19 @@ export const FAQSection: React.FC = () => {
         </div>
 
         {/* Additional questions link */}
-        <div className="mt-12 text-center p-6 rounded-2xl bg-[#EAF1FA]/70 border border-[#DCE6F2]">
-          <p className="text-sm text-[#0B132B] font-medium">
-            Have a specific scenario or timeline question?{" "}
+        <div className="mt-12 text-center p-6 rounded-2xl bg-[#F8FAFC] border border-slate-200/90 shadow-xs">
+          <p className="text-xs sm:text-sm text-slate-700 font-medium">
+            Have a specific search criteria or timeline question?{" "}
             <a
               href="#contact"
-              className="text-[#3E4C9A] font-bold underline hover:text-[#4d5cb3] focus:outline-none"
+              className="text-[#3E4C9A] font-bold underline underline-offset-2 hover:text-[#4F67B8]"
             >
-              Discuss it directly with our team
+              Discuss it directly with our team during your consultation →
             </a>
-            .
           </p>
         </div>
       </div>
     </section>
   );
 };
+

@@ -11,55 +11,55 @@ export const Footer: React.FC = () => {
 
   return (
     <>
-      <footer className="bg-[#0B132B] text-white border-t border-[#EAF1FA]/10 pt-16 pb-12">
+      <footer className="bg-[#070B19] text-white border-t border-white/[0.08] pt-16 pb-12 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-[#EAF1FA]/10">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-white/[0.08]">
             {/* Brand column */}
             <div className="md:col-span-2">
               <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#3E4C9A] to-[#20A486] p-[1.5px]">
-                  <div className="w-full h-full bg-[#0B132B] rounded-[10px] flex items-center justify-center">
-                    <ShieldCheck className="w-5 h-5 text-[#20A486]" />
+                <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#3E4C9A] to-[#10B981] p-[1.5px] shadow-md">
+                  <div className="w-full h-full bg-[#070B19] rounded-[10px] flex items-center justify-center">
+                    <ShieldCheck className="w-5 h-5 text-[#34D399]" />
                   </div>
                 </div>
                 <div>
-                  <span className="text-white font-bold text-lg tracking-tight block">
+                  <span className="text-white font-extrabold text-lg tracking-tight block">
                     {siteConfig.brandName}
                   </span>
-                  <span className="text-[#EAF1FA]/70 text-xs font-medium uppercase tracking-wider block">
+                  <span className="text-slate-400 text-xs font-medium uppercase tracking-wider block">
                     {siteConfig.tagline}
                   </span>
                 </div>
               </div>
 
-              <p className="text-sm text-[#EAF1FA]/70 max-w-md leading-relaxed mb-6">
-                Assisting professionals with personalized resume review, targeted opportunity discovery, LinkedIn & Naukri application support, recruiter outreach, and transparent weekly progress reporting.
+              <p className="text-sm text-slate-300 max-w-md leading-relaxed mb-6">
+                Dedicated career concierge for full-time working professionals. Managing resume positioning, high-fit opportunity curation, LinkedIn & Naukri application execution, and transparent Friday performance digests.
               </p>
 
-              <div className="flex items-center gap-4 text-xs text-[#EAF1FA]/80">
+              <div className="flex items-center gap-4 text-xs text-slate-300">
                 <div className="flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-[#20A486]"></span>
-                  <span>Privacy-First Operations</span>
+                  <span className="w-2 h-2 rounded-full bg-[#10B981]"></span>
+                  <span>100% Confidential</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-[#3E4C9A]"></span>
-                  <span>Transparent Weekly Reporting</span>
+                  <span className="w-2 h-2 rounded-full bg-[#4F67B8]"></span>
+                  <span>Weekly Candidate Audits</span>
                 </div>
               </div>
             </div>
 
             {/* Direct Contact info */}
             <div>
-              <h4 className="text-xs font-bold uppercase tracking-wider text-[#20A486] mb-4">
+              <h4 className="text-xs font-bold uppercase tracking-wider text-slate-200 mb-4">
                 Direct Communication
               </h4>
-              <ul className="space-y-3 text-sm text-[#EAF1FA]/85">
+              <ul className="space-y-3 text-sm text-slate-300">
                 <li>
                   <a
                     href={`mailto:${siteConfig.contact.email}`}
                     className="flex items-center gap-2.5 hover:text-white transition-colors"
                   >
-                    <Mail className="w-4 h-4 text-[#20A486] shrink-0" />
+                    <Mail className="w-4 h-4 text-blue-300 shrink-0" />
                     <span className="break-all">{siteConfig.contact.email}</span>
                   </a>
                 </li>
@@ -68,7 +68,7 @@ export const Footer: React.FC = () => {
                     href={`tel:${siteConfig.contact.phoneTel}`}
                     className="flex items-center gap-2.5 hover:text-white transition-colors"
                   >
-                    <Phone className="w-4 h-4 text-[#20A486] shrink-0" />
+                    <Phone className="w-4 h-4 text-blue-300 shrink-0" />
                     <span>{siteConfig.contact.phoneDisplay}</span>
                   </a>
                 </li>
@@ -79,8 +79,8 @@ export const Footer: React.FC = () => {
                     rel="noopener noreferrer"
                     className="flex items-center gap-2.5 hover:text-white transition-colors"
                   >
-                    <MessageCircle className="w-4 h-4 text-[#20A486] shrink-0" />
-                    <span>WhatsApp Direct Support</span>
+                    <MessageCircle className="w-4 h-4 text-[#34D399] shrink-0" />
+                    <span>WhatsApp Concierge Chat</span>
                   </a>
                 </li>
               </ul>
@@ -88,10 +88,10 @@ export const Footer: React.FC = () => {
 
             {/* Quick Links & Legal */}
             <div>
-              <h4 className="text-xs font-bold uppercase tracking-wider text-[#20A486] mb-4">
-                Navigation & Policies
+              <h4 className="text-xs font-bold uppercase tracking-wider text-slate-200 mb-4">
+                Quick Links & Disclosures
               </h4>
-              <ul className="space-y-2.5 text-sm text-[#EAF1FA]/80">
+              <ul className="space-y-2.5 text-sm text-slate-300">
                 <li>
                   <button
                     type="button"
@@ -99,7 +99,7 @@ export const Footer: React.FC = () => {
                     className="hover:text-white transition-colors text-left flex items-center gap-1.5 focus:outline-none"
                   >
                     <span>Privacy Principles</span>
-                    <ExternalLink className="w-3 h-3 text-[#20A486]" />
+                    <ExternalLink className="w-3 h-3 text-slate-400" />
                   </button>
                 </li>
                 <li>
@@ -109,22 +109,22 @@ export const Footer: React.FC = () => {
                     className="hover:text-white transition-colors text-left flex items-center gap-1.5 focus:outline-none"
                   >
                     <span>Terms of Service</span>
-                    <ExternalLink className="w-3 h-3 text-[#20A486]" />
+                    <ExternalLink className="w-3 h-3 text-slate-400" />
                   </button>
                 </li>
                 <li>
                   <a href="#contact" className="hover:text-white transition-colors">
-                    Contact & Inquiries
+                    Consultation Booking
                   </a>
                 </li>
                 <li>
                   <a href="#weekly-updates" className="hover:text-white transition-colors">
-                    Weekly Activity Digest
+                    Weekly Activity Dashboard
                   </a>
                 </li>
                 <li>
                   <a href="#pricing" className="hover:text-white transition-colors">
-                    Monthly Plans
+                    Month-to-Month Plans
                   </a>
                 </li>
               </ul>
@@ -132,17 +132,17 @@ export const Footer: React.FC = () => {
           </div>
 
           {/* Compliance & Trademark Disclaimer */}
-          <div className="pt-8 pb-4 text-xs text-[#EAF1FA]/65 leading-relaxed space-y-2">
-            <p className="bg-[#1C2541]/60 border border-[#EAF1FA]/10 rounded-xl p-4">
-              <strong>Service Notice:</strong> {siteConfig.compliance.platformDisclaimer}{" "}
+          <div className="pt-8 pb-4 text-xs text-slate-400 leading-relaxed space-y-2">
+            <p className="bg-slate-900/80 border border-white/[0.08] rounded-xl p-4 text-slate-300">
+              <strong className="text-white">Independent Service Disclosure:</strong> {siteConfig.compliance.platformDisclaimer}{" "}
               {siteConfig.compliance.noGuaranteeStatement}
             </p>
           </div>
 
           {/* Copyright line */}
-          <div className="pt-4 flex flex-col sm:flex-row items-center justify-between text-xs text-[#EAF1FA]/50 gap-2">
+          <div className="pt-4 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-2">
             <p>© {currentYear} {siteConfig.brandName}. All rights reserved.</p>
-            <p>Designed for professional job seekers in India and internationally.</p>
+            <p>Designed for busy working professionals in India and internationally.</p>
           </div>
         </div>
       </footer>

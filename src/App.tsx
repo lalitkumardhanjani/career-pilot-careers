@@ -6,6 +6,7 @@ import { ProblemValue } from "./components/ProblemValue";
 import { WhatsIncluded } from "./components/WhatsIncluded";
 import { HowItWorks } from "./components/HowItWorks";
 import { WeeklyReportPreview } from "./components/WeeklyReportPreview";
+import { ClientTestimonials } from "./components/ClientTestimonials";
 import { WhyChooseUs } from "./components/WhyChooseUs";
 import { PrivacySection } from "./components/PrivacySection";
 import { Pricing } from "./components/Pricing";
@@ -27,7 +28,7 @@ export const App: React.FC = () => {
       <Navbar />
 
       <main className="flex-1">
-        {/* 2. Hero Section (Focus on Your Work. We'll Pilot Your Next Move) */}
+        {/* 2. Hero Section (Focus on Your Demanding Work. We'll Pilot Your Next Move) */}
         <Hero />
 
         {/* 3. Time-Saving Spotlight for Busy Working Professionals */}
@@ -42,10 +43,13 @@ export const App: React.FC = () => {
         {/* 6. How It Works (5-Step Process Timeline) */}
         <HowItWorks />
 
-        {/* 7. Detailed Transparency Section (Weekly Activity Summary Preview) */}
+        {/* 7. Detailed Transparency Section (Weekly Activity Summary & Analytics Preview) */}
         <WeeklyReportPreview />
 
-        {/* 8. Why Choose Us (4 Credibility Pillars) */}
+        {/* 8. Candidate Success Stories & Testimonials */}
+        <ClientTestimonials />
+
+        {/* 9. Why Choose Us (4 Credibility Pillars) */}
         <WhyChooseUs />
 
         {/* 9. Privacy and Onboarding Section */}

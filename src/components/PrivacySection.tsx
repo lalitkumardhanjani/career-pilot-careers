@@ -27,24 +27,24 @@ export const PrivacySection: React.FC = () => {
   return (
     <>
       <section
-        className="py-20 lg:py-28 bg-gradient-to-b from-[#EAF1FA]/60 via-[#FFFFFF] to-[#EAF1FA]/40 border-y border-[#DCE6F2] relative"
+        className="py-20 lg:py-28 bg-[#F8FAFC] border-y border-slate-200/80 relative overflow-hidden"
         id="privacy"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <div className="w-14 h-14 rounded-2xl bg-white shadow-md border border-[#DCE6F2] flex items-center justify-center text-[#20A486] mx-auto mb-5">
+            <div className="w-14 h-14 rounded-2xl bg-white shadow-md border border-slate-200 flex items-center justify-center text-[#3E4C9A] mx-auto mb-5">
               <Shield className="w-7 h-7" />
             </div>
 
-            <span className="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#20A486] bg-[#20A486]/10 px-3.5 py-1.5 rounded-full inline-block mb-3">
+            <span className="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#3E4C9A] bg-[#EBF0FA] border border-[#3E4C9A]/20 px-4 py-1.5 rounded-full inline-block mb-3 shadow-sm">
               Confidentiality & Control
             </span>
 
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#0B132B] tracking-tight">
-              Your Privacy Comes First.
+              Your Professional Privacy Comes First.
             </h2>
-            <p className="mt-4 text-base sm:text-lg text-[#3A506B] leading-relaxed">
-              We help you choose a safe, privacy-conscious workflow that fits your existing professional presence. You remain in total control of your accounts and communications at every step.
+            <p className="mt-4 text-base sm:text-lg text-slate-600 leading-relaxed">
+              We help you choose a safe, privacy-conscious workflow that protects your existing employment. You remain in total control of your accounts and criteria at every step.
             </p>
           </div>
 
@@ -55,17 +55,17 @@ export const PrivacySection: React.FC = () => {
               return (
                 <div
                   key={idx}
-                  className="rounded-2xl bg-white border border-[#DCE6F2] p-6 shadow-sm hover:shadow-md transition-all duration-200"
+                  className="rounded-2xl bg-white border border-slate-200/90 p-6 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group"
                 >
                   <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 rounded-xl bg-[#20A486]/15 flex items-center justify-center text-[#20A486] shrink-0 mt-0.5">
+                    <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#EBF0FA] to-[#F1F5F9] border border-[#3E4C9A]/15 flex items-center justify-center text-[#3E4C9A] shrink-0 mt-0.5 group-hover:scale-105 transition-transform shadow-xs">
                       <Icon className="w-5 h-5" />
                     </div>
                     <div>
-                      <h3 className="font-bold text-sm sm:text-base text-[#0B132B] mb-1.5">
+                      <h3 className="font-bold text-sm sm:text-base text-[#0B132B] mb-1.5 group-hover:text-[#3E4C9A] transition-colors">
                         {item.title}
                       </h3>
-                      <p className="text-xs sm:text-sm text-[#3A506B] leading-relaxed">
+                      <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
                         “{item.description}”
                       </p>
                     </div>
@@ -80,12 +80,12 @@ export const PrivacySection: React.FC = () => {
             <button
               type="button"
               onClick={() => setModalOpen(true)}
-              className="inline-flex items-center gap-2 bg-[#0B132B] hover:bg-[#1C2541] text-white font-semibold text-sm px-6 py-3 rounded-xl shadow-md transition-all duration-200 hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-[#20A486]"
+              className="inline-flex items-center gap-2 bg-[#0B132B] hover:bg-slate-800 text-white font-semibold text-sm px-6 py-3 rounded-xl shadow-lg transition-all duration-300 hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-[#3E4C9A]"
               id="privacy-principles-btn"
             >
-              <ShieldCheck className="w-4 h-4 text-[#20A486]" />
-              <span>Read Our Privacy Principles</span>
-              <ExternalLink className="w-3.5 h-3.5 text-[#EAF1FA]/70" />
+              <ShieldCheck className="w-4 h-4 text-[#34D399]" />
+              <span>Read Full Privacy Principles</span>
+              <ExternalLink className="w-3.5 h-3.5 text-slate-400" />
             </button>
           </div>
         </div>
@@ -96,3 +96,4 @@ export const PrivacySection: React.FC = () => {
     </>
   );
 };
+

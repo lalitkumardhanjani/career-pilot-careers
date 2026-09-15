@@ -1,35 +1,39 @@
 import React from "react";
-import { ArrowRight, MessageCircle, ShieldCheck } from "lucide-react";
+import { ArrowRight, MessageCircle, ShieldCheck, Sparkles, Clock } from "lucide-react";
 import { siteConfig } from "../config/siteConfig";
 
 export const FinalCTA: React.FC = () => {
   return (
-    <section className="py-20 lg:py-24 bg-gradient-to-br from-[#0B132B] via-[#1C2541] to-[#0B132B] text-white relative overflow-hidden">
-      {/* Glow Effects */}
-      <div className="absolute top-0 right-0 w-80 h-80 bg-[#3E4C9A]/20 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-0 left-0 w-80 h-80 bg-[#20A486]/15 rounded-full blur-3xl pointer-events-none" />
+    <section className="py-20 lg:py-28 bg-[#0B132B] text-white relative overflow-hidden">
+      {/* Radiant Ambient Spotlights */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-full bg-[radial-gradient(ellipse_70%_60%_at_50%_50%,rgba(62,76,154,0.35),rgba(11,19,43,0))] pointer-events-none" />
+      <div className="absolute -bottom-10 right-10 w-96 h-96 bg-[#10B981]/15 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute inset-0 bg-grid-dark opacity-40 pointer-events-none" />
 
       <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#1C2541] border border-[#EAF1FA]/20 text-[#EAF1FA] text-xs font-semibold uppercase tracking-wider mb-6">
-          <ShieldCheck className="w-4 h-4 text-[#20A486]" />
-          <span>Strategic Career Acceleration</span>
+        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#101A36] border border-white/10 text-slate-200 text-xs font-semibold uppercase tracking-wider mb-6 shadow-xl backdrop-blur-md">
+          <Sparkles className="w-4 h-4 text-[#34D399]" />
+          <span>Strategic Executive Career Concierge</span>
         </div>
 
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-6">
-          Ready to Bring Structure to Your Job Search?
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-6 leading-tight">
+          Ready to Bring Structure & Momentum <br className="hidden sm:inline" />
+          <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-300 via-indigo-200 to-[#34D399]">
+            to Your Next Career Move?
+          </span>
         </h2>
 
-        <p className="text-base sm:text-lg md:text-xl text-[#EAF1FA]/90 max-w-2xl mx-auto mb-10 leading-relaxed font-normal">
-          Tell us where you want to go next. We’ll help you understand whether our career-support service is the right fit.
+        <p className="text-base sm:text-lg md:text-xl text-slate-300 max-w-2xl mx-auto mb-10 leading-relaxed font-normal">
+          Let our career specialists manage the grueling 15–20 hours of daily job applications and recruiter outreach, while you stay focused on your current high-impact work.
         </p>
 
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
           <a
             href="#contact"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#3E4C9A] hover:bg-[#4d5cb3] text-white font-bold text-base px-9 py-4 rounded-xl shadow-xl shadow-[#3E4C9A]/30 transition-all duration-200 hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-[#20A486]"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-gradient-to-r from-[#3E4C9A] via-[#4F67B8] to-[#3E4C9A] hover:from-[#4859b3] hover:to-[#5571d4] text-white font-bold text-base px-9 py-4 rounded-xl shadow-xl shadow-[#3E4C9A]/35 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-2xl focus:outline-none focus:ring-2 focus:ring-[#34D399]"
             id="final-cta-primary-btn"
           >
-            <span>Book a Free Consultation</span>
+            <span>Schedule Free Strategy Consultation</span>
             <ArrowRight className="w-5 h-5" />
           </a>
 
@@ -37,14 +41,30 @@ export const FinalCTA: React.FC = () => {
             href={siteConfig.contact.whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#20A486] hover:bg-[#17856d] text-white font-bold text-base px-8 py-4 rounded-xl shadow-lg shadow-[#20A486]/20 transition-all duration-200 hover:-translate-y-0.5"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-[#10B981] hover:bg-[#0ea372] text-white font-bold text-base px-8 py-4 rounded-xl shadow-lg shadow-[#10B981]/25 transition-all duration-300 hover:-translate-y-0.5"
             id="final-cta-whatsapp-btn"
           >
             <MessageCircle className="w-5 h-5" />
-            <span>WhatsApp Us</span>
+            <span>Chat Directly on WhatsApp</span>
           </a>
+        </div>
+
+        <div className="flex flex-wrap items-center justify-center gap-y-2 gap-x-6 text-xs text-slate-400 font-medium">
+          <span className="flex items-center gap-1.5 text-slate-300">
+            <ShieldCheck className="w-3.5 h-3.5 text-[#34D399]" />
+            100% Confidential
+          </span>
+          <span className="flex items-center gap-1.5 text-slate-300">
+            <Clock className="w-3.5 h-3.5 text-[#34D399]" />
+            15-Minute Intro Call
+          </span>
+          <span className="flex items-center gap-1.5 text-slate-300">
+            <Sparkles className="w-3.5 h-3.5 text-[#34D399]" />
+            Zero Sales Pressure
+          </span>
         </div>
       </div>
     </section>
   );
 };
+
