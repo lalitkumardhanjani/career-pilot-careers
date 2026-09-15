@@ -2,13 +2,15 @@
 
 > Dedicated job-search & application concierge service for busy working professionals who don’t have time to apply, scroll job boards, or chase recruiters.
 
-🌐 **Official Production Live Website (Vercel Global Edge Network)**:  
-👉 **[https://careerpilotcareers.vercel.app/](https://careerpilotcareers.vercel.app/)**
+🌐 **Official Production Live Websites**:  
+👉 **[https://copilotpartners.vercel.app/](https://copilotpartners.vercel.app/)**  
+👉 **[https://careerpilotcareers.vercel.app/](https://careerpilotcareers.vercel.app/)**  
 
-🔗 **Alternative Mirror Links**:
+🔗 **Instant Live Mirrors**:
+- [https://copilotpartners.surge.sh](https://copilotpartners.surge.sh)
+- [https://copilot-partners.surge.sh](https://copilot-partners.surge.sh)
 - [https://careerpilotcareers.surge.sh](https://careerpilotcareers.surge.sh)
-- [https://careerpilotjobs.surge.sh](https://careerpilotjobs.surge.sh)
-- [https://careerpilot-partners.surge.sh](https://careerpilot-partners.surge.sh)
+- [https://lalitkumardhanjani.github.io/career-pilot-careers/](https://lalitkumardhanjani.github.io/career-pilot-careers/)
 
 ---
 
