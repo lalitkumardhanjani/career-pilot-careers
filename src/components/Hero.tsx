@@ -84,7 +84,7 @@ export const Hero: React.FC = () => {
   ];
 
   return (
-    <section className="relative pt-28 sm:pt-36 lg:pt-40 pb-16 sm:pb-20 lg:pb-28 overflow-hidden bg-[#0B132B] text-white">
+    <section className="relative pt-24 sm:pt-28 lg:pt-32 pb-16 sm:pb-20 lg:pb-28 overflow-hidden bg-[#0B132B] text-white">
       {/* Background Decorative Ambient Radial Spotlights */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[600px] bg-[radial-gradient(ellipse_80%_60%_at_50%_0%,rgba(62,76,154,0.3),rgba(11,19,43,0))] pointer-events-none" />
       <div className="absolute top-1/4 -left-20 w-96 h-96 bg-[#4F67B8]/20 rounded-full blur-3xl pointer-events-none" />

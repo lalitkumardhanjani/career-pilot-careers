@@ -25,27 +25,6 @@ export const Navbar: React.FC = () => {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
-      {/* Top Subtle Announcement Bar */}
-      <div className="bg-[#070B19] border-b border-white/[0.06] text-white py-1 sm:py-1.5 px-3 sm:px-4 text-center text-[10px] sm:text-xs font-medium tracking-wide">
-        <div className="max-w-7xl mx-auto flex items-center justify-center gap-1.5 sm:gap-3 flex-wrap">
-          <span className="inline-flex items-center gap-1.5 text-[#34D399] font-semibold shrink-0">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#34D399] animate-pulse"></span>
-            Accepting Q3 Cohort
-          </span>
-          <span className="text-slate-400 hidden sm:inline">•</span>
-          <span className="text-slate-300 line-clamp-1 sm:line-clamp-none">
-            Dedicated Career Concierge for Busy Working Professionals
-          </span>
-          <span className="text-slate-400 hidden md:inline">•</span>
-          <a
-            href="#contact"
-            className="text-white hover:text-[#34D399] underline underline-offset-2 transition-colors hidden md:inline font-semibold shrink-0"
-          >
-            Check Availability →
-          </a>
-        </div>
-      </div>
-
       {/* Main Glassmorphic Navigation Bar */}
       <div
         className={`transition-all duration-300 ${
