@@ -1,8 +1,28 @@
-import React from "react";
-import { ShieldCheck, ArrowRight, CheckCircle2, Clock, Target, Zap, FileCheck, X } from "lucide-react";
+import React, { useState } from "react";
+import {
+  ShieldCheck,
+  ArrowRight,
+  CheckCircle2,
+  Clock,
+  Target,
+  Zap,
+  FileCheck,
+  X,
+  Calculator,
+  Sparkles,
+  TrendingUp,
+} from "lucide-react";
 import { siteConfig } from "../config/siteConfig";
 
 export const BusyProfessionalSpotlight: React.FC = () => {
+  const [weeklyJobHours, setWeeklyJobHours] = useState(50); // slider between 40 and 70 hours
+
+  // Calculate dynamic ROI metrics
+  const searchHoursNeededPerWeek = Math.round(15 + (weeklyJobHours - 40) * 0.1);
+  const monthlyHoursReclaimed = searchHoursNeededPerWeek * 4;
+  // Estimated hourly value based on ₹25L–₹50L annual CTC (~₹1,000 - ₹2,000 / hr)
+  const conservativeTimeValueMonthly = monthlyHoursReclaimed * 1000;
+
   const metricIcons = [Clock, Target, Zap, FileCheck];
 
   return (
@@ -19,8 +39,132 @@ export const BusyProfessionalSpotlight: React.FC = () => {
             Designed for Busy Professionals Who Want Better Opportunities
           </h2>
           <p className="mt-4 text-base sm:text-lg text-slate-600 leading-relaxed">
-            Running a serious career search requires 15–20 hours every week. When you're managing projects, team meetings, and deliverables, job searching stalls. CareerPilot steps in as your dedicated execution team.
+            Running a serious career search requires 15–20 hours every week. When you're managing team deliverables, sprint deadlines, and stakeholder meetings, job searching stalls. CareerPilot steps in as your dedicated execution team.
           </p>
+        </div>
+
+        {/* INTERACTIVE CALCULATOR: Executive Time Reclaimed & Career ROI */}
+        <div className="max-w-4xl mx-auto rounded-3xl bg-gradient-to-b from-[#101A36] to-[#0B132B] border border-white/15 p-6 sm:p-10 text-white shadow-2xl shadow-slate-900/10 mb-16 relative overflow-hidden">
+          <div className="absolute top-0 right-0 w-80 h-80 bg-[#3E4C9A]/20 rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute bottom-0 left-0 w-72 h-72 bg-[#10B981]/15 rounded-full blur-3xl pointer-events-none" />
+
+          <div className="relative z-10">
+            {/* Header of Calculator */}
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-white/10 mb-8">
+              <div className="flex items-center gap-3">
+                <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-[#3E4C9A] to-[#4F67B8] flex items-center justify-center text-white shadow-md">
+                  <Calculator className="w-5 h-5" />
+                </div>
+                <div>
+                  <div className="flex items-center gap-2">
+                    <span className="text-xs font-bold uppercase tracking-wider text-[#34D399]">
+                      Interactive Time Audit
+                    </span>
+                    <span className="text-[10px] bg-white/10 text-slate-300 px-2 py-0.5 rounded-full font-semibold">
+                      Live Simulation
+                    </span>
+                  </div>
+                  <h3 className="text-lg sm:text-xl font-extrabold text-white">
+                    Executive Time Reclaimed & ROI Calculator
+                  </h3>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-1.5 text-xs text-slate-300 bg-white/[0.05] px-3.5 py-1.5 rounded-xl border border-white/10 self-start sm:self-auto">
+                <TrendingUp className="w-3.5 h-3.5 text-[#34D399]" />
+                <span>ROI on Executive Mental Bandwidth</span>
+              </div>
+            </div>
+
+            {/* Slider Control */}
+            <div className="mb-8">
+              <div className="flex justify-between items-center mb-3">
+                <label htmlFor="weeklyJobHoursSlider" className="text-sm font-semibold text-slate-200">
+                  Your Current Weekly Work & Meeting Hours:
+                </label>
+                <span className="text-lg font-black text-[#34D399] bg-[#34D399]/10 px-3.5 py-1 rounded-xl border border-[#34D399]/30">
+                  {weeklyJobHours} Hours / Week
+                </span>
+              </div>
+
+              <input
+                id="weeklyJobHoursSlider"
+                type="range"
+                min="40"
+                max="75"
+                step="5"
+                value={weeklyJobHours}
+                onChange={(e) => setWeeklyJobHours(Number(e.target.value))}
+                className="luxury-slider"
+                aria-label="Weekly Work & Meeting Hours"
+              />
+
+              <div className="flex justify-between text-[11px] text-slate-400 mt-2">
+                <span>40 hrs (Standard)</span>
+                <span>50 hrs (Active Tech / SDE Lead)</span>
+                <span>60+ hrs (High Demand / Leadership)</span>
+              </div>
+            </div>
+
+            {/* Dynamic Results Display Strip */}
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
+              {/* Box 1 */}
+              <div className="rounded-2xl bg-[#070B19]/80 border border-white/10 p-5">
+                <span className="text-[11px] font-bold uppercase tracking-wider text-slate-400 block mb-1">
+                  Manual Search Time Needed
+                </span>
+                <div className="text-2xl sm:text-3xl font-black text-rose-400">
+                  ~{searchHoursNeededPerWeek} hrs<span className="text-xs font-normal text-slate-400">/week</span>
+                </div>
+                <p className="text-[11px] text-slate-400 mt-1">
+                  Tailoring resumes, scouring portals, filling repetitive forms at night.
+                </p>
+              </div>
+
+              {/* Box 2 */}
+              <div className="rounded-2xl bg-[#070B19]/80 border border-white/10 p-5">
+                <span className="text-[11px] font-bold uppercase tracking-wider text-slate-400 block mb-1">
+                  Time Reclaimed with CareerPilot
+                </span>
+                <div className="text-2xl sm:text-3xl font-black text-[#34D399]">
+                  +{monthlyHoursReclaimed} hrs<span className="text-xs font-normal text-slate-400">/month</span>
+                </div>
+                <p className="text-[11px] text-slate-400 mt-1">
+                  Protected evenings & weekends while applications proceed daily.
+                </p>
+              </div>
+
+              {/* Box 3 */}
+              <div className="rounded-2xl bg-[#070B19]/80 border border-white/10 p-5">
+                <span className="text-[11px] font-bold uppercase tracking-wider text-slate-400 block mb-1">
+                  Value of Reclaimed Focus
+                </span>
+                <div className="text-2xl sm:text-3xl font-black text-blue-300">
+                  ₹{conservativeTimeValueMonthly.toLocaleString("en-IN")}+
+                </div>
+                <p className="text-[11px] text-slate-400 mt-1">
+                  Valued against senior professional salary vs ₹10,000/mo fee.
+                </p>
+              </div>
+            </div>
+
+            {/* Calculator Footer CTA */}
+            <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-4 border-t border-white/10">
+              <div className="flex items-center gap-2 text-xs text-slate-300 text-center sm:text-left">
+                <Sparkles className="w-4 h-4 text-[#34D399] shrink-0" />
+                <span>
+                  Invest ₹10,000/mo to reclaim 60–80 hours of your life while our team targets 100+ opportunities.
+                </span>
+              </div>
+              <a
+                href="#pricing"
+                className="inline-flex items-center gap-2 bg-gradient-to-r from-[#3E4C9A] to-[#4F67B8] hover:from-[#4859b3] hover:to-[#5571d4] text-white text-xs font-bold px-5 py-2.5 rounded-xl shadow-md transition-all shrink-0"
+              >
+                <span>View Concierge Plans</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </a>
+            </div>
+          </div>
         </div>
 
         {/* 4 Value Metric Cards */}
@@ -168,4 +312,3 @@ export const BusyProfessionalSpotlight: React.FC = () => {
     </section>
   );
 };
-

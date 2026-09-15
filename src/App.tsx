@@ -14,6 +14,7 @@ import { FAQSection } from "./components/FAQSection";
 import { FinalCTA } from "./components/FinalCTA";
 import { ContactSection } from "./components/ContactSection";
 import { Footer } from "./components/Footer";
+import { FloatingConcierge } from "./components/FloatingConcierge";
 
 export const App: React.FC = () => {
   const [selectedPlan, setSelectedPlan] = useState<string>("india");
@@ -70,6 +71,9 @@ export const App: React.FC = () => {
 
       {/* 14. Footer with Legal Disclaimers & Independent Notice */}
       <Footer />
+
+      {/* 15. Floating Concierge Chat Desk */}
+      <FloatingConcierge />
     </div>
   );
 };

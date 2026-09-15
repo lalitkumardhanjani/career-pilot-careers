@@ -12,11 +12,14 @@ import {
   CheckCircle2,
   Clock,
   Download,
+  X,
+  ShieldCheck,
+  FileText,
 } from "lucide-react";
 
 export const WeeklyReportPreview: React.FC = () => {
   const [selectedTab, setSelectedTab] = useState<"overview" | "charts" | "log">("overview");
-  const [downloadedModalOpen, setDownloadedModalOpen] = useState(false);
+  const [pdfModalOpen, setPdfModalOpen] = useState(false);
 
   // Sample verified progressive activity log items representing typical weekly report data
   const sampleActivityLogs = [
@@ -76,13 +79,6 @@ export const WeeklyReportPreview: React.FC = () => {
     { day: "Fri", apps: 11, outreach: 16, heightApps: "h-22", heightOutreach: "h-32", total: 27 },
   ];
 
-  const handleDownloadSample = () => {
-    setDownloadedModalOpen(true);
-    setTimeout(() => {
-      setDownloadedModalOpen(false);
-    }, 4000);
-  };
-
   return (
     <section className="py-20 lg:py-28 bg-[#0B132B] text-white relative overflow-hidden" id="weekly-updates">
       {/* Background ambient radial glow accents */}
@@ -104,7 +100,7 @@ export const WeeklyReportPreview: React.FC = () => {
         </div>
 
         {/* Enterprise Dashboard Container */}
-        <div className="rounded-3xl bg-[#101A36]/80 border border-white/10 backdrop-blur-2xl p-6 sm:p-8 md:p-10 shadow-2xl shadow-black/70">
+        <div className="rounded-3xl bg-[#101A36]/85 border border-white/15 backdrop-blur-2xl p-6 sm:p-8 md:p-10 shadow-2xl shadow-black/80">
           {/* Dashboard Header Bar */}
           <div className="flex flex-col md:flex-row md:items-center justify-between pb-6 border-b border-white/[0.08] gap-4 mb-8">
             <div className="flex items-center gap-3.5">
@@ -166,7 +162,7 @@ export const WeeklyReportPreview: React.FC = () => {
 
           {/* TAB 1: Key Metrics Overview */}
           {selectedTab === "overview" && (
-            <div className="space-y-6">
+            <div className="space-y-6 animate-in fade-in duration-300">
               {/* 6 Core Weekly Insight KPI Cards */}
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
                 {/* Metric 1: Emails Sent */}
@@ -438,8 +434,9 @@ export const WeeklyReportPreview: React.FC = () => {
             <div className="flex items-center gap-3">
               <button
                 type="button"
-                onClick={handleDownloadSample}
-                className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/15 text-white text-xs font-semibold px-4 py-2.5 rounded-xl border border-white/15 transition-colors"
+                onClick={() => setPdfModalOpen(true)}
+                className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/15 text-white text-xs font-semibold px-4 py-2.5 rounded-xl border border-white/15 transition-colors cursor-pointer shadow-xs"
+                id="view-sample-pdf-btn"
               >
                 <Download className="w-3.5 h-3.5 text-[#34D399]" />
                 <span>View Sample PDF Digest</span>
@@ -460,15 +457,161 @@ export const WeeklyReportPreview: React.FC = () => {
         </div>
       </div>
 
-      {/* Sample Download Simulation Toast */}
-      {downloadedModalOpen && (
-        <div className="fixed bottom-6 right-6 z-50 bg-[#101A36] border border-[#34D399]/50 text-white px-5 py-4 rounded-2xl shadow-2xl flex items-center gap-3 animate-in slide-in-from-bottom-5">
-          <div className="w-8 h-8 rounded-full bg-[#10B981]/20 text-[#34D399] flex items-center justify-center">
-            <CheckCircle2 className="w-5 h-5" />
-          </div>
-          <div>
-            <div className="text-xs font-bold text-white">Sample Friday Candidate Digest Ready</div>
-            <div className="text-[11px] text-slate-300">The 12-page activity audit report was loaded successfully for demo.</div>
+      {/* SAMPLE PDF DIGEST EXECUTIVE MODAL */}
+      {pdfModalOpen && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-black/80 backdrop-blur-md animate-in fade-in duration-200"
+          role="dialog"
+          aria-modal="true"
+        >
+          <div className="relative w-full max-w-3xl bg-[#0B132B] text-white rounded-3xl shadow-2xl border border-white/20 overflow-hidden flex flex-col max-h-[90vh]">
+            {/* Modal Header */}
+            <div className="bg-[#101A36] px-6 py-4 border-b border-white/10 flex items-center justify-between">
+              <div className="flex items-center gap-3">
+                <div className="w-9 h-9 rounded-xl bg-[#3E4C9A] flex items-center justify-center text-white">
+                  <FileText className="w-5 h-5" />
+                </div>
+                <div>
+                  <div className="text-xs font-bold text-[#34D399] uppercase tracking-wider">
+                    Official Executive Document Preview
+                  </div>
+                  <h4 className="text-sm sm:text-base font-extrabold text-white">
+                    CareerPilot Confidential Candidate Performance Digest
+                  </h4>
+                </div>
+              </div>
+              <button
+                type="button"
+                onClick={() => setPdfModalOpen(false)}
+                className="text-slate-400 hover:text-white p-2 rounded-xl focus:outline-none"
+                aria-label="Close Sample PDF Modal"
+              >
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+
+            {/* Modal Document Body (Styled like an executive PDF document) */}
+            <div className="p-6 sm:p-8 space-y-6 overflow-y-auto text-xs sm:text-sm text-slate-300">
+              {/* Document Meta Header */}
+              <div className="bg-[#070B19] rounded-2xl p-5 border border-white/10 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                <div>
+                  <span className="text-[10px] uppercase tracking-widest text-slate-400 font-bold block">
+                    Candidate Reference
+                  </span>
+                  <span className="text-base font-bold text-white">
+                    Client ID #CP-8492 • Senior Tech Lead
+                  </span>
+                  <p className="text-xs text-slate-400">Target CTC: ₹45L–₹60L • Bengaluru / Remote</p>
+                </div>
+                <div className="text-left sm:text-right">
+                  <span className="text-[10px] uppercase tracking-widest text-slate-400 font-bold block">
+                    Reporting Period
+                  </span>
+                  <span className="text-sm font-semibold text-[#34D399]">
+                    Week 3 (Friday Audit Delivered)
+                  </span>
+                  <p className="text-xs text-slate-400">Status: Active Recruitment Pipeline</p>
+                </div>
+              </div>
+
+              {/* Executive Summary Stats */}
+              <div>
+                <h5 className="font-bold text-white text-sm mb-3">1. Executive Weekly Volume Summary</h5>
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-center">
+                  <div className="bg-[#1C2541]/50 p-3 rounded-xl border border-white/10">
+                    <div className="text-xl font-black text-white">38</div>
+                    <div className="text-[10px] text-slate-400 uppercase">Companies Applied</div>
+                  </div>
+                  <div className="bg-[#1C2541]/50 p-3 rounded-xl border border-white/10">
+                    <div className="text-xl font-black text-blue-300">42</div>
+                    <div className="text-[10px] text-slate-400 uppercase">Recruiter Emails</div>
+                  </div>
+                  <div className="bg-[#1C2541]/50 p-3 rounded-xl border border-white/10">
+                    <div className="text-xl font-black text-purple-300">26</div>
+                    <div className="text-[10px] text-slate-400 uppercase">Talent Leads Linked</div>
+                  </div>
+                  <div className="bg-[#1C2541]/50 p-3 rounded-xl border border-white/10">
+                    <div className="text-xl font-black text-[#34D399]">4</div>
+                    <div className="text-[10px] text-slate-400 uppercase">Alumni Referrals</div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Sample Verified Submissions Table */}
+              <div>
+                <h5 className="font-bold text-white text-sm mb-3">2. Sample Application Audit Log (Week 3)</h5>
+                <div className="overflow-x-auto rounded-xl border border-white/10">
+                  <table className="w-full text-left text-xs text-slate-300">
+                    <thead className="bg-[#101A36] text-white uppercase text-[10px] tracking-wider border-b border-white/10">
+                      <tr>
+                        <th className="py-2.5 px-3">Company</th>
+                        <th className="py-2.5 px-3">Role</th>
+                        <th className="py-2.5 px-3">Channel</th>
+                        <th className="py-2.5 px-3">Application Detail</th>
+                        <th className="py-2.5 px-3">Status</th>
+                      </tr>
+                    </thead>
+                    <tbody className="divide-y divide-white/5">
+                      <tr>
+                        <td className="py-2.5 px-3 font-semibold text-white">Stripe</td>
+                        <td className="py-2.5 px-3">Staff Backend Eng</td>
+                        <td className="py-2.5 px-3">LinkedIn Tailored</td>
+                        <td className="py-2.5 px-3">Custom Go/Kubernetes notes + GitHub portfolio</td>
+                        <td className="py-2.5 px-3 text-blue-300 font-semibold">Submitted</td>
+                      </tr>
+                      <tr>
+                        <td className="py-2.5 px-3 font-semibold text-white">Razorpay</td>
+                        <td className="py-2.5 px-3">Lead Platform Eng</td>
+                        <td className="py-2.5 px-3">Direct Naukri Boost</td>
+                        <td className="py-2.5 px-3">High-match ATS resume + 60-day notice confirmed</td>
+                        <td className="py-2.5 px-3 text-amber-300 font-semibold">Under Review</td>
+                      </tr>
+                      <tr>
+                        <td className="py-2.5 px-3 font-semibold text-white">Swiggy</td>
+                        <td className="py-2.5 px-3">Principal Eng</td>
+                        <td className="py-2.5 px-3">Internal Referral</td>
+                        <td className="py-2.5 px-3">Referral submitted by Senior Staff Engineer alumni</td>
+                        <td className="py-2.5 px-3 text-[#34D399] font-semibold">Referral Active</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              {/* Strategic Next Steps */}
+              <div className="bg-[#101A36]/60 rounded-2xl p-4 border border-white/10">
+                <h5 className="font-bold text-white text-xs uppercase tracking-wider mb-2 flex items-center gap-1.5">
+                  <ShieldCheck className="w-4 h-4 text-[#34D399]" />
+                  <span>3. Strategic Focus for Upcoming Week</span>
+                </h5>
+                <p className="text-xs text-slate-300 leading-relaxed">
+                  Focus on follow-ups with 8 hiring managers at CRED, Atlassian, and Coinbase who accepted LinkedIn connection requests. Target 10 newly posted Tier-1 leadership openings closing next Tuesday.
+                </p>
+              </div>
+            </div>
+
+            {/* Modal Footer */}
+            <div className="bg-[#101A36] px-6 py-4 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-3">
+              <div className="text-[11px] text-slate-400 text-center sm:text-left">
+                Every Friday at 5:00 PM, an updated PDF and online audit like this is sent directly to you.
+              </div>
+              <div className="flex items-center gap-2">
+                <button
+                  type="button"
+                  onClick={() => setPdfModalOpen(false)}
+                  className="bg-white/10 hover:bg-white/15 text-white text-xs font-semibold px-4 py-2 rounded-xl transition-colors"
+                >
+                  Close Preview
+                </button>
+                <a
+                  href="#contact"
+                  onClick={() => setPdfModalOpen(false)}
+                  className="bg-gradient-to-r from-[#3E4C9A] to-[#4F67B8] text-white text-xs font-bold px-5 py-2 rounded-xl shadow-md transition-all"
+                >
+                  Start Your Concierge Service
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       )}
