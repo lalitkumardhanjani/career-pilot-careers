@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --navy-900: #0B132B;
+    --navy-800: #1C2541;
+    --navy-700: #3A506B;
+    --indigo-600: #4056A1;
+    --indigo-500: #4F67B8;
+    --indigo-100: #EBF0FA;
+    --soft-blue: #DCE6F2;
+    --emerald-500: #2A9D8F;
+    --emerald-600: #21867A;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif;
+    color: #0B132B;
+    background-color: #F8FAFC;
+    overflow-x: hidden;
+  }
+}
+
+/* Glassmorphism and custom animation utilities */
+.glass-nav {
+  background: rgba(11, 19, 43, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(220, 230, 242, 0.12);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(220, 230, 242, 0.6);
+}
+
+.glass-card-dark {
+  background: rgba(28, 37, 65, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(220, 230, 242, 0.15);
+}
+
+/* Subtle glow effect */
+.glow-accent {
+  box-shadow: 0 0 40px -10px rgba(64, 86, 161, 0.25);
+}
+
+.glow-emerald {
+  box-shadow: 0 0 35px -8px rgba(42, 157, 143, 0.3);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0B132B;
+}
+::-webkit-scrollbar-thumb {
+  background: #3A506B;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #4056A1;
+}
