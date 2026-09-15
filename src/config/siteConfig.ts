@@ -43,7 +43,8 @@ export const siteConfig = {
       "Save 15+ hours/week • Candidate-controlled onboarding • Clear weekly reporting",
   },
   contact: {
-    email: "LK3560003@gmail.com",
+    email: "lk356003@gmail.com",
+    backupEmail: "LK3560003@gmail.com",
     phoneDisplay: "+91 63787 92367",
     phoneTel: "+916378792367",
     whatsappUrl: "https://wa.me/916378792367",

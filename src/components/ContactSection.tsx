@@ -9,6 +9,9 @@ import {
   Loader2,
   ArrowRight,
   ShieldCheck,
+  Inbox,
+  Database,
+  X,
 } from "lucide-react";
 import { siteConfig } from "../config/siteConfig";
 
@@ -32,6 +35,12 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ selectedPlanId }
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
+  const [needsActivation, setNeedsActivation] = useState(false);
+  const [adminModalOpen, setAdminModalOpen] = useState(false);
+  const [storedLeads, setStoredLeads] = useState<any[]>([]);
+
+  const primaryRecipient = "lk356003@gmail.com";
+  const backupRecipient = "LK3560003@gmail.com";
 
   // Sync country if plan selected from pricing card
   useEffect(() => {
@@ -43,6 +52,16 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ selectedPlanId }
       }
     }
   }, [selectedPlanId]);
+
+  // Load stored leads on mount
+  useEffect(() => {
+    try {
+      const stored = JSON.parse(localStorage.getItem("careerpilot_leads") || "[]");
+      setStoredLeads(stored);
+    } catch {
+      // ignore
+    }
+  }, [isSubmitted]);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
@@ -68,64 +87,73 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ selectedPlanId }
     setIsSubmitting(true);
 
     try {
-      // 1. Send via FormSubmit.co directly to LK3560003@gmail.com
-      const formSubmitEndpoint = "https://formsubmit.co/ajax/LK3560003@gmail.com";
+      const payload = {
+        _subject: `New Career Consultation: ${formData.fullName} (${formData.targetRole})`,
+        _template: "table",
+        _captcha: "false",
+        _cc: backupRecipient,
+        "Full Name": formData.fullName,
+        "Email Address": formData.email,
+        "Phone / WhatsApp": formData.phone,
+        "Current Role": formData.currentRole || "Not specified",
+        "Years of Experience": formData.yearsOfExperience,
+        "Target Role": formData.targetRole,
+        "Preferred Country": formData.country,
+        "Client Message": formData.message || "No additional message",
+        "Selected Plan": selectedPlanId || "General Inquiry",
+        "Submitted At": new Date().toLocaleString(),
+      };
+
+      // 1. Dispatch via FormSubmit.co directly to lk356003@gmail.com
+      const primaryEndpoint = `https://formsubmit.co/ajax/${primaryRecipient}`;
       try {
-        await fetch(formSubmitEndpoint, {
+        const response = await fetch(primaryEndpoint, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
             Accept: "application/json",
           },
-          body: JSON.stringify({
-            _subject: `New Career Consultation: ${formData.fullName} (${formData.targetRole})`,
-            _template: "table",
-            _captcha: "false",
-            "Full Name": formData.fullName,
-            "Email Address": formData.email,
-            "Phone / WhatsApp": formData.phone,
-            "Current Role": formData.currentRole || "Not specified",
-            "Years of Experience": formData.yearsOfExperience,
-            "Target Role": formData.targetRole,
-            "Preferred Country": formData.country,
-            "Client Message": formData.message || "No additional message",
-            "Selected Plan": selectedPlanId || "General Inquiry",
-            "Submitted At": new Date().toLocaleString(),
-          }),
+          body: JSON.stringify(payload),
         });
+
+        const data = await response.json().catch(() => null);
+        if (
+          data &&
+          data.success === "false" &&
+          typeof data.message === "string" &&
+          data.message.toLowerCase().includes("activation")
+        ) {
+          setNeedsActivation(true);
+        }
       } catch (submitErr) {
-        console.log("FormSubmit delivery handled:", submitErr);
+        console.log("FormSubmit primary delivery handled:", submitErr);
       }
 
-      // 2. Also send to custom Formspree if valid endpoint provided
-      if (
-        siteConfig.contact.formspreeEndpoint &&
-        siteConfig.contact.formspreeEndpoint.startsWith("http") &&
-        !siteConfig.contact.formspreeEndpoint.includes("xyzgklqw")
-      ) {
-        try {
-          await fetch(siteConfig.contact.formspreeEndpoint, {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-              Accept: "application/json",
-            },
-            body: JSON.stringify({
-              ...formData,
-              selectedPlan: selectedPlanId || "Not specified",
-              submittedAt: new Date().toISOString(),
-            }),
-          });
-        } catch (fetchErr) {
-          console.log("Formspree fallback:", fetchErr);
-        }
+      // 2. Also dispatch to backup recipient (LK3560003@gmail.com)
+      try {
+        await fetch(`https://formsubmit.co/ajax/${backupRecipient}`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: JSON.stringify(payload),
+        });
+      } catch (backupErr) {
+        console.log("Backup email dispatch:", backupErr);
       }
 
       // 3. Safe local storage record
       try {
         const stored = JSON.parse(localStorage.getItem("careerpilot_leads") || "[]");
-        stored.push({ ...formData, timestamp: new Date().toISOString() });
+        stored.unshift({
+          ...formData,
+          selectedPlan: selectedPlanId || "General Inquiry",
+          timestamp: new Date().toISOString(),
+          formattedTime: new Date().toLocaleString(),
+        });
         localStorage.setItem("careerpilot_leads", JSON.stringify(stored));
+        setStoredLeads(stored);
       } catch (storageErr) {
         console.warn("Local storage write skipped:", storageErr);
       }
@@ -152,7 +180,18 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ selectedPlanId }
       consent: false,
     });
     setIsSubmitted(false);
+    setNeedsActivation(false);
   };
+
+  // Pre-filled WhatsApp notification message
+  const whatsappMessage = encodeURIComponent(
+    `Hello CareerPilot Partners,\n\nI have submitted a career strategy consultation request:\n• Name: ${formData.fullName}\n• Email: ${formData.email}\n• Phone: ${formData.phone}\n• Target Role: ${formData.targetRole}\n• Experience: ${formData.yearsOfExperience}\n• Country: ${formData.country}\n• Message: ${formData.message || "None"}\n\nPlease review and confirm our strategy call time.`
+  );
+
+  // Pre-filled Email body
+  const mailtoBody = encodeURIComponent(
+    `Full Name: ${formData.fullName}\nEmail: ${formData.email}\nPhone: ${formData.phone}\nCurrent Role: ${formData.currentRole}\nYears of Experience: ${formData.yearsOfExperience}\nTarget Role: ${formData.targetRole}\nPreferred Country: ${formData.country}\nSelected Plan: ${selectedPlanId || "General Inquiry"}\n\nClient Message:\n${formData.message || "No additional message"}\n\nSubmitted at: ${new Date().toLocaleString()}`
+  );
 
   return (
     <section className="py-20 lg:py-28 bg-[#F8FAFC] border-t border-slate-200/80 relative overflow-hidden" id="contact">
@@ -181,10 +220,10 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ selectedPlanId }
             </div>
             <h3 className="font-bold text-base text-[#0B132B] mb-1">Direct Email</h3>
             <p className="text-xs sm:text-sm text-slate-600 font-medium mb-4 break-all">
-              {siteConfig.contact.email}
+              {primaryRecipient}
             </p>
             <a
-              href={`mailto:${siteConfig.contact.email}?subject=Career%20Concierge%20Strategy%20Inquiry`}
+              href={`mailto:${primaryRecipient}?subject=Career%20Concierge%20Strategy%20Inquiry`}
               className="inline-flex items-center justify-center gap-2 bg-[#3E4C9A] hover:bg-[#4d5cb3] text-white text-xs font-bold px-4 py-2.5 rounded-xl w-full transition-colors shadow-sm"
               id="contact-email-btn"
             >
@@ -238,18 +277,54 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ selectedPlanId }
         <div className="max-w-3xl mx-auto rounded-3xl bg-white border border-slate-200/90 p-8 sm:p-10 md:p-12 shadow-2xl shadow-slate-900/5">
           {isSubmitted ? (
             /* Refined Confirmation Success State */
-            <div className="text-center py-8 animate-in fade-in zoom-in-95 duration-300">
+            <div className="text-center py-6 animate-in fade-in zoom-in-95 duration-300">
               <div className="w-16 h-16 rounded-2xl bg-emerald-50 text-[#10B981] border border-emerald-200 flex items-center justify-center mx-auto mb-5 shadow-xs">
                 <CheckCircle2 className="w-9 h-9 stroke-[2.5]" />
               </div>
+
               <h3 className="text-2xl font-bold text-[#0B132B] mb-2">
                 Consultation Request Received!
               </h3>
               <p className="text-sm sm:text-base text-slate-600 max-w-md mx-auto mb-6 leading-relaxed">
-                Thank you, <span className="font-bold text-[#0B132B]">{formData.fullName || "there"}</span>. Our career team has logged your inquiry and will review your target role details promptly.
+                Thank you, <span className="font-bold text-[#0B132B]">{formData.fullName || "there"}</span>. Your career consultation request has been captured and dispatched to our directors at <strong className="text-[#3E4C9A]">{primaryRecipient}</strong>.
               </p>
 
-              <div className="rounded-2xl bg-slate-50 border border-slate-200 p-5 text-xs text-slate-600 max-w-md mx-auto mb-6 text-left space-y-2.5">
+              {/* 1-Time Form Activation Notice for Inbox Owner */}
+              <div
+                className={`rounded-2xl p-5 text-left text-xs sm:text-sm max-w-lg mx-auto mb-6 shadow-xs ${
+                  needsActivation
+                    ? "bg-amber-50/90 border-2 border-amber-400 text-amber-950"
+                    : "bg-blue-50/80 border border-blue-200 text-slate-700"
+                }`}
+              >
+                <div className="flex items-start gap-3">
+                  <Inbox
+                    className={`w-5 h-5 shrink-0 mt-0.5 ${
+                      needsActivation ? "text-amber-600 animate-bounce" : "text-[#3E4C9A]"
+                    }`}
+                  />
+                  <div>
+                    <h4 className="font-bold text-[#0B132B] text-xs sm:text-sm mb-1">
+                      {needsActivation
+                        ? `Action Required: 1-Click Activation Needed for ${primaryRecipient}`
+                        : `Notice for Inbox Owner (${primaryRecipient}):`}
+                    </h4>
+                    <p className="text-xs text-slate-700 leading-relaxed mb-2">
+                      If this is your first submission via FormSubmit, please open your Gmail inbox at{" "}
+                      <strong className="text-[#0B132B] underline">{primaryRecipient}</strong> (check your{" "}
+                      <em>Updates</em> or <em>Spam</em> folder as well) for an email from FormSubmit with the subject{" "}
+                      <strong className="text-slate-900">"Action Required: Activate your FormSubmit form"</strong> and click{" "}
+                      <strong className="text-emerald-700 underline">"Activate Form"</strong> once.
+                    </p>
+                    <p className="text-[11px] text-slate-500 italic">
+                      Once activated, FormSubmit automatically forwards every lead directly to your Gmail inbox!
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Summary of submitted parameters */}
+              <div className="rounded-2xl bg-slate-50 border border-slate-200 p-5 text-xs text-slate-600 max-w-lg mx-auto mb-6 text-left space-y-2.5">
                 <div className="flex justify-between">
                   <span className="font-semibold text-[#0B132B]">Target Role:</span>
                   <span className="font-medium text-slate-800">{formData.targetRole}</span>
@@ -266,41 +341,44 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ selectedPlanId }
                   <span className="font-semibold text-[#0B132B]">Candidate Email:</span>
                   <span className="font-medium text-slate-800">{formData.email}</span>
                 </div>
+                <div className="flex justify-between">
+                  <span className="font-semibold text-[#0B132B]">Phone / WhatsApp:</span>
+                  <span className="font-medium text-slate-800">{formData.phone}</span>
+                </div>
                 <div className="flex justify-between pt-2 border-t border-slate-200">
-                  <span className="font-semibold text-[#0B132B]">Delivered to Inbox:</span>
-                  <span className="font-bold text-[#3E4C9A]">LK3560003@gmail.com</span>
+                  <span className="font-semibold text-[#0B132B]">Primary Inbox Target:</span>
+                  <span className="font-bold text-[#3E4C9A]">{primaryRecipient}</span>
                 </div>
               </div>
 
+              {/* Immediate 1-Click Direct Notification Options */}
               <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
                 <a
-                  href={`mailto:LK3560003@gmail.com?subject=${encodeURIComponent(
-                    `New Career Consultation: ${formData.fullName} (${formData.targetRole})`
-                  )}&body=${encodeURIComponent(
-                    `Full Name: ${formData.fullName}\nEmail: ${formData.email}\nPhone: ${formData.phone}\nCurrent Role: ${formData.currentRole}\nYears of Experience: ${formData.yearsOfExperience}\nTarget Role: ${formData.targetRole}\nPreferred Country: ${formData.country}\nMessage: ${formData.message}`
-                  )}`}
-                  className="inline-flex items-center justify-center gap-2 bg-[#3E4C9A] hover:bg-[#4d5cb3] text-white text-xs font-bold px-5 py-3 rounded-xl transition-colors shadow-sm"
+                  href={`https://wa.me/916378792367?text=${whatsappMessage}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#10B981] hover:bg-[#0ea372] text-white text-xs font-bold px-6 py-3.5 rounded-xl transition-colors shadow-md shadow-[#10B981]/25"
+                  id="success-whatsapp-notify-btn"
                 >
-                  <Mail className="w-4 h-4" />
-                  <span>Send Direct Email to Team</span>
+                  <MessageCircle className="w-4 h-4" />
+                  <span>Send Immediate WhatsApp Copy</span>
                 </a>
 
                 <a
-                  href={`https://wa.me/916378792367?text=${encodeURIComponent(
-                    `Hello ${siteConfig.brandName}, I just submitted a consultation request for ${formData.targetRole}. My name is ${formData.fullName}, Email: ${formData.email}, Phone: ${formData.phone}.`
-                  )}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 bg-[#10B981] hover:bg-[#0ea372] text-white text-xs font-bold px-5 py-3 rounded-xl transition-colors shadow-sm"
+                  href={`mailto:${primaryRecipient}?cc=${backupRecipient}&subject=${encodeURIComponent(
+                    `New Career Consultation: ${formData.fullName} (${formData.targetRole})`
+                  )}&body=${mailtoBody}`}
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#3E4C9A] hover:bg-[#4d5cb3] text-white text-xs font-bold px-6 py-3.5 rounded-xl transition-colors shadow-md shadow-[#3E4C9A]/25"
+                  id="success-email-notify-btn"
                 >
-                  <MessageCircle className="w-4 h-4" />
-                  <span>Notify via WhatsApp</span>
+                  <Mail className="w-4 h-4" />
+                  <span>Send via Email Client (1-Click)</span>
                 </a>
 
                 <button
                   type="button"
                   onClick={handleReset}
-                  className="inline-flex items-center justify-center bg-white hover:bg-slate-50 text-slate-700 text-xs font-bold px-5 py-3 rounded-xl border border-slate-200 transition-colors"
+                  className="w-full sm:w-auto inline-flex items-center justify-center bg-white hover:bg-slate-50 text-slate-700 text-xs font-bold px-5 py-3.5 rounded-xl border border-slate-200 transition-colors"
                 >
                   Submit Another Inquiry
                 </button>
@@ -319,7 +397,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ selectedPlanId }
                   </span>
                 </div>
                 <p className="text-xs sm:text-sm text-slate-600">
-                  Share your background and goals so we can evaluate role matches prior to our strategy call.
+                  Share your background and goals so our team can review role matches prior to our strategy call.
                 </p>
               </div>
 
@@ -519,7 +597,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ selectedPlanId }
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full inline-flex items-center justify-center gap-2.5 bg-gradient-to-r from-[#3E4C9A] via-[#4F67B8] to-[#3E4C9A] hover:from-[#4859b3] hover:to-[#5571d4] text-white font-bold text-base py-4 px-6 rounded-xl shadow-xl shadow-[#3E4C9A]/30 transition-all duration-300 hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-[#34D399] disabled:opacity-60 disabled:pointer-events-none"
+                className="w-full inline-flex items-center justify-center gap-2.5 bg-gradient-to-r from-[#3E4C9A] via-[#4F67B8] to-[#3E4C9A] hover:from-[#4859b3] hover:to-[#5571d4] text-white font-bold text-base py-4 px-6 rounded-xl shadow-xl shadow-[#3E4C9A]/30 transition-all duration-300 hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-[#34D399] disabled:opacity-60 disabled:pointer-events-none cursor-pointer"
                 id="submit-consultation-btn"
               >
                 {isSubmitting ? (
@@ -537,12 +615,93 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ selectedPlanId }
 
               <div className="flex items-center justify-center gap-2 text-[11px] text-slate-500 pt-2">
                 <ShieldCheck className="w-3.5 h-3.5 text-[#10B981]" />
-                <span>100% Confidential • We never ask for account passwords through this form.</span>
+                <span>100% Confidential • Dispatched directly to {primaryRecipient}</span>
               </div>
             </form>
           )}
         </div>
+
+        {/* Discreet Admin Leads Vault Link */}
+        <div className="mt-8 text-center">
+          <button
+            type="button"
+            onClick={() => setAdminModalOpen(true)}
+            className="inline-flex items-center gap-1.5 text-xs text-slate-400 hover:text-slate-600 font-medium transition-colors cursor-pointer"
+          >
+            <Database className="w-3.5 h-3.5" />
+            <span>View Captured Inquiries Vault ({storedLeads.length})</span>
+          </button>
+        </div>
       </div>
+
+      {/* Captured Leads Vault Modal */}
+      {adminModalOpen && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-black/70 backdrop-blur-sm animate-in fade-in duration-200"
+          role="dialog"
+          aria-modal="true"
+        >
+          <div className="relative w-full max-w-2xl bg-white rounded-3xl shadow-2xl border border-slate-200 overflow-hidden flex flex-col max-h-[85vh]">
+            <div className="bg-[#0B132B] text-white px-6 py-4 flex items-center justify-between">
+              <div className="flex items-center gap-2.5">
+                <Database className="w-5 h-5 text-[#34D399]" />
+                <div>
+                  <h4 className="font-bold text-sm sm:text-base">Captured Inquiries Vault</h4>
+                  <span className="text-[11px] text-slate-300">
+                    Stored securely in local session ({storedLeads.length} leads logged)
+                  </span>
+                </div>
+              </div>
+              <button
+                type="button"
+                onClick={() => setAdminModalOpen(false)}
+                className="text-slate-400 hover:text-white p-1 rounded-lg"
+              >
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+
+            <div className="p-6 overflow-y-auto space-y-4">
+              {storedLeads.length === 0 ? (
+                <div className="text-center py-8 text-slate-500 text-sm">
+                  No inquiries recorded in this browser session yet. Submit a test inquiry to see it here!
+                </div>
+              ) : (
+                storedLeads.map((lead, idx) => (
+                  <div key={idx} className="bg-slate-50 border border-slate-200 rounded-2xl p-4 text-xs space-y-1.5">
+                    <div className="flex items-center justify-between">
+                      <span className="font-bold text-[#0B132B] text-sm">{lead.fullName}</span>
+                      <span className="text-[10px] text-slate-400">{lead.formattedTime || lead.timestamp}</span>
+                    </div>
+                    <div className="text-slate-700">
+                      <strong>Role:</strong> {lead.targetRole} ({lead.yearsOfExperience}) • <strong>Country:</strong> {lead.country}
+                    </div>
+                    <div className="text-slate-600">
+                      <strong>Email:</strong> {lead.email} • <strong>Phone:</strong> {lead.phone}
+                    </div>
+                    {lead.message && (
+                      <div className="text-slate-600 bg-white p-2 rounded-lg border border-slate-200/60 mt-1">
+                        "{lead.message}"
+                      </div>
+                    )}
+                  </div>
+                ))
+              )}
+            </div>
+
+            <div className="bg-slate-100 px-6 py-3 border-t border-slate-200 flex justify-between items-center text-xs">
+              <span className="text-slate-500">Destination: {primaryRecipient}</span>
+              <button
+                type="button"
+                onClick={() => setAdminModalOpen(false)}
+                className="bg-[#0B132B] text-white px-4 py-1.5 rounded-xl font-medium"
+              >
+                Close Vault
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 };
