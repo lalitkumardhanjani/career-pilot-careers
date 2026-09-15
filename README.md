@@ -2,12 +2,13 @@
 
 > Dedicated job-search & application concierge service for busy working professionals who don’t have time to apply, scroll job boards, or chase recruiters.
 
-🌐 **Universal Global Live Website (Accessible Worldwide on All Networks & ISPs)**:  
-👉 **[https://lalitkumardhanjani.github.io/career-pilot-careers/](https://lalitkumardhanjani.github.io/career-pilot-careers/)**
+🌐 **Official Production Live Website (Vercel Global Edge Network)**:  
+👉 **[https://careerpilotcareers.vercel.app/](https://careerpilotcareers.vercel.app/)**
 
 🔗 **Alternative Mirror Links**:
+- [https://careerpilotcareers.surge.sh](https://careerpilotcareers.surge.sh)
+- [https://careerpilotjobs.surge.sh](https://careerpilotjobs.surge.sh)
 - [https://careerpilot-partners.surge.sh](https://careerpilot-partners.surge.sh)
-- [https://nextrole-career-services.surge.sh](https://nextrole-career-services.surge.sh)
 
 ---
 
