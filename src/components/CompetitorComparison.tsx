@@ -147,13 +147,13 @@ export const CompetitorComparison: React.FC = () => {
         status: "positive",
       },
       applycove: {
-        value: "Paid Tiers: ₹349–₹1,299/mo",
-        detail: "Higher tiers required for more daily applications (up to 200/day on Pro). No human review or referral help.",
+        value: "Paid Tiers: ₹1,600–₹5,800/mo",
+        detail: "Tiered by runtime (Starter: ₹1,600/mo, Growth: ₹3,300/mo, Pro: ₹5,800/mo). No human review or referral help.",
         status: "warning",
       },
       loopcv: {
         value: "Charges for Extra Credits & Loops",
-        detail: "Tiered subscription (€9.99 to €129+/mo) plus extra charges for email enrichment credits.",
+        detail: "Tiered subscription (€9.99 to €129+/mo, ~₹900–₹12,000/mo) plus extra charges for email credits.",
         status: "warning",
       },
     },
@@ -207,8 +207,8 @@ export const CompetitorComparison: React.FC = () => {
         status: "positive",
       },
       applycove: {
-        value: "₹349 – ₹1,299 / mo (bot only)",
-        detail: "Up to 200 auto-applications/day on Pro plan. Zero human resume review, zero recruiter networking, zero referral help.",
+        value: "₹1,600 – ₹5,800 / mo (Bot Only)",
+        detail: "Starter ₹1,600/mo, Growth ₹3,300/mo, Pro ₹5,800/mo. Zero human resume review, zero recruiter networking, zero referral help.",
         status: "warning",
       },
       loopcv: {
@@ -265,7 +265,7 @@ export const CompetitorComparison: React.FC = () => {
           </h2>
 
           <p className="text-sm sm:text-base md:text-lg text-slate-300 leading-relaxed max-w-2xl mx-auto">
-            Tools like ApplyCove (₹349–₹1,299/mo) and LoopCV automate clicking application buttons. CareerPilot provides a dedicated professional team that re-engineers your resume, sends personalized recruiter emails, and secures employee referrals — with a 14-day 100% money-back guarantee.
+            Tools like ApplyCove (₹1,600–₹5,800/mo) and LoopCV (~₹900–₹12,000/mo) automate clicking application buttons. CareerPilot provides a dedicated professional team that re-engineers your resume, sends personalized recruiter emails, and secures employee referrals — with a 14-day 100% money-back guarantee.
           </p>
 
           {/* Quick Filter Buttons */}
@@ -360,13 +360,13 @@ export const CompetitorComparison: React.FC = () => {
             {/* ApplyCove Header */}
             <div className="col-span-3 sm:col-span-2 flex flex-col justify-center text-center px-1 sm:px-2">
               <span className="text-white font-bold text-xs sm:text-sm truncate">ApplyCove</span>
-              <span className="text-[10px] text-slate-400 hidden sm:block">$19–$68/mo Bot</span>
+              <span className="text-[10px] text-slate-400 hidden sm:block">₹1,600–₹5,800/mo Bot</span>
             </div>
 
             {/* LoopCV Header */}
             <div className="hidden sm:flex col-span-2 flex-col justify-center text-center px-2">
               <span className="text-white font-bold text-sm truncate">LoopCV</span>
-              <span className="text-[10px] text-slate-400">€9.99–€129/mo Loops</span>
+              <span className="text-[10px] text-slate-400">~₹900–₹12,000/mo Loops</span>
             </div>
           </div>
 
@@ -530,7 +530,7 @@ export const CompetitorComparison: React.FC = () => {
                     </a>
                   </div>
                   <p>
-                    Starter at $19/mo (20 mins daily runtime, 1 platform), Growth at $39/mo (1 hr runtime), Pro at $68/mo (2 hrs runtime). Pure supervised browser bot. No human resume re-engineering or employee referral outreach.
+                    Starter at ₹1,600/mo ($19), Growth at ₹3,300/mo ($39), Pro at ₹5,800/mo ($68). Pure supervised browser bot. No human resume re-engineering or employee referral outreach.
                   </p>
                 </div>
 

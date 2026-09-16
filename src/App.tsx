@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 import { Navbar } from "./components/Navbar";
-import { Hero } from "./components/Hero";
-import { BusyProfessionalSpotlight } from "./components/BusyProfessionalSpotlight";
 import { CoreAIPillarsShowcase } from "./components/CoreAIPillarsShowcase";
 import { HowItWorks } from "./components/HowItWorks";
 import { WeeklyReportPreview } from "./components/WeeklyReportPreview";
+import { BusyProfessionalSpotlight } from "./components/BusyProfessionalSpotlight";
 import { ClientTestimonials } from "./components/ClientTestimonials";
 import { Pricing } from "./components/Pricing";
 import { CompetitorComparison } from "./components/CompetitorComparison";
@@ -22,38 +21,35 @@ export const App: React.FC = () => {
 
   return (
     <div className="min-h-screen flex flex-col bg-[#F8FAFC] text-[#0B132B]">
-      {/* 1. Sticky Navigation Bar */}
+      {/* Sticky Navigation Bar */}
       <Navbar />
 
       <main className="flex-1">
-        {/* 2. Hero Section (Upload Resume • We Pilot Complete Job Search) */}
-        <Hero />
-
-        {/* 3. Time-Saving Calculator & Comparison for Busy Working Professionals */}
-        <BusyProfessionalSpotlight />
-
-        {/* 4. 7 Core Services Interactive Showcase (Live ATS, Outreach, Referrals, Naukri) */}
+        {/* 1. What Our Dedicated Career Team Executes For You Every Day */}
         <CoreAIPillarsShowcase />
 
-        {/* 5. How It Works (5-Step Process Timeline) */}
+        {/* 2. How We Work With You Step-by-Step */}
         <HowItWorks />
 
-        {/* 6. Transparency Tracker (Weekly Activity Summary & Analytics Preview) */}
+        {/* 3. Know Exactly What Is Being Done for Your Career */}
         <WeeklyReportPreview />
 
-        {/* 7. Candidate Success Stories & Verified Reviews */}
+        {/* 4. Made for Busy Working Professionals & Doing It Alone vs Having CareerPilot */}
+        <BusyProfessionalSpotlight />
+
+        {/* 5. Honest Feedback from Working Professionals */}
         <ClientTestimonials />
 
-        {/* 8. Pricing Plans with 14-Day 100% Refund Guarantee */}
+        {/* 6. Simple Month-to-Month Pricing • Cancel Anytime */}
         <Pricing onSelectPlan={handleSelectPlan} />
 
-        {/* 9. Competitor Comparison Section (Dedicated Humans vs Automated Spam Bots) */}
+        {/* 7. Dedicated Career Team vs Automated Form Bots */}
         <CompetitorComparison />
 
-        {/* 10. Frequently Asked Questions */}
+        {/* 8. Frequently Asked Questions */}
         <FAQSection />
 
-        {/* 11. Consultation & Fast-Track Application Form */}
+        {/* 9. Let’s Discuss Your Career Objectives */}
         <ContactSection selectedPlanId={selectedPlan} />
       </main>
 
