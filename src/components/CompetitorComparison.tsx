@@ -78,12 +78,12 @@ export const CompetitorComparison: React.FC = () => {
       },
     },
     {
-      feature: "Dual-Vector Employee Referrals",
+      feature: "Direct Employee Referrals",
       category: "referrals",
-      description: "Activating 1st-degree alumni + target company insiders for 5x interview callbacks",
+      description: "Connecting with alumni and team insiders to get you internal employee referrals",
       careerPilot: {
-        value: "Full Dual-Vector Referral Strategy",
-        detail: "Proactively approaches university alumni & verified company insiders to lock internal referral codes.",
+        value: "Alumni & Company Insider Referrals",
+        detail: "Reaches out warmly to college alumni and verified insiders to lock internal referral codes for you.",
         status: "positive",
       },
       applycove: {
@@ -543,7 +543,7 @@ export const CompetitorComparison: React.FC = () => {
                     </a>
                   </div>
                   <p>
-                    Free tier limited to 10 applies/mo; paid tiers from €9.99/mo up to €129+/mo for automated loops across generic job aggregator boards. No dedicated account management or dual-vector referral coordination.
+                    Free tier limited to 10 applies/mo; paid tiers from €9.99/mo up to €129+/mo for automated loops across generic job aggregator boards. No dedicated account management or employee referral outreach.
                   </p>
                 </div>
               </div>

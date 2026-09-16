@@ -27,13 +27,13 @@ export const HowItWorks: React.FC = () => {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#3E4C9A] bg-[#EBF0FA] border border-[#3E4C9A]/20 px-4 py-1.5 rounded-full inline-block mb-4 shadow-sm">
-            Full-Service White-Glove Workflow
+            Simple 5-Step Process
           </span>
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#0B132B] tracking-tight">
-            How Our Dedicated Career Team Operates
+            How We Work With You Step-by-Step
           </h2>
           <p className="mt-4 text-base sm:text-lg text-slate-600 leading-relaxed">
-            From specialist resume re-engineering and company scouting through personalized recruiter outreach, dual-vector employee referrals, and weekly executive briefings.
+            From rewriting your resume and finding the best roles, to messaging hiring managers, securing employee referrals, and booking your interviews.
           </p>
         </div>
 
@@ -73,7 +73,7 @@ export const HowItWorks: React.FC = () => {
 
                 <div className="mt-5 pt-3 border-t border-slate-200/60 flex items-center gap-1.5 text-[11px] text-[#10B981] font-semibold">
                   <CheckCircle2 className="w-3.5 h-3.5" />
-                  <span>Milestone {step.step}</span>
+                  <span>Step {step.step}</span>
                 </div>
               </div>
             );

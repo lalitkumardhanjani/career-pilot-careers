@@ -32,13 +32,13 @@ export const WhatsIncluded: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#3E4C9A] bg-[#EBF0FA] border border-[#3E4C9A]/20 px-4 py-1.5 rounded-full inline-block mb-4 shadow-sm">
-            Dedicated Executive Service Suite
+            Everything We Do For You
           </span>
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#0B132B] tracking-tight">
-            Full-Service Career Acceleration Suite
+            Complete Done-For-You Career Services
           </h2>
           <p className="mt-4 text-base sm:text-lg text-slate-600 leading-relaxed">
-            Every service is meticulously executed by our dedicated team of career specialists, talent researchers, and outreach coordinators.
+            Every single step is handled by our dedicated team of career specialists so you never have to worry about job searching alone.
           </p>
         </div>
 
@@ -89,7 +89,7 @@ export const WhatsIncluded: React.FC = () => {
                 </div>
 
                 <div className="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between text-xs font-semibold text-[#3E4C9A]">
-                  <span>Dedicated Specialist Execution</span>
+                  <span>100% Handled For You</span>
                   <ArrowUpRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                 </div>
               </div>

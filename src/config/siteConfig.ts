@@ -36,23 +36,23 @@ export interface ProcessStep {
 export const siteConfig = {
   brandName: "CareerPilot Partners",
   companyName: "CareerPilot Partners",
-  tagline: "Dedicated Career Specialists & Full-Service Application Concierge for Busy Professionals",
+  tagline: "Your Personal Career Team • We Find the Jobs, Polish Your Resume, Message Recruiters & Apply for You",
   oneLineVision:
-    "A dedicated team of senior career strategists, recruiter researchers, and application specialists actively scouring openings, tailoring resumes, securing employee referrals, and reaching out to hiring leads on your behalf.",
+    "You work hard at your daily job. Our dedicated team searches for verified openings every morning, rewrites your resume, reaches out to hiring managers, and secures employee referrals so you can land high-impact interviews without the stress.",
   hero: {
-    badge: "Dedicated Professional Career Team • Working Actively For You",
-    headline: "Focus on Your Demanding Work. Our Dedicated Team Pilots Your Next Move.",
+    badge: "Real Career Specialists Working For You • 100% Done-For-You",
+    headline: "Focus on Your Busy Job. Our Dedicated Team Handles Your Next Move.",
     subheadline:
-      "Working 10-hour days leaves zero time to browse job boards, tailor resumes, find hiring decision-makers, and chase recruiters. Our dedicated career team acts as your personal career co-pilot—optimizing your resume, discovering high-match openings, securing employee referrals, personalizing recruiter outreach, and executing targeted applications so you land high-impact interviews.",
+      "Working 10-hour days leaves no energy to browse job boards, rewrite resumes, and chase recruiters after work. Our dedicated team does the heavy lifting for you—we polish your resume, find matching high-paying openings, get you employee referrals, reach out directly to recruiters, and submit your applications. You just show up for the interviews.",
     trustStatement:
-      "Save 15–20 hours/week • 100% human-guided & candidate-controlled • All platform premiums covered",
+      "Save 15–20 hours every week • 100% private & current-employer safe • All tools & platform fees included",
     pipelineWorkflow: [
-      { step: "01", name: "Curate", desc: "Daily opportunity research across LinkedIn, Naukri & corporate career portals" },
-      { step: "02", name: "Tailor", desc: "Expert resume re-engineering & ATS market calibration" },
-      { step: "03", name: "Connect", desc: "Direct relationship building with talent partners & headhunters" },
-      { step: "04", name: "Refer", desc: "Dual-vector outreach: 1st-degree alumni & verified company insiders" },
-      { step: "05", name: "Apply", desc: "Curated applications with tailored screening question responses" },
-      { step: "06", name: "Report", desc: "Transparent Friday intelligence digest & callback management" },
+      { step: "01", name: "Polish", desc: "Line-by-line resume rewrite so you pass screening filters and impress managers" },
+      { step: "02", name: "Find", desc: "Daily search across LinkedIn, Naukri & company websites matching your target salary" },
+      { step: "03", name: "Connect", desc: "Friendly, direct messages sent to hiring leads and recruiters at target firms" },
+      { step: "04", name: "Refer", desc: "Direct employee referrals from alumni and company insiders so your resume skips the pile" },
+      { step: "05", name: "Apply", desc: "Tailored applications submitted with thoughtful answers to company screening questions" },
+      { step: "06", name: "Report", desc: "A simple, clear update every Friday showing everything done and interviews queued" },
     ],
   },
   contact: {
@@ -72,64 +72,64 @@ export const siteConfig = {
     pricingDisclaimer:
       "Career-support services do not guarantee interviews, job offers, employment, recruiter responses, or referral outcomes. Results depend on candidate profile, role fit, job market, and employer hiring decisions.",
     platformPremiumNote:
-      "All necessary platform toolings, email verification credits, recruiter search suites, and outreach infrastructure are 100% absorbed and managed by our team.",
+      "All necessary platform tools, email verification credits, recruiter search suites, and outreach fees are 100% covered and managed by our team.",
     applicationPhilosophy:
-      "Every application and message is guided by agreed target roles, seniority, compensation brackets, and preferred locations. We focus on high relevance and personalized quality—never blind automation or spam.",
+      "Every application and message strictly follows your agreed target roles, salary expectations, preferred cities, and company rules. We focus on high relevance and personalized quality—never blind spam or robotic bulk clicks.",
     howItWorksNote:
-      "Every job search is unique. We focus on consistent, high-signal execution by dedicated specialists for busy professionals—not unrealistic shortcuts.",
+      "Every job search is unique. We focus on consistent, daily execution by real career specialists for busy working professionals.",
   },
 
   busyProfessionalMetrics: [
     {
       metric: "15–20 hrs",
       label: "Saved Every Week",
-      detail: "No more spending exhausted evenings scrolling job boards, rewriting cover notes, and filling repetitive portals.",
+      detail: "Spend your evenings relaxing with family and recharging, not filling out repetitive online job forms.",
     },
     {
       metric: "96%+",
-      label: "ATS Match Score",
-      detail: "Resumes and profiles are hand-calibrated by career specialists to target industry standards and job descriptions.",
+      label: "Resume Match Score",
+      detail: "Rewritten by real career specialists to highlight your achievements and match company job descriptions.",
     },
     {
       metric: "3.4x",
-      label: "Higher Response Rate",
-      detail: "Personalized situational messaging crafted for recruiters and referrers dramatically outperforms cold portal applications.",
+      label: "More Recruiter Replies",
+      detail: "Personalized, warm notes to hiring managers get answered far more often than cold portal submissions.",
     },
     {
       metric: "100%",
-      label: "Premiums Covered",
-      detail: "All outreach credits, profile boosters, email verification tools, and portals are fully managed by our team.",
+      label: "All Tools Included",
+      detail: "All paid email finders, recruiter search suites, and application tools are completely covered by us.",
     },
   ],
 
   problemCards: [
     {
-      title: "Zero Time After a 9-to-6 Day",
+      title: "Exhausted After a 9-to-6 Workday",
       description:
-        "After a demanding workday, spending 2–3 hours finding openings and filling repetitive portal forms leads to burnout and dropped consistency.",
+        "After working 9 to 10 hours, spending 2 to 3 hours searching job portals and filling repetitive forms burns you out.",
       icon: "Clock",
       badge: "Time Exhaustion",
     },
     {
-      title: "Silent Portals & ATS Black Holes",
+      title: "Applications Disappearing into a Black Hole",
       description:
-        "Standard portal applications rarely get seen without keyword calibration, direct recruiter outreach, and internal referral pathways.",
+        "Submitting standard resumes through portals without referrals or direct recruiter emails rarely gets a callback.",
       icon: "EyeOff",
-      badge: "Black Hole Rejections",
+      badge: "Zero Responses",
     },
     {
-      title: "Missed 48-Hour Openings",
+      title: "Great Jobs Fill Up in 48 Hours",
       description:
-        "Top positions fill up within 48–72 hours. If you only search on weekends, the best employer application windows are already closed.",
+        "If you only look for jobs on weekends, the best openings posted during the week are already closed or flooded.",
       icon: "SearchX",
       badge: "Fast-Closing Roles",
     },
     {
-      title: "Awkward or Generic Networking",
+      title: "Cold Messaging Feels Awkward",
       description:
-        "Sending generic copy-paste messages to recruiters and connections burns bridges. Context-aware, human-crafted messaging is essential.",
+        "Reaching out to strangers on LinkedIn can feel uncomfortable. Our team writes thoughtful, respectful introductions for you.",
       icon: "MessageSquareOff",
-      badge: "Outreach Fatigue",
+      badge: "Networking Stress",
     },
   ],
 
@@ -137,106 +137,106 @@ export const siteConfig = {
     {
       id: "resume-reengineering",
       letter: "01",
-      title: "Expert Resume Re-Engineering & ATS Calibration",
+      title: "Resume Rewrite & ATS Optimization",
       description:
-        "Our senior career specialists personally audit your resume against target roles, job descriptions, and ATS algorithms. We restructure bullet points into quantified achievements and optimize keyword density with complete transparency.",
+        "Our career specialists personally review and rewrite your resume. We transform your daily tasks into clear, quantified achievements and make sure your resume easily passes applicant tracking filters.",
       icon: "FileText",
-      tag: "Pillar 1 • Resume & ATS",
+      tag: "Step 1 • Resume & ATS",
       impactMetric: "ATS Score: 62% → 96%",
       keyFeatures: [
-        "Senior career specialist hand-review & ATS parser audit",
-        "Passive tasks rewritten into quantified business impact",
-        "Role-specific customization for target tech stacks",
+        "Line-by-line review by an experienced career specialist",
+        "Passive tasks rewritten into clear, quantified business achievements",
+        "Tailored specifically for your skills and target job roles",
       ],
     },
     {
       id: "recruiter-email",
       letter: "02",
-      title: "Direct Recruiter & Decision-Maker Email Campaigns",
+      title: "Direct Emails to Recruiters & Hiring Managers",
       description:
-        "Our research team identifies verified talent partners and engineering hiring managers, crafting personalized, professional outreach tailored specifically to each role—delivered from your dedicated candidate email.",
+        "We find verified email addresses of recruiters and engineering managers at your target companies. We send warm, personalized introductions highlighting your exact strengths and portfolio.",
       icon: "MailCheck",
-      tag: "Pillar 2 • Direct Outreach",
-      impactMetric: "3.4x Higher Reply Rate",
+      tag: "Step 2 • Direct Outreach",
+      impactMetric: "3.4x More Recruiter Replies",
       keyFeatures: [
-        "Verified recruiter & hiring manager email discovery",
-        "Hyper-personalized situational templates tailored by specialists",
-        "Polite, structured follow-up cadences managed on your behalf",
+        "Verified recruiter and hiring manager emails discovered",
+        "Personalized, friendly notes tailored to each specific role",
+        "Polite follow-up messages managed for you automatically",
       ],
     },
     {
       id: "role-scouting",
       letter: "03",
-      title: "High-Signal Opportunity Scouting & Requirement Extraction",
+      title: "Daily Hand-Picked Job Openings",
       description:
-        "Our team conducts continuous daily research across LinkedIn, corporate career portals, and unlisted opportunities matching your exact title, skills, experience, target CTC, and location preferences.",
+        "Every single morning, our team searches LinkedIn, company career pages, and job boards to find fresh roles matching your exact skills, preferred locations, and target salary.",
       icon: "Compass",
-      tag: "Pillar 3 • Role Scouting",
-      impactMetric: "30+ Weekly Verified Openings",
+      tag: "Step 3 • Daily Job Search",
+      impactMetric: "30+ Verified Openings Weekly",
       keyFeatures: [
-        "Daily curation across corporate portals & unlisted roles",
-        "Compensation & seniority threshold filtering",
-        "Clear match rationale provided for every opportunity",
+        "Fresh daily search across corporate career pages and job boards",
+        "Strictly filtered by your target salary, seniority, and location",
+        "Clear reason provided for why each job is a great fit for you",
       ],
     },
     {
       id: "dual-referrals",
       letter: "04",
-      title: "Dual-Vector Employee Referral Strategy",
+      title: "Direct Employee Referrals (Alumni & Insiders)",
       description:
-        "Referrals are your highest-leverage route to interviews. Our team activates warm referrals across your existing 1st-degree/alumni network and coordinates respectful, value-first introductions to verified insiders at target firms.",
+        "Employee referrals give you a 5x higher chance of landing an interview. We politely reach out to alumni from your college and helpful insiders at your target companies to secure internal referral codes.",
       icon: "Users2",
-      tag: "Pillar 4 • Referral Strategy",
+      tag: "Step 4 • Employee Referrals",
       impactMetric: "5x Higher Interview Callback",
       keyFeatures: [
-        "1st-degree & alumni network relationship activation without awkwardness",
-        "Respectful outreach to senior engineers & leads at target firms",
-        "Context-aware messaging adapted to recipient relationship",
+        "Warm connections with college alumni and verified company insiders",
+        "Respectful, friendly outreach so you never feel awkward",
+        "Skips the crowded applicant queue and lands right in front of the hiring team",
       ],
     },
     {
       id: "recruiter-networking",
       letter: "05",
-      title: "Proactive Recruiter & Headhunter Network Expansion",
+      title: "Building Your Personal Recruiter Network",
       description:
-        "Our team builds long-term relationships on your behalf with specialized headhunters and executive talent partners in your domain before openings go public—managing connection notes and ongoing touchpoints.",
+        "We proactively connect with specialized headhunters and senior tech recruiters in your field before jobs are even posted publicly—putting your profile at the top of their list.",
       icon: "UserCheck",
-      tag: "Pillar 5 • Talent Network",
-      impactMetric: "Dedicated Talent CRM",
+      tag: "Step 5 • Recruiter Networking",
+      impactMetric: "Dedicated Recruiter Network",
       keyFeatures: [
-        "Specialized headhunters & executive talent leads identified",
-        "Personalized connection requests highlighting candidate value",
-        "Relationship nurturing & pipeline tracking managed by our team",
+        "Top headhunters and tech talent partners identified in your domain",
+        "Warm connection notes highlighting your experience and value",
+        "Long-term relationships nurtured so opportunities come to you first",
       ],
     },
     {
       id: "naukri-acceleration",
       letter: "06",
-      title: "Naukri Profile FastForward & Curated Application Team",
+      title: "Naukri & LinkedIn Applications & Profile Boost",
       description:
-        "We optimize your Naukri headline, summary, and keyword weighting to place your profile in the top recruiter search bracket (FastForward rank), while our team submits high-priority applications with tailored questionnaire responses.",
+        "We optimize your Naukri and LinkedIn profile headlines and keywords so recruiters discover you first. Plus, our team submits applications with thoughtful, custom answers to employer screening questions.",
       icon: "CheckSquare",
-      tag: "Pillar 6 • Naukri Booster",
-      impactMetric: "Top 3% Recruiter Search Index",
+      tag: "Step 6 • Job Applications",
+      impactMetric: "Top 3% Search Visibility",
       keyFeatures: [
-        "Naukri profile keyword & headline optimization by experts",
-        "Daily activity cadence maintaining high search indexing",
-        "Curated applications with custom screening questionnaire answers",
+        "Naukri & LinkedIn headlines and summaries polished for maximum recruiter views",
+        "Daily profile activity maintained to keep you at the top of recruiter searches",
+        "Carefully submitted applications with customized screening answers",
       ],
     },
     {
       id: "dedicated-concierge",
       letter: "07",
-      title: "Dedicated Career Specialist & Transparent Reporting",
+      title: "Your Dedicated Career Manager & Weekly Updates",
       description:
-        "You are assigned a dedicated career specialist who manages your entire search. All outreach credits and platform toolings are 100% covered. You track everything via our central dashboard and weekly Friday intelligence digests.",
+        "You are paired with a dedicated career specialist who manages your entire job search. All tools and software fees are 100% paid by us. You receive a simple, transparent summary every Friday.",
       icon: "LineChart",
-      tag: "Pillar 7 • Concierge Management",
-      impactMetric: "100% Tooling & Premiums Covered",
+      tag: "Step 7 • Personal Manager",
+      impactMetric: "100% of Tools & Fees Covered",
       keyFeatures: [
-        "Dedicated career manager assigned to your account",
-        "All outreach credits & platform toolings included",
-        "Transparent Friday progress & intelligence digest",
+        "Dedicated career specialist assigned personally to you",
+        "All outreach tools, email finders, and platform fees fully included",
+        "Clear Friday progress update showing all applications, replies, and interviews",
       ],
     },
   ] as ServiceItem[],
@@ -244,146 +244,146 @@ export const siteConfig = {
   howItWorksSteps: [
     {
       step: "01",
-      title: "Strategy Consultation with Career Specialist",
+      title: "Quick 30-Min Onboarding Chat",
       description:
-        "We understand your career trajectory, target roles, preferred locations, target CTC, notice period, and specific companies to prioritize or exclude.",
-      badge: "Step 01 • Consultation",
+        "We learn about your target roles, desired salary, preferred cities, notice period, and any companies you want us to avoid.",
+      badge: "Step 01 • Get Started",
     },
     {
       step: "02",
-      title: "Resume & Profile Re-Engineering",
+      title: "We Rewrite Your Resume & Profiles",
       description:
-        "Our career specialists audit and rewrite your resume, calibrating bullet points to quantified business impact and target market criteria.",
-      badge: "Step 02 • Positioning",
+        "Our specialists polish your resume and LinkedIn/Naukri profiles so your achievements shine and pass company screening filters.",
+      badge: "Step 02 • Polish Resume",
     },
     {
       step: "03",
-      title: "Target Company & Search Calibration",
+      title: "We Set Your Search Rules",
       description:
-        "We establish your daily search matrix: role keywords, compensation boundaries, location constraints, and corporate targets.",
-      badge: "Step 03 • Strategy",
+        "We establish your exact criteria—job titles, salary expectations, tech stacks, and company wishlists—so every application is on point.",
+      badge: "Step 03 • Plan & Match",
     },
     {
       step: "04",
-      title: "Applications, Referrals & Recruiter Outreach",
+      title: "We Apply, Message Recruiters & Get Referrals",
       description:
-        "Our team executes your multi-channel search: direct recruiter emails, dual-vector referral asks, and curated LinkedIn & Naukri submissions.",
-      badge: "Step 04 • Execution",
+        "Our team works for you every day: submitting applications, reaching out to hiring managers, and securing employee referrals.",
+      badge: "Step 04 • Daily Execution",
     },
     {
       step: "05",
-      title: "Interview Acceleration & Friday Digest",
+      title: "You Interview & Choose the Best Offer",
       description:
-        "Track interview invitations, recruiter replies, and key milestones in your central dashboard with a comprehensive weekly strategic digest.",
-      badge: "Step 05 • Momentum",
+        "You get 15 to 20 interview calls in 1 to 2 weeks, review your Friday updates, and pick from 4 to 5 competing offer letters.",
+      badge: "Step 05 • Get Hired",
     },
   ] as ProcessStep[],
 
   weeklySummaryPreview: {
-    title: "Dedicated Team Dashboard • Real-Time Pipeline Intelligence",
-    note: "You are never left guessing. Your dedicated career specialist and Friday intelligence digest provide 100% visibility into actions completed, responses, and callback momentum.",
+    title: "Your Weekly Progress Dashboard • 100% Clear & Transparent",
+    note: "You never have to guess what's happening. Your dedicated career manager and Friday summary give you complete visibility into every application submitted, recruiter message sent, and interview scheduled.",
     metrics: [
-      { label: "Candidate Profile", value: "Senior Backend / Staff Software Engineer" },
-      { label: "Target Brackets", value: "₹35L – ₹55L / $140k – $200k • BLR, HYD, US Remote" },
-      { label: "ATS Optimization Score", value: "96% (Re-engineered from baseline 62%)" },
-      { label: "High-Signal Roles Discovered", value: "42 Verified Openings Hand-Curated" },
-      { label: "Recruiter Outreach Sent", value: "18 Hyper-Personalized Direct Inquiries" },
-      { label: "Employee Referrals Requested", value: "7 Context-Aware Warm Asks Delivered" },
-      { label: "Referrals Confirmed", value: "3 Internal Referral Codes Logged" },
-      { label: "Naukri Search Rank Boost", value: "Top 3% Recruiter Search Visibility Index" },
-      { label: "Curated Applications Logged", value: "24 High-Priority Submissions" },
-      { label: "Active Interview Callbacks", value: "4 Preliminary HR / Tech Rounds Scheduled" },
-      { label: "Top Matching Companies", value: "Atlassian, Razorpay, Microsoft, Swiggy, Stripe" },
-      { label: "Next Week Strategic Focus", value: "Accelerate FinTech Leadership Outreach" },
+      { label: "Candidate Profile", value: "Senior Backend / Full Stack Engineer" },
+      { label: "Target Salary", value: "₹35L – ₹55L / $140k – $200k • Bangalore, Hyderabad, Remote" },
+      { label: "Resume ATS Score", value: "96% (Rewritten from baseline 62%)" },
+      { label: "Hand-Picked Roles Found", value: "42 Verified Jobs Matching Criteria" },
+      { label: "Recruiter Emails Sent", value: "18 Personalized Messages to Hiring Managers" },
+      { label: "Employee Referrals Requested", value: "7 Warm Introductions to Insiders" },
+      { label: "Employee Referrals Confirmed", value: "3 Internal Referral Codes Secured" },
+      { label: "Naukri & LinkedIn Rank", value: "Top 3% Recruiter Search Visibility" },
+      { label: "Applications Submitted", value: "24 High-Priority Applications Completed" },
+      { label: "Interview Calls Scheduled", value: "4 Preliminary Recruiter & Tech Rounds Queued" },
+      { label: "Top Companies Contacted", value: "Atlassian, Razorpay, Microsoft, Swiggy, Stripe" },
+      { label: "Next Week's Focus", value: "Expand Outreach to FinTech & Product Engineering Leads" },
     ],
   },
 
   credibilityPillars: [
     {
-      title: "Dedicated Human Career Specialists",
+      title: "Real Human Career Specialists",
       description:
-        "Real career experts and talent researchers manage your search—delivering personalized, high-touch execution rather than generic automation.",
+        "Real career experts and researchers handle your search by hand—giving you personal, high-quality attention rather than generic bot automation.",
       icon: "Users2",
     },
     {
-      title: "Multi-Channel Outreach Infrastructure",
+      title: "All Job Search Tools Included",
       description:
-        "Leveraging specialized recruiter email discovery, verified talent databases, and targeted application systems behind the scenes for maximum reach and speed.",
+        "We provide all verified email search tools, recruiter databases, and application systems behind the scenes at no extra cost to you.",
       icon: "Layers",
     },
     {
-      title: "Dual-Vector Referral Strategy",
+      title: "Direct Employee Referrals",
       description:
-        "Unlock the hidden job market by activating warm 1st-degree connections and respectful company insider referral requests.",
+        "We reach out to college alumni and helpful company insiders to secure internal referrals so your resume skips the pile.",
       icon: "Target",
     },
     {
-      title: "Complete Pipeline Transparency",
+      title: "100% Transparent Tracking",
       description:
-        "Monitor applications, outreach statuses, recruiter replies, and interview invitations in one transparent, candidate-controlled dashboard.",
+        "Track every application, recruiter message, reply, and interview call in one clear, simple dashboard whenever you want.",
       icon: "BarChart4",
     },
   ],
 
   privacyPrinciples: [
     {
-      title: "Candidate-Controlled Boundaries",
-      description: "You set target CTC, excluded companies, and location boundaries before any application or outreach occurs.",
+      title: "You're Always in Control",
+      description: "You choose your target salary, location preferences, and any companies you want us to avoid.",
     },
     {
-      title: "Zero Credential Harvesting",
-      description: "We never ask for account passwords through web inquiry forms. Security and privacy are paramount.",
+      title: "We Never Ask For Your Passwords",
+      description: "Your personal accounts stay yours. We never ask for sensitive passwords.",
     },
     {
-      title: "Explicit Consent Prior to Submissions",
-      description: "All application pipelines and outreach sequences adhere strictly to your agreed candidate criteria.",
+      title: "Your Current Job is 100% Safe",
+      description: "We strictly blacklist your current company, sister companies, and clients so no one at your current job ever knows.",
     },
     {
-      title: "Dedicated Job-Search Communication",
-      description: "All recruiter conversations can be routed through a dedicated professional email address for full candidate ownership.",
+      title: "Private Dedicated Job Search Email",
+      description: "All recruiter messages can run through a separate professional email so your personal inbox stays clean and private.",
     },
     {
-      title: "Strict Professional Confidentiality",
-      description: "Your current employer status, resume data, and compensation expectations are protected by non-disclosure standards.",
+      title: "Strict Professional Privacy",
+      description: "Your resume, compensation details, and job search are protected by strict confidentiality standards.",
     },
     {
-      title: "Month-to-Month Flexibility",
-      description: "No lock-in or long-term contracts. Pause, resume, or adjust your career acceleration tier whenever you wish.",
+      title: "Cancel Anytime with 1 Click",
+      description: "No long-term contracts. You can pause, restart, or cancel your month-to-month membership whenever you want.",
     },
   ],
 
   cancellationPolicy: {
     title: "14-Day 100% Money-Back Opportunity Guarantee",
     summary:
-      "If our dedicated career team does not deliver relevant interview opportunities matching your agreed compensation, seniority, and role criteria within your first 2 weeks (14 days), your entire subscription fee will be 100% refunded to your original payment method. Zero risk, no questions asked.",
+      "If our dedicated career team does not deliver relevant interview opportunities matching your agreed salary, seniority, and role criteria within your first 2 weeks (14 days), your entire subscription fee will be 100% refunded to your original payment method. Zero risk, no questions asked.",
     period: "First 14 Calendar Days",
     refundType: "100% Full Money-Back Refund",
-    processingTime: "Processed within 24 hours, credited to source account in 3–5 business days",
+    processingTime: "Approved within 24 hours, credited back to source account in 3–5 business days",
     terms: [
       {
         heading: "14-Day Opportunity Window",
         description:
-          "Starting from your completed onboarding consultation, our specialists audit your resume, scout openings, submit tailored applications, and execute recruiter campaigns. If zero relevant interview opportunities are coordinated within 14 calendar days, you qualify for an immediate 100% refund.",
+          "Starting from your completed onboarding consultation, our team polishes your resume, finds matching jobs, submits tailored applications, and reaches out to recruiters and employee referrers. If zero relevant interview opportunities are coordinated within 14 calendar days, you qualify for an immediate 100% refund.",
       },
       {
-        heading: "100% Full Fee Refund (No Hidden Deductions)",
+        heading: "100% Full Refund (No Hidden Fees)",
         description:
-          "You receive back 100% of your initial subscription fee (₹10,000 for India Accelerator or $100 for Global Accelerator). We absorb all platform costs, email verification credits, and administrative overhead.",
+          "You receive back 100% of your initial subscription fee (₹10,000 for India Accelerator or $100 for Global Accelerator). We cover all platform costs, email finder credits, and admin expenses.",
       },
       {
-        heading: "Zero Hassle & 1-Click Request",
+        heading: "Simple & Friendly 1-Click Request",
         description:
-          "To request a refund within your first 14 days, simply notify your dedicated talent specialist via WhatsApp or email, or click 'Request Cancellation' in your portal. No interrogation, no bureaucratic hurdles.",
+          "To request a refund within your first 14 days, simply text your dedicated specialist on WhatsApp, email us, or click 'Request Cancellation' in your dashboard. No interrogation, no hassle.",
       },
       {
-        heading: "Month-to-Month Flexibility (Cancel Anytime)",
+        heading: "Cancel Anytime (Month-to-Month)",
         description:
-          "Beyond your first 14 days, your membership remains strictly month-to-month with zero long-term lock-in contracts. You can pause or cancel at any time prior to your next 30-day billing renewal.",
+          "Beyond your first 14 days, your membership remains strictly month-to-month with no long-term contracts. You can pause or cancel at any time before your next monthly renewal.",
       },
       {
-        heading: "Strict Confidentiality Retained Forever",
+        heading: "Your Privacy is Protected Forever",
         description:
-          "Even if you cancel and receive a full refund, our non-disclosure standards, employer negative-company exclusion list, and data protection agreements remain 100% legally binding and confidential forever.",
+          "Even if you cancel and receive a full refund, our non-disclosure agreement and company blacklist remain 100% active and confidential forever.",
       },
     ],
   },
@@ -399,16 +399,16 @@ export const siteConfig = {
       badge: "Most Popular • India Roles",
       features: [
         "14-Day 100% Money-Back Guarantee (Full refund if opportunities not delivered in 2 weeks)",
-        "Dedicated Career Specialist & Research Coordinator",
-        "Expert Resume Re-Engineering & ATS 95%+ Calibration",
-        "Daily High-Signal Opportunity Scouting across corporate portals",
-        "Personalized Recruiter & Hiring Manager Email Campaigns",
-        "Dual-Vector Referral Strategy (1st degree alumni + company insiders)",
-        "Naukri Profile FastForward Optimization & Search Rank Booster",
-        "Targeted LinkedIn & Naukri Application Submissions with Custom Answers",
-        "Proactive Recruiter & Headhunter Network Expansion",
-        "All Email Verification & Platform Premiums 100% Covered",
-        "Weekly Friday Intelligence Digest & Real-Time Tracking",
+        "Dedicated Personal Career Specialist & Coordinator",
+        "Complete Resume Rewrite & 95%+ ATS Optimization",
+        "Daily Hand-Picked Job Openings across top corporate portals",
+        "Personalized Emails to Hiring Managers & Recruiters",
+        "Direct Employee Referrals (Alumni + Company Insiders)",
+        "Naukri Profile Boost & Top 3% Recruiter Search Ranking",
+        "Tailored LinkedIn & Naukri Applications with Custom Answers",
+        "Proactive Outreach to Headhunters & Executive Recruiters",
+        "All Email Finder Tools & Platform Fees 100% Covered",
+        "Clear Friday Progress Update & Real-Time Tracking",
       ],
       disclaimer:
         "CareerPilot Partners provides structured career acceleration, expert review, and outreach execution. Interview calls and hiring decisions depend on candidate qualifications, employer requirements, and market conditions.",
@@ -423,16 +423,16 @@ export const siteConfig = {
       badge: "US & International Roles",
       features: [
         "14-Day 100% Money-Back Guarantee (Full refund if opportunities not delivered in 2 weeks)",
-        "Dedicated Career Specialist & Research Coordinator",
-        "Expert Resume Re-Engineering & ATS 95%+ Calibration",
-        "Daily High-Signal Opportunity Scouting across US/Global portals",
-        "Personalized Recruiter & Hiring Manager Email Campaigns",
-        "Dual-Vector Referral Strategy for US & Multinational Companies",
-        "LinkedIn Profile Global Optimization & InMail Outreach",
-        "Targeted International Portal Application Submissions",
-        "Global Recruiter & Executive Search Network Expansion",
-        "All Email Verification & Platform Premiums 100% Covered",
-        "Weekly Friday Intelligence Digest & Real-Time Tracking",
+        "Dedicated Personal Career Specialist & Coordinator",
+        "Complete Resume Rewrite & 95%+ ATS Optimization",
+        "Daily Hand-Picked Job Openings across US & global portals",
+        "Personalized Emails to Hiring Managers & Recruiters",
+        "Direct Employee Referrals for US & Multinational Companies",
+        "LinkedIn Profile Global Optimization & Recruiter Outreach",
+        "Tailored International Job Portal Applications",
+        "Proactive Outreach to Global Executive Search Recruiters",
+        "All Email Finder Tools & Platform Fees 100% Covered",
+        "Clear Friday Progress Update & Real-Time Tracking",
       ],
       disclaimer:
         "CareerPilot Partners provides structured career acceleration, expert review, and outreach execution. Interview calls and hiring decisions depend on candidate qualifications, employer requirements, and market conditions.",
@@ -443,67 +443,67 @@ export const siteConfig = {
     {
       question: "What is your Cancellation and 100% Money-Back Refund Policy?",
       answer:
-        "We back our concierge service with a strict 14-Day (2-Week) 100% Money-Back Guarantee. If our dedicated team does not deliver relevant interview opportunities matching your agreed compensation, seniority, and target role criteria within your first 14 days of service, your entire subscription fee (₹10,000 / $100) will be 100% refunded to your original payment method. No questions asked, no hidden deductions, and no tedious bureaucracy. Furthermore, our service is strictly month-to-month—you can pause or cancel at any time with a single click or a quick message to your talent lead.",
+        "We back our service with a 14-Day (2-Week) 100% Money-Back Guarantee. If our dedicated team does not deliver relevant interview opportunities matching your agreed salary, seniority, and target role preferences within your first 14 days, your entire subscription fee (₹10,000 / $100) will be 100% refunded to your original payment method. No questions asked, no hidden deductions, and no tedious back-and-forth. Plus, our service is strictly month-to-month—you can pause or cancel at any time with a single click or a quick message to your career lead.",
     },
     {
       question: "How do you consistently generate 15–20 interview calls in just 1–2 weeks?",
       answer:
-        "Rather than relying on a single slow job portal or blind applications, we execute a simultaneous 4-vector strategy: (1) Re-engineering your resume to achieve a 96%+ ATS score, (2) Submitting curated applications with bespoke answers to employer screening questions, (3) Delivering personalized outreach to verified Engineering Directors and Talent Partners, and (4) Securing direct employee referrals via alumni and company insiders. This multi-channel convergence creates immediate pipeline momentum, delivering 15–20 high-signal interview calls within 10 to 14 days.",
+        "Instead of relying on a single slow job board or sending cold generic applications, we take action across 4 key channels at once: (1) We rewrite your resume so it easily passes company ATS filters with a 96%+ score, (2) We submit customized applications with thoughtful answers to company screening questions, (3) We send warm, personal emails directly to verified engineering directors and hiring managers, and (4) We secure direct employee referrals from alumni and company insiders. Working across all these channels creates immediate momentum, delivering 15 to 20 relevant interview calls in just 10 to 14 days.",
     },
     {
       question: "How does the team help convert interviews into 4–5 competing offer letters?",
       answer:
-        "Landing multiple offers requires synchronized interview velocity. When you receive 15–20 interview calls in a tight 2-week window, our team helps you cluster initial screenings and technical loops concurrently. Having multiple companies progressing simultaneously creates urgency on the employer side and gives you supreme negotiation leverage to secure 4–5 competing offer letters—allowing you to negotiate compensation, seniority, and joining flexibility from a position of power.",
+        "Getting multiple job offers comes down to timing. When you receive 15 to 20 interview calls in a concentrated 2-week window, our team helps you schedule your initial screenings and technical rounds in close succession. Having multiple companies interviewing you at the same time creates urgency on their end and gives you strong negotiation leverage to secure 4 to 5 competing offer letters—so you can negotiate for your best compensation, seniority, and joining terms from a position of strength.",
     },
     {
       question: "I work 10–12 hours a day and have zero free time. How much time do I need to invest?",
       answer:
-        "You only need to invest 30 to 45 minutes during onboarding to align on your target roles, compensation floor, preferred tech stacks, and company exclusion list. After that, your dedicated team handles 100% of the operational heavy lifting—role research, resume tailoring, form filling, recruiter messages, and referral outreach. Your only responsibility is attending the curated interview calls our team coordinates for you.",
+        "You only need 30 to 45 minutes for our initial onboarding conversation to align on your target roles, minimum salary, tech stacks, and company blacklist. After that, your dedicated team takes care of all the day-to-day work—job research, resume tailoring, form filling, recruiter messages, and referral outreach. Your only job is showing up for the interview calls we arrange for you.",
     },
     {
       question: "Is this an automated AI bot or a real human career team?",
       answer:
-        "This is a human-led, dedicated professional service. While our team utilizes specialized research systems to discover verified emails, scan openings, and organize outreach at scale, every resume improvement, recruiter message, and referral ask is reviewed, personalized, and guided by experienced career specialists. We never use blind clicker bots that get candidate accounts restricted.",
+        "This is a real, human-led service. While our team uses software tools behind the scenes to verify recruiter emails and scan job boards quickly, every resume edit, recruiter email, and referral message is written, reviewed, and personalized by experienced career specialists. We never use blind clicking bots that risk getting your accounts flagged.",
     },
     {
-      question: "Is my current employer protected? How do you ensure 100% confidentiality?",
+      question: "Is my current employer protected? How do you keep this 100% confidential?",
       answer:
-        "Confidentiality is guaranteed under strict non-disclosure terms. During onboarding, we maintain an explicit 'Negative Company List' ensuring your current employer, sister subsidiaries, and direct client partners are completely blacklisted from any applications or outreach. We never post public 'Open to Work' banners on your profile, and all recruiter correspondence can be routed through a dedicated private communication channel.",
+        "Your privacy is protected under strict confidentiality terms. During onboarding, we make an explicit blacklist of your current company, subsidiaries, and client partners so they are never contacted. We never put public 'Open to Work' banners on your profile, and all recruiter correspondence can run through a private dedicated email address.",
     },
     {
-      question: "What if I have a specialized tech stack (e.g. Data Engineering, Game Development, Distributed Systems)?",
+      question: "What if I have a specialized tech stack (e.g. Data Engineering, Game Development, Full Stack)?",
       answer:
-        "Every tech domain requires nuanced positioning. Our senior strategists specialize in translating complex technical achievements—such as Unity shader optimization, Spark petabyte data pipelines, low-latency microservices, or distributed architecture—into quantified metrics that modern ATS filters and hiring managers prioritize. We specifically target engineering managers who lead teams in your exact discipline.",
+        "Every technical field has its own language. Our career specialists know how to translate specialized work—like Unity game development, Spark petabyte data pipelines, microservices, or React performance tuning—into clear business impact metrics that hiring managers and ATS filters love. We specifically reach out to engineering leads who manage teams in your exact domain.",
     },
     {
-      question: "Do you handle the tedious application screening questions on portals?",
+      question: "Do you handle the tedious application questions on company portals?",
       answer:
-        "Yes. Many candidates get automatically filtered out because of rushed or mismatched answers to employer screening questionnaires (e.g. notice period, relevant years of framework experience, architecture methodology). Our application coordinators craft thoughtful, calibrated responses to every custom question to ensure your submission passes directly into the hiring manager's review queue.",
+        "Yes, absolutely. Many applicants get disqualified because of rushed answers to custom screening questionnaires (like notice period, years of framework experience, or architecture approaches). Our team carefully writes thoughtful, accurate answers to every screening question to make sure your application moves straight to the hiring manager.",
     },
     {
-      question: "How does the Dual-Vector Referral Strategy work without awkwardness?",
+      question: "How do employee referrals work without feeling awkward?",
       answer:
-        "Employee referrals are the single highest-converting job search channel (yielding a 5x callback rate). Our team coordinates two distinct vectors: (1) Respectfully mapping warm pathways through your extended 1st-degree connections and university alumni, and (2) Sending value-first, context-aware introductory notes to senior engineers and engineering leads at your target companies. This secures confirmed internal referral codes before jobs become saturated.",
+        "Employee referrals are the single most effective way to get an interview (giving you a 5x higher callback rate). Our team coordinates warm introductions in two ways: (1) Reaching out warmly through alumni from your college or past networks, and (2) Sending polite, respectful notes to engineers and team leads at your target companies. This gets your resume reviewed internally before hundreds of other people apply.",
     },
     {
-      question: "How does Naukri profile optimization and FastForward rank boosting work?",
+      question: "How does Naukri profile optimization and search ranking work?",
       answer:
-        "Naukri's recruiter search algorithm ranks candidates based on keyword density, headline clarity, and daily profile activity freshness. Our specialists re-engineer your profile summary, headline, and skill taxonomy to position you in the top 3% search bracket. We also execute daily freshness calibrations, ensuring recruiters actively scouting your tech stack see your profile first.",
+        "Naukri's recruiter search ranks candidate profiles based on keywords, headline clarity, and daily activity. Our specialists rewrite your profile headline, summary, and skill tags so your profile ranks in the top 3% of search results. We also keep your profile active daily, so recruiters hiring in your field see you first.",
     },
     {
-      question: "Are platform tool premiums, email verification credits, and InMails included?",
+      question: "Are tool fees, email verification credits, and InMails included?",
       answer:
-        "Yes, 100% included. All costs for verified email discovery tools, recruiter search suites, and outreach infrastructure are fully absorbed by CareerPilot Partners. There are zero hidden fees, extra software subscriptions, or credit top-ups required.",
+        "Yes, 100% included. All costs for verified email discovery tools, recruiter search suites, and outreach software are fully paid for by CareerPilot Partners. You never have to pay extra software fees or buy credits.",
     },
     {
-      question: "What is the transparent Friday Intelligence Digest?",
+      question: "What is the Friday Progress Update?",
       answer:
-        "Every Friday at 5:00 PM, you receive a comprehensive performance report and dashboard update detailing every role scouted, tailored application submitted, recruiter message sent, and interview call queued. You maintain 100% visibility and control over your search without spending a single evening doing data entry.",
+        "Every Friday at 5:00 PM, you receive a clear, easy-to-read update and dashboard summary. It shows every job we found, application submitted, recruiter message sent, and interview scheduled. You get complete transparency without doing any administrative work yourself.",
     },
     {
       question: "Do you guarantee job offers or placements?",
       answer:
-        "No ethical career firm guarantees employment, as final hiring and hiring committee decisions rest strictly with employers. What we guarantee is relentless, high-precision execution: optimized resume assets, verified recruiter outreach, strategic referrals, and consistent submissions that reliably generate 15–20 high-signal interview calls in 1–2 weeks.",
+        "No ethical career service can guarantee a job offer, because the final hiring decision always rests with the employer. What we do guarantee is consistent, high-quality execution: a polished resume, direct recruiter outreach, employee referrals, and daily applications that reliably generate 15 to 20 interview calls in 1 to 2 weeks.",
     },
   ] as FAQItem[],
 };

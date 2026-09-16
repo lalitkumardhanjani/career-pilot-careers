@@ -33,13 +33,13 @@ export const BusyProfessionalSpotlight: React.FC = () => {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#3E4C9A] bg-[#EBF0FA] border border-[#3E4C9A]/20 px-4 py-1.5 rounded-full inline-block mb-4 shadow-sm">
-            The Co-Pilot Advantage
+            Why Professionals Choose Us
           </span>
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#0B132B] tracking-tight">
-            Designed for Busy Professionals Who Want Better Opportunities
+            Made for Busy Working Professionals Who Want Better Opportunities
           </h2>
           <p className="mt-4 text-base sm:text-lg text-slate-600 leading-relaxed">
-            Running a serious career search requires 15–20 hours every week. When you're managing team deliverables, sprint deadlines, and stakeholder meetings, job searching stalls. CareerPilot steps in as your dedicated execution team.
+            Running a proper job search takes 15 to 20 hours every single week. When you're working 9–10 hours a day, it's exhausting to search job boards, fix your resume, and message recruiters at night. CareerPilot takes care of everything for you.
           </p>
         </div>
 
@@ -58,21 +58,21 @@ export const BusyProfessionalSpotlight: React.FC = () => {
                 <div>
                   <div className="flex items-center gap-2">
                     <span className="text-xs font-bold uppercase tracking-wider text-[#34D399]">
-                      Interactive Time Audit
+                      Time Calculator
                     </span>
                     <span className="text-[10px] bg-white/10 text-slate-300 px-2 py-0.5 rounded-full font-semibold">
-                      Live Simulation
+                      Live Calculator
                     </span>
                   </div>
                   <h3 className="text-base sm:text-lg md:text-xl font-extrabold text-white">
-                    Executive Time Reclaimed & ROI Calculator
+                    See How Much Time &amp; Stress You Save
                   </h3>
                 </div>
               </div>
 
               <div className="flex items-center gap-1.5 text-xs text-slate-300 bg-white/[0.05] px-3.5 py-1.5 rounded-xl border border-white/10 self-start sm:self-auto">
                 <TrendingUp className="w-3.5 h-3.5 text-[#34D399] shrink-0" />
-                <span>ROI on Executive Mental Bandwidth</span>
+                <span>Get Your Evenings &amp; Weekends Back</span>
               </div>
             </div>
 
@@ -80,7 +80,7 @@ export const BusyProfessionalSpotlight: React.FC = () => {
             <div className="mb-6 sm:mb-8">
               <div className="flex flex-col xs:flex-row xs:items-center justify-between gap-2 mb-3">
                 <label htmlFor="weeklyJobHoursSlider" className="text-xs sm:text-sm font-semibold text-slate-200">
-                  Your Current Weekly Work & Meeting Hours:
+                  How Many Hours Do You Work Each Week?
                 </label>
                 <span className="text-base sm:text-lg font-black text-[#34D399] bg-[#34D399]/10 px-3 py-1 rounded-xl border border-[#34D399]/30 w-fit">
                   {weeklyJobHours} Hours / Week
@@ -213,10 +213,10 @@ export const BusyProfessionalSpotlight: React.FC = () => {
 
           <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-10">
             <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-widest text-[#34D399] block mb-2">
-              Strategic Executive Comparison
+              Side-by-Side Comparison
             </span>
             <h3 className="text-lg sm:text-2xl md:text-3xl font-extrabold text-white">
-              The DIY Job Hunt Struggle vs. CareerPilot Concierge
+              Doing It Alone After Work vs. Having CareerPilot On Your Side
             </h3>
           </div>
 
@@ -224,35 +224,35 @@ export const BusyProfessionalSpotlight: React.FC = () => {
             {/* Left: Doing It Alone */}
             <div className="rounded-2xl bg-[#1C2541]/50 border border-white/[0.08] p-4 sm:p-6 md:p-7 backdrop-blur-sm">
               <span className="text-[11px] font-bold uppercase tracking-widest text-rose-400 block mb-2">
-                Doing It Alone While Working
+                Doing It Alone After Work
               </span>
               <h4 className="text-lg sm:text-xl font-bold text-white mb-4">
-                15–20 Hours/Week of High Stress
+                15–20 Hours/Week of Stress &amp; Exhaustion
               </h4>
               <ul className="space-y-3.5 text-xs sm:text-sm text-slate-300">
                 <li className="flex items-start gap-2.5">
                   <div className="w-5 h-5 rounded-full bg-rose-500/10 text-rose-400 flex items-center justify-center shrink-0 mt-0.5">
                     <X className="w-3.5 h-3.5 stroke-[3]" />
                   </div>
-                  <span>Exhausted evenings: scrolling portals at 11 PM after 10 hours of meetings</span>
+                  <span>Exhausted evenings: scrolling job boards at 11 PM after 10 hours of meetings</span>
                 </li>
                 <li className="flex items-start gap-2.5">
                   <div className="w-5 h-5 rounded-full bg-rose-500/10 text-rose-400 flex items-center justify-center shrink-0 mt-0.5">
                     <X className="w-3.5 h-3.5 stroke-[3]" />
                   </div>
-                  <span>Repetitive portal forms: filling out 30-minute employer questionnaires on weekends</span>
+                  <span>Repetitive forms: filling out 30-minute company questionnaires on weekends</span>
                 </li>
                 <li className="flex items-start gap-2.5">
                   <div className="w-5 h-5 rounded-full bg-rose-500/10 text-rose-400 flex items-center justify-center shrink-0 mt-0.5">
                     <X className="w-3.5 h-3.5 stroke-[3]" />
                   </div>
-                  <span>Missed 48-hour windows: top-tier high-paying roles close before you get time to apply</span>
+                  <span>Missed 48-hour windows: top-paying jobs close before you get time to apply</span>
                 </li>
                 <li className="flex items-start gap-2.5">
                   <div className="w-5 h-5 rounded-full bg-rose-500/10 text-rose-400 flex items-center justify-center shrink-0 mt-0.5">
                     <X className="w-3.5 h-3.5 stroke-[3]" />
                   </div>
-                  <span>Zero recruiter bandwidth: no time to identify talent partners or request alumni referrals</span>
+                  <span>No time to network: no energy to find hiring managers or request alumni referrals</span>
                 </li>
               </ul>
             </div>
@@ -260,35 +260,35 @@ export const BusyProfessionalSpotlight: React.FC = () => {
             {/* Right: With CareerPilot Partners */}
             <div className="rounded-2xl bg-gradient-to-b from-[#1C2541] to-[#101A36] border-2 border-blue-400/50 p-4 sm:p-6 md:p-7 shadow-2xl relative">
               <span className="text-[11px] font-bold uppercase tracking-widest text-[#070B19] bg-[#34D399] px-3 py-0.5 rounded-full inline-block mb-3 font-semibold">
-                With CareerPilot as Your Co-Pilot
+                With CareerPilot Partners
               </span>
               <h4 className="text-lg sm:text-xl font-bold text-white mb-4">
-                ~30 Minutes/Week to Review Results
+                Just 30 Minutes/Week to Review Results &amp; Interview
               </h4>
               <ul className="space-y-3.5 text-xs sm:text-sm text-white">
                 <li className="flex items-start gap-2.5">
                   <div className="w-5 h-5 rounded-full bg-[#10B981]/20 text-[#34D399] flex items-center justify-center shrink-0 mt-0.5">
                     <CheckCircle2 className="w-3.5 h-3.5" />
                   </div>
-                  <span>Daily curated discovery matching your exact target compensation & seniority</span>
+                  <span>Daily job discovery matching your exact target salary and seniority</span>
                 </li>
                 <li className="flex items-start gap-2.5">
                   <div className="w-5 h-5 rounded-full bg-[#10B981]/20 text-[#34D399] flex items-center justify-center shrink-0 mt-0.5">
                     <CheckCircle2 className="w-3.5 h-3.5" />
                   </div>
-                  <span>LinkedIn & Naukri applications submitted according to your agreed criteria</span>
+                  <span>LinkedIn &amp; Naukri applications submitted according to your rules</span>
                 </li>
                 <li className="flex items-start gap-2.5">
                   <div className="w-5 h-5 rounded-full bg-[#10B981]/20 text-[#34D399] flex items-center justify-center shrink-0 mt-0.5">
                     <CheckCircle2 className="w-3.5 h-3.5" />
                   </div>
-                  <span>Strategic recruiter outreach & internal alumni referral requests handled for you</span>
+                  <span>Direct recruiter outreach &amp; internal alumni referral requests handled for you</span>
                 </li>
                 <li className="flex items-start gap-2.5">
                   <div className="w-5 h-5 rounded-full bg-[#10B981]/20 text-[#34D399] flex items-center justify-center shrink-0 mt-0.5">
                     <CheckCircle2 className="w-3.5 h-3.5" />
                   </div>
-                  <span>Transparent Friday intelligence digest tracking every submission, email, and response</span>
+                  <span>Transparent Friday updates tracking every submission, email, and response</span>
                 </li>
               </ul>
             </div>
@@ -297,13 +297,13 @@ export const BusyProfessionalSpotlight: React.FC = () => {
           <div className="mt-8 sm:mt-10 pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
             <div className="flex items-center gap-2 text-xs text-slate-300">
               <ShieldCheck className="w-4 h-4 text-[#34D399] shrink-0" />
-              <span>You retain 100% control over target companies, salary expectations, and privacy parameters.</span>
+              <span>You're always in complete control of target companies, salary expectations, and location rules.</span>
             </div>
             <a
               href="#contact"
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-gradient-to-r from-[#3E4C9A] to-[#4F67B8] hover:from-[#4859b3] hover:to-[#5a74cb] text-white text-xs sm:text-sm font-bold px-6 py-3 rounded-xl transition-all duration-300 hover:shadow-lg shadow-md shrink-0"
             >
-              <span>Get Started With Your Co-Pilot</span>
+              <span>Talk to Our Career Team</span>
               <ArrowRight className="w-4 h-4" />
             </a>
           </div>

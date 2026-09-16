@@ -35,7 +35,7 @@ export const Footer: React.FC = () => {
               </div>
 
               <p className="text-sm text-slate-300 max-w-md leading-relaxed mb-6">
-                Full-service professional career concierge. Our dedicated career specialists and talent researchers handle your market-driven resume calibration, high-signal role discovery, precision recruiter campaigns, dual-vector referrals, and comprehensive pipeline tracking.
+                Your personal career team. We polish your resume, find matching high-paying jobs, reach out to recruiters, secure employee referrals, and manage your applications so you can land great interviews without burning out.
               </p>
 
               <div className="flex items-center gap-4 text-xs text-slate-300">

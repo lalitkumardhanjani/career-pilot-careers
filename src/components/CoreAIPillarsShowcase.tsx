@@ -27,71 +27,71 @@ export const CoreAIPillarsShowcase: React.FC = () => {
     {
       id: "resume-reengineering",
       number: "01",
-      title: "Expert Resume Re-Engineering & ATS",
-      shortTitle: "Resume Re-Engineering",
-      tagline: "Personally audited by senior career specialists and calibrated to market hiring standards",
+      title: "Resume Rewrite & ATS Optimization",
+      shortTitle: "Resume Polish",
+      tagline: "Personally reviewed and rewritten by senior specialists so your achievements shine and pass ATS filters",
       icon: FileText,
-      badge: "Pillar 01 • ATS 96%+",
+      badge: "Step 01 • ATS 96%+",
       gradient: "from-blue-600 to-indigo-600",
     },
     {
       id: "recruiter-email",
       number: "02",
-      title: "Direct Recruiter Email Campaigns",
-      shortTitle: "Recruiter Campaigns",
-      tagline: "Hand-crafted, multi-touch email & InMail campaigns sent directly to verified hiring leads",
+      title: "Direct Emails to Recruiters & Hiring Managers",
+      shortTitle: "Recruiter Emails",
+      tagline: "Warm, personalized introductory notes sent directly to verified hiring managers and talent leads",
       icon: MailCheck,
-      badge: "Pillar 02 • 3.4x Response",
+      badge: "Step 02 • 3.4x Replies",
       gradient: "from-indigo-600 to-purple-600",
     },
     {
       id: "role-scouting",
       number: "03",
-      title: "High-Signal Opportunity Scouting",
-      shortTitle: "Opportunity Scouting",
-      tagline: "Continuous daily research across verified corporate portals with transparent match reasoning",
+      title: "Daily Hand-Picked Job Openings",
+      shortTitle: "Job Scouting",
+      tagline: "Every morning, our team finds verified roles strictly matching your target salary and skills",
       icon: Compass,
-      badge: "Pillar 03 • Daily Radar",
+      badge: "Step 03 • Hand-Picked",
       gradient: "from-cyan-600 to-blue-600",
     },
     {
       id: "dual-referrals",
       number: "04",
-      title: "Dual-Vector Referral Strategy",
-      shortTitle: "Referral Strategy",
-      tagline: "Unlock high-converting referrals from 1st-degree alumni and verified company insiders",
+      title: "Direct Employee Referrals (Alumni & Insiders)",
+      shortTitle: "Employee Referrals",
+      tagline: "Warm introductions to college alumni and verified company insiders to secure internal referrals",
       icon: Users2,
-      badge: "Pillar 04 • 5x Callbacks",
+      badge: "Step 04 • 5x Callbacks",
       gradient: "from-emerald-600 to-teal-600",
     },
     {
       id: "recruiter-networking",
       number: "05",
-      title: "Executive Recruiter Networking",
-      shortTitle: "Talent Networking",
-      tagline: "Proactive relationship building with niche headhunters before roles open publicly",
+      title: "Building Your Recruiter Network",
+      shortTitle: "Recruiter Network",
+      tagline: "Connecting with specialized tech headhunters and talent leads before roles open publicly",
       icon: UserCheck,
-      badge: "Pillar 05 • Talent CRM",
+      badge: "Step 05 • Recruiter Network",
       gradient: "from-blue-700 to-navy-800",
     },
     {
       id: "naukri-acceleration",
       number: "06",
-      title: "Naukri FastForward & Application Team",
-      shortTitle: "Naukri Optimization",
-      tagline: "Boost your FastForward visibility index and submit curated applications with custom answers",
+      title: "Naukri & LinkedIn Applications & Profile Boost",
+      shortTitle: "Job Applications",
+      tagline: "Rank in top 3% of recruiter searches and submit curated applications with thoughtful answers",
       icon: CheckSquare,
-      badge: "Pillar 06 • Top 3% Index",
+      badge: "Step 06 • Top 3% Rank",
       gradient: "from-amber-600 to-orange-600",
     },
     {
       id: "dedicated-concierge",
       number: "07",
-      title: "Dedicated Specialist & Command Center",
-      shortTitle: "Dedicated Manager",
-      tagline: "Assigned career specialist managing all tools, with full transparency and Friday digests",
+      title: "Your Dedicated Career Manager & Dashboard",
+      shortTitle: "Personal Manager",
+      tagline: "Assigned personal career manager handling all tools, with complete visibility and Friday summaries",
       icon: LineChart,
-      badge: "Pillar 07 • 100% Managed",
+      badge: "Step 07 • 100% Managed",
       gradient: "from-emerald-600 to-indigo-700",
     },
   ];
@@ -111,17 +111,17 @@ export const CoreAIPillarsShowcase: React.FC = () => {
           <div className="inline-flex items-center gap-2 bg-[#3E4C9A]/40 border border-blue-400/30 px-4 py-1.5 rounded-full mb-4 shadow-inner">
             <ShieldCheck className="w-4 h-4 text-[#34D399]" />
             <span className="text-xs sm:text-sm font-extrabold uppercase tracking-wider text-blue-200">
-              Full-Service Career Concierge • Dedicated Specialist Team
+              Real Career Specialists • 100% Done-For-You
             </span>
           </div>
           <h2 className="text-2xl sm:text-3xl md:text-5xl font-black text-white tracking-tight leading-tight">
             What Our Dedicated Career Team <br />
             <span className="bg-gradient-to-r from-blue-300 via-[#34D399] to-emerald-400 bg-clip-text text-transparent">
-              Executes For You
+              Executes For You Every Day
             </span>
           </h2>
           <p className="mt-4 text-base sm:text-lg text-slate-300 leading-relaxed">
-            Behind every application, recruiter email, and referral ask is an experienced career specialist managing your search end-to-end. Experience high-touch human expertise without spending your weekends scrolling job boards.
+            Behind every application, recruiter email, and referral ask is a real, experienced career specialist managing your search end-to-end. Enjoy peace of mind without spending your weekends scrolling job boards.
           </p>
         </div>
 
@@ -582,17 +582,17 @@ export const CoreAIPillarsShowcase: React.FC = () => {
             </div>
           )}
 
-          {/* PILLAR 4: DUAL-VECTOR REFERRAL STRATEGY */}
+          {/* PILLAR 4: DIRECT EMPLOYEE REFERRALS */}
           {activePillarIndex === 3 && (
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
               <div className="lg:col-span-5 space-y-5">
                 <div className="space-y-3">
                   <h4 className="text-lg font-bold text-white flex items-center gap-2">
                     <Users2 className="w-5 h-5 text-emerald-400" />
-                    High-Conversion Dual-Vector Referral Strategy
+                    Direct Employee Referrals (Alumni & Insiders)
                   </h4>
                   <p className="text-sm text-slate-300 leading-relaxed">
-                    Referrals provide a <strong>5x to 8x higher interview callback rate</strong> than applying blindly through portals. Our team activates warm connections in your existing network and respectfully coordinates outreach to verified insiders at target companies.
+                    Referrals provide a <strong>5x higher interview callback rate</strong> than applying blindly through job portals. Our team reaches out warmly to alumni from your college and helpful team insiders at target companies.
                   </p>
                 </div>
 
@@ -605,7 +605,7 @@ export const CoreAIPillarsShowcase: React.FC = () => {
                         : "text-slate-400 hover:text-white"
                     }`}
                   >
-                    Vector A: 1st-Degree & Alumni
+                    Channel A: College Alumni & Friends
                   </button>
                   <button
                     onClick={() => setReferralVector("insider")}
@@ -615,7 +615,7 @@ export const CoreAIPillarsShowcase: React.FC = () => {
                         : "text-slate-400 hover:text-white"
                     }`}
                   >
-                    Vector B: Company Insiders
+                    Channel B: Company Insiders & Leads
                   </button>
                 </div>
 
@@ -882,15 +882,15 @@ export const CoreAIPillarsShowcase: React.FC = () => {
                 </div>
               </div>
 
-              {/* Command Center Live Telemetry Preview */}
+              {/* Real-Time Dashboard Preview */}
               <div className="lg:col-span-7 bg-[#070B19] rounded-2xl border border-white/10 p-5 sm:p-6 shadow-inner font-sans">
                 <div className="flex items-center justify-between border-b border-white/10 pb-3 mb-4">
                   <div className="text-xs font-bold text-white flex items-center gap-2">
                     <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping" />
-                    Candidate Search Dashboard (Week 3 Live)
+                    Your Job Search Dashboard (Live Updates)
                   </div>
                   <span className="text-[10px] font-bold px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
-                    Managed by Career Team
+                    Updated by Career Team
                   </span>
                 </div>
 

@@ -53,7 +53,7 @@ export const Navbar: React.FC = () => {
                   </span>
                 </div>
                 <span className="text-slate-400 text-[10px] sm:text-[11px] font-medium tracking-wide block">
-                  Professional Career Concierge
+                  Your Dedicated Career Team
                 </span>
               </div>
             </a>
@@ -79,7 +79,7 @@ export const Navbar: React.FC = () => {
                 className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-[#3E4C9A] to-[#10B981] hover:from-[#4757af] hover:to-[#34D399] text-white text-xs sm:text-sm font-bold px-5 py-2.5 rounded-xl shadow-lg shadow-[#3E4C9A]/30 transition-all duration-300 hover:shadow-xl hover:-translate-y-0.5 focus:outline-none"
                 id="nav-cta-btn"
               >
-                <span>Schedule Strategy Call</span>
+                <span>Talk to Our Team</span>
                 <ArrowRight className="w-4 h-4" />
               </a>
             </div>
@@ -101,10 +101,10 @@ export const Navbar: React.FC = () => {
         </div>
       </div>
 
-      {/* Mobile Menu dropdown */}
+      {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-[#0B132B]/98 backdrop-blur-2xl border-b border-white/10 px-4 pt-4 pb-6 shadow-2xl animate-in slide-in-from-top-2">
-          <div className="flex flex-col gap-1.5">
+        <div className="lg:hidden bg-[#0B132B] border-b border-white/10 px-4 py-6 shadow-2xl animate-in slide-in-from-top-2 duration-200">
+          <div className="flex flex-col gap-3">
             {navLinks.map((link) => (
               <a
                 key={link.name}
@@ -121,7 +121,7 @@ export const Navbar: React.FC = () => {
                 onClick={() => setMobileMenuOpen(false)}
                 className="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-[#3E4C9A] to-[#10B981] text-white font-bold py-3 px-4 rounded-xl shadow-lg"
               >
-                <span>Schedule Strategy Call</span>
+                <span>Talk to Our Team</span>
                 <ArrowRight className="w-4 h-4" />
               </a>
             </div>

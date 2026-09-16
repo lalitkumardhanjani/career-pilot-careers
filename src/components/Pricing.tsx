@@ -25,13 +25,13 @@ export const Pricing: React.FC<PricingProps> = ({ onSelectPlan }) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#3E4C9A] bg-[#EBF0FA] border border-[#3E4C9A]/20 px-4 py-1.5 rounded-full inline-block mb-4 shadow-sm">
-            All-Inclusive Platform Membership
+            Simple, Transparent Pricing
           </span>
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#0B132B] tracking-tight">
-            Straightforward Month-to-Month Career Acceleration
+            Simple Month-to-Month Pricing • Cancel Anytime
           </h2>
           <p className="mt-4 text-base sm:text-lg text-slate-600 leading-relaxed">
-            No long-term lock-in. Full specialist resume re-engineering, dedicated recruiter email campaigns, dual-vector referrals, and curated applications with all platform premiums 100% covered.
+            No long-term contracts. Full resume rewrite, direct emails to hiring managers, employee referrals, and tailored applications with all tools and software fees 100% covered.
           </p>
         </div>
 

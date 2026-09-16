@@ -193,7 +193,7 @@ export const WeeklyReportPreview: React.FC = () => {
     },
     {
       id: "referrals",
-      name: "Dual-Vector Employee Referrals",
+      name: "Direct Employee Referrals",
       shortName: "Referrals",
       share: 12,
       volume: "18 Outreach Contacts",
@@ -341,7 +341,7 @@ export const WeeklyReportPreview: React.FC = () => {
                     : "text-slate-400 hover:text-white hover:bg-white/[0.04]"
                 }`}
               >
-                Progressive Log
+                Activity Log
               </button>
             </div>
           </div>
@@ -464,13 +464,13 @@ export const WeeklyReportPreview: React.FC = () => {
                 <div>
                   <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#34D399] mb-1">
                     <Activity className="w-3.5 h-3.5 shrink-0" />
-                    <span>Pipeline Telemetry & Analytics Suite</span>
+                    <span>Weekly Activity &amp; Progress Charts</span>
                   </div>
                   <h4 className="text-base sm:text-lg font-extrabold text-white leading-tight">
-                    Multi-Vector Activity & Conversion Intelligence
+                    Weekly Applications, Outreach &amp; Results
                   </h4>
                   <p className="text-xs text-slate-400 mt-0.5">
-                    Real-time visualization of weekly application volume, recruiter response velocity, and channel ROI.
+                    Clear, simple charts showing your daily applications, recruiter responses, and interviews scheduled.
                   </p>
                 </div>
 

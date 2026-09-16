@@ -23,75 +23,75 @@ export const Hero: React.FC = () => {
   const workflowSteps = [
     {
       id: 0,
-      name: "01 • Optimize",
-      shortLabel: "Tailored Resume & ATS",
+      name: "01 • Polish",
+      shortLabel: "Rewrite Resume & ATS",
       icon: FileCheck2,
-      tag: "Stage 01 • ATS 96%+",
-      detail: "Audit resume against target role JDs, rewrite bullet points with quantified metrics, and calibrate ATS compatibility.",
-      previewTitle: "Market-Driven Resume Calibration & Keyword Indexing",
-      previewContent: "Audited resume against Staff Backend criteria • Quantified 4 key achievements (18k QPS, 42% latency reduction) • ATS compatibility score elevated from 62% to 96%.",
-      previewBadge: "Calibrated to Market",
-      telemetry: "Scanned against 50+ Senior Tech JDs",
+      tag: "Step 01 • ATS 96%+",
+      detail: "We rewrite your resume line-by-line to pass company filters and highlight your real achievements.",
+      previewTitle: "Professional Resume Rewrite & ATS Optimization",
+      previewContent: "Rewrote resume for senior tech roles • Quantified 4 key achievements (high scale, latency reduction) • ATS match score boosted from 62% to 96%.",
+      previewBadge: "Passed ATS Filters",
+      telemetry: "Matched against 50+ Senior Tech JDs",
     },
     {
       id: 1,
-      name: "02 • Discover",
-      shortLabel: "High-Signal Radar",
+      name: "02 • Find",
+      shortLabel: "Daily Job Matches",
       icon: Crosshair,
-      tag: "Stage 02 • Daily Radar",
-      detail: "Algorithmic scanning identifies active, verified openings strictly matching target CTC, seniority, and tech stack.",
-      previewTitle: "Target Company & Verified Opening Radar",
-      previewContent: "Scanned 142 opportunities across LinkedIn & corporate portals • Curated 18 top-tier matches with verified recruiter emails (Atlassian, Razorpay, Stripe, Swiggy).",
-      previewBadge: "18 High-Fit Roles Locked",
-      telemetry: "CTC: ₹35L–₹55L / $150k+ Aligned",
+      tag: "Step 02 • Daily Search",
+      detail: "Every morning, our team finds verified openings that match your skills, preferred city, and target salary.",
+      previewTitle: "Hand-Picked Job Matches at Top Companies",
+      previewContent: "Scanned 142 openings across LinkedIn & company career pages • Hand-picked 18 top-tier matches with verified recruiter emails (Atlassian, Razorpay, Stripe, Swiggy).",
+      previewBadge: "18 Verified Roles Found",
+      telemetry: "Target Salary: ₹35L–₹55L / $150k+ Aligned",
     },
     {
       id: 2,
       name: "03 • Connect",
-      shortLabel: "Recruiter Network",
+      shortLabel: "Message Recruiters",
       icon: UserCheck,
-      tag: "Stage 03 • Talent CRM",
-      detail: "Proactively connect with specialized headhunters and internal talent partners before roles go public.",
-      previewTitle: "Talent Acquisition & Executive Network Expansion",
-      previewContent: "Targeted outreach delivered to Lead Talent Partners at Atlassian and Razorpay • 12 new recruiter connections accepted with positive introductory chats.",
-      previewBadge: "12 Recruiter Connections",
-      telemetry: "High Engagement Index",
+      tag: "Step 03 • Recruiter Outreach",
+      detail: "We send warm, personal messages directly to verified hiring managers and talent leads at target firms.",
+      previewTitle: "Direct Outreach to Hiring Leads & Recruiters",
+      previewContent: "Sent warm, personalized notes to hiring leads at Atlassian and Razorpay • 12 recruiters accepted connections and started conversations.",
+      previewBadge: "12 Recruiter Replies",
+      telemetry: "High Recruiter Interest",
     },
     {
       id: 3,
       name: "04 • Refer",
-      shortLabel: "Dual Referral Engine",
+      shortLabel: "Employee Referrals",
       icon: Users2,
-      tag: "Stage 04 • 5x Callbacks",
-      detail: "Activate warm referrals from 1st-degree alumni network and send context-aware outreach to target company insiders.",
-      previewTitle: "Dual-Vector Employee Referral Strategy",
-      previewContent: "Approached 4 university alumni and 3 verified senior engineers at target firms • 2 internal employee referral codes confirmed for Staff Distributed Systems roles.",
+      tag: "Step 04 • 5x Callbacks",
+      detail: "We reach out to college alumni and team insiders to secure internal employee referral codes.",
+      previewTitle: "Direct Employee Referrals (Alumni & Insiders)",
+      previewContent: "Approached 4 alumni and 3 engineers at target companies • 2 internal employee referral codes confirmed for senior engineering roles.",
       previewBadge: "2 Referrals Secured",
-      telemetry: "5x Higher Interview Callback Probability",
+      telemetry: "5x Higher Chance of an Interview",
     },
     {
       id: 4,
       name: "05 • Apply",
-      shortLabel: "Curated Applications",
+      shortLabel: "Apply For You",
       icon: SendHorizontal,
-      tag: "Stage 05 • Curated Apply",
-      detail: "Submit tailored applications on LinkedIn and boost Naukri FastForward search rank with keyword optimization.",
-      previewTitle: "Smart Application & Naukri Search Booster",
-      previewContent: "Submitted 14 tailored applications with role-specific cover notes • Boosted Naukri FastForward visibility into the top 3% search bracket.",
-      previewBadge: "14 Applications Submitted",
+      tag: "Step 05 • Tailored Apply",
+      detail: "We submit tailored applications with thoughtful answers to company screening questions.",
+      previewTitle: "Careful Applications & Naukri Profile Boost",
+      previewContent: "Submitted 14 custom applications with tailored cover notes • Naukri and LinkedIn profiles boosted into top 3% recruiter search results.",
+      previewBadge: "14 Applications Sent",
       telemetry: "Top 3% Recruiter Search Visibility",
     },
     {
       id: 5,
       name: "06 • Track",
-      shortLabel: "Command Center",
+      shortLabel: "Friday Updates",
       icon: BarChart4,
-      tag: "Stage 06 • Real-Time Log",
-      detail: "Real-time command center tracks all applications, recruiter replies, and interview invitations with a weekly intelligence digest.",
-      previewTitle: "Real-Time Pipeline Command Center & Friday Digest",
-      previewContent: "Real-time pipeline tracking: 3 preliminary recruiter calls coordinated • Comprehensive Friday intelligence report prepared with strategic next steps.",
-      previewBadge: "3 Interview Calls Scheduled",
-      telemetry: "100% Visibility • Zero Guesswork",
+      tag: "Step 06 • Weekly Report",
+      detail: "Track all applications, recruiter replies, and scheduled interviews in a clean dashboard and Friday report.",
+      previewTitle: "Clear Progress Tracking & Friday Summary",
+      previewContent: "All activity logged in your personal dashboard • 3 interview calls coordinated • Comprehensive Friday summary delivered with next steps.",
+      previewBadge: "3 Interviews Scheduled",
+      telemetry: "100% Clear • Zero Guesswork",
     },
   ];
 
@@ -152,7 +152,7 @@ export const Hero: React.FC = () => {
               id="hero-primary-cta"
             >
               <Sparkles className="w-4 h-4 shrink-0" />
-              <span>Schedule Career Strategy Call</span>
+              <span>Talk to Our Career Team</span>
               <ArrowRight className="w-4 h-4 shrink-0" />
             </a>
 
@@ -161,7 +161,7 @@ export const Hero: React.FC = () => {
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-slate-900/80 hover:bg-slate-800 text-slate-200 hover:text-white font-semibold text-sm sm:text-base px-6 sm:px-7 py-3.5 rounded-xl border border-white/10 transition-all duration-300 hover:-translate-y-0.5 backdrop-blur-sm"
               id="hero-secondary-cta"
             >
-              <span>Explore Services Executed For You</span>
+              <span>See What We Do For You</span>
               <ChevronRight className="w-4 h-4 shrink-0" />
             </a>
           </div>
@@ -174,11 +174,11 @@ export const Hero: React.FC = () => {
             </span>
             <span className="flex items-center gap-1.5 text-slate-300">
               <Zap className="w-3.5 h-3.5 text-[#34D399] shrink-0" />
-              <span>100% Personalized Outreach</span>
+              <span>Real Human Messages • No Spam</span>
             </span>
             <span className="flex items-center gap-1.5 text-slate-300">
               <CheckCircle2 className="w-3.5 h-3.5 text-[#34D399] shrink-0" />
-              <span>Zero Generic Spam</span>
+              <span>Current Employer 100% Safe</span>
             </span>
             <span className="flex items-center gap-1.5 text-slate-300">
               <Clock className="w-3.5 h-3.5 text-[#34D399] shrink-0" />
@@ -186,7 +186,7 @@ export const Hero: React.FC = () => {
             </span>
             <span className="flex items-center gap-1.5 text-slate-300">
               <ShieldCheck className="w-3.5 h-3.5 text-[#34D399] shrink-0" />
-              <span>All Platform Premiums Included</span>
+              <span>All Platform Fees Included</span>
             </span>
           </div>
         </div>
@@ -216,16 +216,16 @@ export const Hero: React.FC = () => {
               <div>
                 <div className="flex items-center gap-2 text-[#34D399] text-xs font-bold uppercase tracking-wider mb-1">
                   <Sparkles className="w-3.5 h-3.5 shrink-0" />
-                  <span>What We Actively Execute For You</span>
+                  <span>What We Do For You Every Single Day</span>
                 </div>
                 <h2 className="text-base sm:text-xl font-extrabold text-white">
-                  Week-by-Week Execution Snapshot
+                  How We Run Your Job Search Step-by-Step
                 </h2>
               </div>
 
               <div className="flex items-center gap-2 text-xs text-slate-300 bg-[#0B132B]/80 px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-xl border border-white/10 w-fit">
                 <Lock className="w-3.5 h-3.5 text-[#34D399] shrink-0" />
-                <span className="font-semibold">Candidate-Controlled &amp; Confidential</span>
+                <span className="font-semibold">100% Private • Current Employer Safe</span>
               </div>
             </div>
 
@@ -302,19 +302,19 @@ export const Hero: React.FC = () => {
                 </p>
                 <div className="text-[11px] text-[#34D399] flex items-center gap-1.5 font-semibold">
                   <Sparkles className="w-3.5 h-3.5" />
-                  <span>Specialist Status: {workflowSteps[activeWorkflowStage].telemetry}</span>
+                  <span>Progress: {workflowSteps[activeWorkflowStage].telemetry}</span>
                 </div>
               </div>
 
               <div className="mt-4 flex flex-wrap items-center justify-between gap-2 text-xs text-slate-400">
                 <span className="italic">
-                  Managed meticulously by your dedicated CareerPilot team while you stay focused on your daily deliverables.
+                  Handled completely by your dedicated CareerPilot team while you focus on your work and personal life.
                 </span>
                 <a
                   href="#contact"
                   className="text-blue-300 hover:text-white font-semibold flex items-center gap-1 transition-colors"
                 >
-                  <span>Request Full Candidate Onboarding</span>
+                  <span>Get Started with CareerPilot</span>
                   <ArrowRight className="w-3 h-3" />
                 </a>
               </div>
