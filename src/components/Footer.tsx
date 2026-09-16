@@ -2,10 +2,12 @@ import React, { useState } from "react";
 import { ShieldCheck, Mail, Phone, MessageCircle, ExternalLink, X } from "lucide-react";
 import { siteConfig } from "../config/siteConfig";
 import { PrivacyModal } from "./PrivacyModal";
+import { CancellationPolicyModal } from "./CancellationPolicyModal";
 
 export const Footer: React.FC = () => {
   const [privacyOpen, setPrivacyOpen] = useState(false);
   const [termsOpen, setTermsOpen] = useState(false);
+  const [refundOpen, setRefundOpen] = useState(false);
 
   const currentYear = new Date().getFullYear();
 
@@ -33,7 +35,7 @@ export const Footer: React.FC = () => {
               </div>
 
               <p className="text-sm text-slate-300 max-w-md leading-relaxed mb-6">
-                Dedicated career concierge for full-time working professionals. Managing resume positioning, high-fit opportunity curation, LinkedIn & Naukri application execution, and transparent Friday performance digests.
+                Full-service professional career concierge. Our dedicated career specialists and talent researchers handle your market-driven resume calibration, high-signal role discovery, precision recruiter campaigns, dual-vector referrals, and comprehensive pipeline tracking.
               </p>
 
               <div className="flex items-center gap-4 text-xs text-slate-300">
@@ -92,6 +94,16 @@ export const Footer: React.FC = () => {
                 Quick Links & Disclosures
               </h4>
               <ul className="space-y-2.5 text-sm text-slate-300">
+                <li>
+                  <button
+                    type="button"
+                    onClick={() => setRefundOpen(true)}
+                    className="hover:text-white transition-colors text-left flex items-center gap-1.5 focus:outline-none text-[#34D399] font-semibold"
+                  >
+                    <span>14-Day Cancellation & Refund Policy</span>
+                    <ExternalLink className="w-3 h-3 text-[#34D399]" />
+                  </button>
+                </li>
                 <li>
                   <button
                     type="button"
@@ -200,6 +212,12 @@ export const Footer: React.FC = () => {
           </div>
         </div>
       )}
+
+      {/* 14-Day Cancellation & Refund Policy Modal */}
+      <CancellationPolicyModal
+        isOpen={refundOpen}
+        onClose={() => setRefundOpen(false)}
+      />
     </>
   );
 };

@@ -1,12 +1,15 @@
-import React from "react";
-import { Check, ArrowRight, Shield, AlertCircle, Sparkles, TrendingUp } from "lucide-react";
+import React, { useState } from "react";
+import { Check, ArrowRight, Shield, AlertCircle, Sparkles, TrendingUp, ShieldCheck, RotateCcw, Clock, FileText } from "lucide-react";
 import { siteConfig } from "../config/siteConfig";
+import { CancellationPolicyModal } from "./CancellationPolicyModal";
 
 interface PricingProps {
   onSelectPlan?: (planId: string) => void;
 }
 
 export const Pricing: React.FC<PricingProps> = ({ onSelectPlan }) => {
+  const [isRefundModalOpen, setIsRefundModalOpen] = useState(false);
+
   const handleSelectPlan = (planId: string) => {
     if (onSelectPlan) {
       onSelectPlan(planId);
@@ -22,13 +25,13 @@ export const Pricing: React.FC<PricingProps> = ({ onSelectPlan }) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#3E4C9A] bg-[#EBF0FA] border border-[#3E4C9A]/20 px-4 py-1.5 rounded-full inline-block mb-4 shadow-sm">
-            Transparent Concierge Pricing
+            All-Inclusive Platform Membership
           </span>
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#0B132B] tracking-tight">
-            Straightforward Month-to-Month Career Support
+            Straightforward Month-to-Month Career Acceleration
           </h2>
           <p className="mt-4 text-base sm:text-lg text-slate-600 leading-relaxed">
-            No long-term lock-in. Full concierge execution on LinkedIn and Naukri tailored for professionals seeking roles in India or internationally.
+            No long-term lock-in. Full specialist resume re-engineering, dedicated recruiter email campaigns, dual-vector referrals, and curated applications with all platform premiums 100% covered.
           </p>
         </div>
 
@@ -114,13 +117,68 @@ export const Pricing: React.FC<PricingProps> = ({ onSelectPlan }) => {
                     <span>Select {plan.badge} & Schedule Call</span>
                     <ArrowRight className="w-4 h-4 shrink-0" />
                   </button>
-                  <p className="text-[11px] text-center text-slate-400 mt-2.5">
-                    Cancel anytime • No credit card required upfront
+                  <p className="text-[11px] text-center text-slate-500 mt-2.5 font-medium flex items-center justify-center gap-1.5">
+                    <ShieldCheck className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+                    <span>14-Day 100% Money-Back Guarantee • Cancel anytime</span>
                   </p>
                 </div>
               </div>
             );
           })}
+        </div>
+
+        {/* 14-Day 100% Money-Back Opportunity Guarantee & Cancellation Policy Box */}
+        <div className="max-w-5xl mx-auto rounded-3xl bg-gradient-to-br from-[#0B132B] via-[#0E1B3E] to-[#0B132B] border border-emerald-400/40 p-6 sm:p-8 md:p-10 shadow-2xl text-white mb-8 relative overflow-hidden group">
+          {/* Ambient Glows */}
+          <div className="absolute -right-20 -top-20 w-80 h-80 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute -left-20 -bottom-20 w-80 h-80 bg-[#3E4C9A]/20 rounded-full blur-3xl pointer-events-none" />
+
+          <div className="relative z-10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 sm:gap-8">
+            <div className="max-w-2xl">
+              <div className="inline-flex items-center gap-2 bg-emerald-500/15 border border-emerald-400/30 text-[#34D399] text-[11px] sm:text-xs font-extrabold uppercase tracking-wider px-3.5 py-1.5 rounded-full mb-3 shadow-xs">
+                <ShieldCheck className="w-4 h-4" />
+                <span>100% Zero-Risk Opportunity Guarantee</span>
+              </div>
+
+              <h3 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-white tracking-tight leading-snug">
+                Interview Opportunities in 2 Weeks or 100% Full Money Back
+              </h3>
+
+              <p className="mt-2.5 text-xs sm:text-sm text-slate-300 leading-relaxed">
+                If our dedicated career team does not deliver relevant interview opportunities matching your target role, compensation floor, and seniority criteria within your first <strong>14 calendar days (2 weeks)</strong>, your entire payment will be <strong>100% refunded</strong> immediately. Zero hassle, zero hidden fees, and cancel anytime.
+              </p>
+
+              {/* 3 Quick Guarantee Checkpoints */}
+              <div className="mt-5 grid grid-cols-1 sm:grid-cols-3 gap-3">
+                <div className="flex items-center gap-2 rounded-xl bg-white/5 border border-white/10 p-2.5">
+                  <RotateCcw className="w-4 h-4 text-[#34D399] shrink-0" />
+                  <span className="text-[11px] font-semibold text-slate-200">14-Day Evaluation Window</span>
+                </div>
+                <div className="flex items-center gap-2 rounded-xl bg-white/5 border border-white/10 p-2.5">
+                  <Check className="w-4 h-4 text-[#34D399] shrink-0" />
+                  <span className="text-[11px] font-semibold text-slate-200">100% Full Refund Guaranteed</span>
+                </div>
+                <div className="flex items-center gap-2 rounded-xl bg-white/5 border border-white/10 p-2.5">
+                  <Clock className="w-4 h-4 text-[#34D399] shrink-0" />
+                  <span className="text-[11px] font-semibold text-slate-200">1-Click Cancel Anytime</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="w-full lg:w-auto flex flex-col sm:flex-row lg:flex-col gap-3 shrink-0">
+              <button
+                type="button"
+                onClick={() => setIsRefundModalOpen(true)}
+                className="inline-flex items-center justify-center gap-2 bg-[#34D399] hover:bg-emerald-400 text-[#070B19] font-extrabold text-xs sm:text-sm px-6 py-3.5 rounded-xl shadow-lg transition-all hover:scale-105 cursor-pointer whitespace-nowrap"
+              >
+                <FileText className="w-4 h-4" />
+                <span>View Full Cancellation Policy</span>
+              </button>
+              <p className="text-[11px] text-center text-slate-400">
+                Processed within 24 hours back to original bank / card
+              </p>
+            </div>
+          </div>
         </div>
 
         {/* ROI Time-Value Callout Box */}
@@ -135,7 +193,7 @@ export const Pricing: React.FC<PricingProps> = ({ onSelectPlan }) => {
                   The High-ROI Investment in Your Time
                 </h4>
                 <p className="text-xs sm:text-sm text-slate-600 mt-0.5 leading-relaxed">
-                  At a standard senior engineering / lead salary, 60–80 hours of your personal time each month is worth over ₹50,000+. For just ₹10,000/mo, CareerPilot protects your focus and executes your search continuously.
+                  At a standard senior engineering / lead salary, 60–80 hours of your personal time each month is worth over ₹50,000+. For just ₹10,000/mo, your dedicated CareerPilot team protects your focus and executes your search continuously.
                 </p>
               </div>
             </div>
@@ -165,6 +223,12 @@ export const Pricing: React.FC<PricingProps> = ({ onSelectPlan }) => {
           </div>
         </div>
       </div>
+
+      {/* Cancellation & 100% Refund Policy Modal */}
+      <CancellationPolicyModal
+        isOpen={isRefundModalOpen}
+        onClose={() => setIsRefundModalOpen(false)}
+      />
     </section>
   );
 };

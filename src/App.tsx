@@ -3,6 +3,7 @@ import { Navbar } from "./components/Navbar";
 import { Hero } from "./components/Hero";
 import { BusyProfessionalSpotlight } from "./components/BusyProfessionalSpotlight";
 import { ProblemValue } from "./components/ProblemValue";
+import { CoreAIPillarsShowcase } from "./components/CoreAIPillarsShowcase";
 import { WhatsIncluded } from "./components/WhatsIncluded";
 import { HowItWorks } from "./components/HowItWorks";
 import { WeeklyReportPreview } from "./components/WeeklyReportPreview";
@@ -10,6 +11,7 @@ import { ClientTestimonials } from "./components/ClientTestimonials";
 import { WhyChooseUs } from "./components/WhyChooseUs";
 import { PrivacySection } from "./components/PrivacySection";
 import { Pricing } from "./components/Pricing";
+import { CompetitorComparison } from "./components/CompetitorComparison";
 import { FAQSection } from "./components/FAQSection";
 import { FinalCTA } from "./components/FinalCTA";
 import { ContactSection } from "./components/ContactSection";
@@ -29,19 +31,22 @@ export const App: React.FC = () => {
       <Navbar />
 
       <main className="flex-1">
-        {/* 2. Hero Section (Focus on Your Demanding Work. We'll Pilot Your Next Move) */}
+        {/* 2. Hero Section (Upload Resume • We Pilot Complete Job Search) */}
         <Hero />
 
         {/* 3. Time-Saving Spotlight for Busy Working Professionals */}
         <BusyProfessionalSpotlight />
 
-        {/* 4. The Problem Section (A 9-to-6 Job Leaves Zero Hours) */}
+        {/* 4. The Problem Section (Zero Time After 9-to-6 Day) */}
         <ProblemValue />
 
-        {/* 5. Services / What We Do (6 Cards: LinkedIn & Naukri Applications) */}
+        {/* 5. 7 Core Services Interactive Showcase (Live ATS, Outreach, Referrals, Naukri) */}
+        <CoreAIPillarsShowcase />
+
+        {/* 6. Executive Services / What We Do */}
         <WhatsIncluded />
 
-        {/* 6. How It Works (5-Step Process Timeline) */}
+        {/* 7. How It Works (5-Step Process Timeline) */}
         <HowItWorks />
 
         {/* 7. Detailed Transparency Section (Weekly Activity Summary & Analytics Preview) */}
@@ -59,7 +64,10 @@ export const App: React.FC = () => {
         {/* 10. Pricing Section (India & International Support Plans) */}
         <Pricing onSelectPlan={handleSelectPlan} />
 
-        {/* 11. FAQ Section (7 Detailed FAQs including Busy Professional Fit) */}
+        {/* 11. Competitor Comparison Section (CareerPilot vs ApplyCove & LoopCV) */}
+        <CompetitorComparison />
+
+        {/* 12. FAQ Section (7 Detailed FAQs including Busy Professional Fit) */}
         <FAQSection />
 
         {/* 12. Final CTA Section */}

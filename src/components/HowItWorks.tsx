@@ -1,8 +1,8 @@
 import React from "react";
 import {
-  MessageSquareText,
-  FileCheck,
-  Crosshair,
+  FileText,
+  Sparkles,
+  Compass,
   SendHorizontal,
   LineChart,
   CheckCircle2,
@@ -12,9 +12,9 @@ import { siteConfig } from "../config/siteConfig";
 
 export const HowItWorks: React.FC = () => {
   const stepIcons = [
-    MessageSquareText,
-    FileCheck,
-    Crosshair,
+    FileText,
+    Sparkles,
+    Compass,
     SendHorizontal,
     LineChart,
   ];
@@ -27,13 +27,13 @@ export const HowItWorks: React.FC = () => {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#3E4C9A] bg-[#EBF0FA] border border-[#3E4C9A]/20 px-4 py-1.5 rounded-full inline-block mb-4 shadow-sm">
-            Structured Onboarding & Execution
+            Full-Service White-Glove Workflow
           </span>
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#0B132B] tracking-tight">
-            A Clear 5-Step Process From Day One
+            How Our Dedicated Career Team Operates
           </h2>
           <p className="mt-4 text-base sm:text-lg text-slate-600 leading-relaxed">
-            From your introductory consultation through ongoing Friday intelligence digests, every milestone is structured, transparent, and aligned with your career goals.
+            From specialist resume re-engineering and company scouting through personalized recruiter outreach, dual-vector employee referrals, and weekly executive briefings.
           </p>
         </div>
 
@@ -73,7 +73,7 @@ export const HowItWorks: React.FC = () => {
 
                 <div className="mt-5 pt-3 border-t border-slate-200/60 flex items-center gap-1.5 text-[11px] text-[#10B981] font-semibold">
                   <CheckCircle2 className="w-3.5 h-3.5" />
-                  <span>Milestone 0{step.step}</span>
+                  <span>Milestone {step.step}</span>
                 </div>
               </div>
             );
@@ -91,4 +91,5 @@ export const HowItWorks: React.FC = () => {
     </section>
   );
 };
+
 

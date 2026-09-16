@@ -45,8 +45,8 @@ export const FAQSection: React.FC = () => {
                   id={`faq-btn-${idx}`}
                 >
                   <div className="flex items-center gap-2.5 sm:gap-3.5">
-                    <span className="text-xs font-bold text-[#3E4C9A] bg-[#EBF0FA] border border-[#3E4C9A]/20 px-2 sm:px-2.5 py-0.5 rounded-md shrink-0">
-                      Q0{idx + 1}
+                    <span className="text-xs font-bold text-[#3E4C9A] bg-[#EBF0FA] border border-[#3E4C9A]/20 px-2 sm:px-2.5 py-0.5 rounded-md shrink-0 font-mono">
+                      Q{String(idx + 1).padStart(2, "0")}
                     </span>
                     <span className="text-sm sm:text-base md:text-lg font-bold text-[#0B132B]">
                       {faq.question}

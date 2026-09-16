@@ -15,12 +15,12 @@ export const Navbar: React.FC = () => {
   }, []);
 
   const navLinks = [
+    { name: "What Our Team Does", href: "#features" },
     { name: "How It Works", href: "#how-it-works" },
-    { name: "What We Do", href: "#what-we-do" },
-    { name: "Weekly Dashboard", href: "#weekly-updates" },
+    { name: "Client Reviews", href: "#testimonials" },
     { name: "Pricing", href: "#pricing" },
+    { name: "Compare with Bots", href: "#comparison" },
     { name: "FAQs", href: "#faqs" },
-    { name: "Contact", href: "#contact" },
   ];
 
   return (
@@ -48,26 +48,23 @@ export const Navbar: React.FC = () => {
               </div>
               <div className="min-w-0">
                 <div className="flex items-center gap-1.5 sm:gap-2">
-                  <span className="text-white font-extrabold text-base sm:text-lg md:text-xl tracking-tight leading-tight truncate">
+                  <span className="text-white font-extrabold text-base sm:text-lg md:text-xl tracking-tight leading-tight">
                     {siteConfig.brandName}
                   </span>
-                  <span className="text-[9px] sm:text-[10px] font-bold uppercase tracking-wider px-1.5 sm:px-2 py-0.5 rounded-full bg-[#3E4C9A]/40 text-blue-200 border border-blue-400/20 hidden sm:inline-flex shrink-0">
-                    Concierge
-                  </span>
                 </div>
-                <span className="text-slate-400 text-[10px] sm:text-[11px] font-medium tracking-wide block truncate">
-                  Career Co-Pilot for Busy Professionals
+                <span className="text-slate-400 text-[10px] sm:text-[11px] font-medium tracking-wide block">
+                  Professional Career Concierge
                 </span>
               </div>
             </a>
 
             {/* Desktop Navigation Links */}
-            <nav className="hidden lg:flex items-center gap-8" aria-label="Main Navigation">
+            <nav className="hidden lg:flex items-center gap-7" aria-label="Main Navigation">
               {navLinks.map((link) => (
                 <a
                   key={link.name}
                   href={link.href}
-                  className="text-sm font-medium text-slate-300 hover:text-white transition-colors duration-200 relative group py-1"
+                  className="text-xs sm:text-sm font-medium text-slate-300 hover:text-white transition-colors duration-200 relative group py-1"
                 >
                   <span>{link.name}</span>
                   <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#34D399] transition-all duration-200 group-hover:w-full rounded-full"></span>
@@ -79,10 +76,10 @@ export const Navbar: React.FC = () => {
             <div className="hidden sm:flex items-center gap-4">
               <a
                 href="#contact"
-                className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-[#3E4C9A] to-[#4F67B8] hover:from-[#4757af] hover:to-[#5a74cb] text-white text-sm font-semibold px-5 py-2.5 rounded-xl shadow-lg shadow-[#3E4C9A]/30 transition-all duration-300 hover:shadow-xl hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-[#34D399]"
+                className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-[#3E4C9A] to-[#10B981] hover:from-[#4757af] hover:to-[#34D399] text-white text-xs sm:text-sm font-bold px-5 py-2.5 rounded-xl shadow-lg shadow-[#3E4C9A]/30 transition-all duration-300 hover:shadow-xl hover:-translate-y-0.5 focus:outline-none"
                 id="nav-cta-btn"
               >
-                <span>Book Consultation</span>
+                <span>Schedule Strategy Call</span>
                 <ArrowRight className="w-4 h-4" />
               </a>
             </div>
@@ -122,9 +119,9 @@ export const Navbar: React.FC = () => {
               <a
                 href="#contact"
                 onClick={() => setMobileMenuOpen(false)}
-                className="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-[#3E4C9A] to-[#4F67B8] text-white font-semibold py-3 px-4 rounded-xl shadow-lg"
+                className="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-[#3E4C9A] to-[#10B981] text-white font-bold py-3 px-4 rounded-xl shadow-lg"
               >
-                <span>Book a Free Consultation</span>
+                <span>Schedule Strategy Call</span>
                 <ArrowRight className="w-4 h-4" />
               </a>
             </div>
@@ -134,4 +131,5 @@ export const Navbar: React.FC = () => {
     </header>
   );
 };
+
 
