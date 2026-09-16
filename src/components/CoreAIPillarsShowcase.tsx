@@ -160,6 +160,20 @@ export const CoreAIPillarsShowcase: React.FC = () => {
           </div>
         </div>
 
+        {/* Dedicated Pipeline Section Heading right before Step 01: Resume Polish */}
+        <div className="text-center max-w-3xl mx-auto mb-8 pt-8 border-t border-white/10">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-gradient-to-r from-blue-500/10 to-emerald-500/10 border border-[#34D399]/30 text-xs font-bold text-[#34D399] mb-3">
+            <Sparkles className="w-3.5 h-3.5 text-[#34D399]" />
+            <span>The 7-Step Done-For-You Career Pipeline</span>
+          </div>
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-white tracking-tight">
+            How Our Specialists Run Your Search Step-by-Step
+          </h2>
+          <p className="text-xs sm:text-sm text-slate-300 mt-2 max-w-xl mx-auto">
+            Click any step below to explore how we rewrite your resume, reach decision-makers, and secure referrals:
+          </p>
+        </div>
+
         {/* 7-Pillar Navigation Tabs */}
         <div className="flex lg:grid lg:grid-cols-7 gap-2 pb-4 lg:pb-0 overflow-x-auto no-scrollbar mb-10 border-b border-white/10">
           {pillars.map((pillar, idx) => {
